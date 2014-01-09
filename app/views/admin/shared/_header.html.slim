@@ -1,0 +1,108 @@
+.navbar.navbar-inverse
+  .navbar-inner
+    button type="button" class="btn btn-navbar visible-phone" id="menu-toggler"
+      span.fa.fa-bars
+      span.fa.fa-bars
+      span.fa.fa-bars
+    
+    a.brand href="#{admin_path}"
+      = image_tag "admin/logo-white.png", "width" => "171"
+
+    ul.nav.pull-right
+      li.notification-dropdown.hidden-phone
+        a href="#" class="trigger"
+          i.fa.fa-warning
+          span.count 8
+        .pop-dialog
+            .pointer.right
+              .arrow
+              .arrow_border
+            .body
+              a.close-icon href="#"
+                i.fa.fa-times-circle
+              .notifications
+                h3 You have 6 new notifications
+                a.item href="#"
+                  i.fa.fa-sign-in
+                  |&nbsp;New user registration
+                  span.time
+                    i.fa.fa-clock-o
+                    |&nbsp;13 min.
+                a.item href="#"
+                  i.fa.fa-sign-in
+                  |&nbsp;New user registration
+                  span.time
+                    i.fa.fa-clock-o
+                    |&nbsp;13 min.
+                a.item href="#"
+                  i.fa.fa-envelope
+                  |&nbsp;New user registration
+                  span.time
+                    i.fa.fa-clock-o
+                    |&nbsp;13 min.
+                a.item href="#"
+                  i.fa.fa-download
+                  |&nbsp;New user registration
+                  span.time
+                    i.fa.fa-clock-o
+                    |&nbsp;13 min.
+                .footer
+                    a.logout href="#" View all notifications
+      li.notification-dropdown.hidden-phone
+        a.trigger href="#"
+          i.fa.fa-envelope
+        .pop-dialog
+          .pointer.right
+            .arrow
+            .arrow_border
+          .body
+            a.close-icon href="#"
+              i.fa.fa-times-circle
+            .messages
+              a.item href="#"
+                = image_tag "admin/contact-img.png", "class" => "display"
+                .name Alejandra Galván
+                .msg
+                  |There are many variations of available, but the majority have suffered alterations.
+                span.time
+                  i.fa.fa-clock-o
+                  |&nbsp;13 min.
+              a.item href="#"
+                = image_tag "admin/contact-img2.png", "class" => "display"
+                .name Alejandra Galván
+                .msg
+                  |There are many variations of available, but the majority have suffered alterations.
+                span.time
+                  i.fa.fa-clock-o
+                  |&nbsp;13 min.
+              a.item href="#"
+                = image_tag "admin/contact-img.png", "class" => "display"
+                .name Alejandra Galván
+                .msg
+                  |There are many variations of available, but the majority have suffered alterations.
+                span.time
+                  i.fa.fa-clock-o
+                  |&nbsp;13 min.
+              .footer
+                a.logout href="#" View all messages
+      li.dropdown
+        a.dropdown-toggle.hidden-phone href="#" data-toggle="dropdown"
+          |&nbsp;Your account
+          b.caret
+        ul.dropdown-menu
+          li
+            a href="personal-info.html" Personal info
+          li
+            a href="#" Account settings
+          li
+            a href="#" Billing
+          li
+            a href="#" Export your data
+          li
+            a href="#" Send feedback
+      li.settings.hidden-phone
+        a href="personal-info.html" role="button"
+          i.fa.fa-cog
+      li.settings.hidden-phone
+        a href="signin.html" role="button"
+          i.fa.fa-share

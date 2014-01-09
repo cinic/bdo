@@ -1,0 +1,18 @@
+nav.main-menu
+  ul.list
+    li.item
+      = link_to "Инвестиции", page_path("investing"), class: "link"
+    li.item
+      = link_to "Трейдинг", page_path("trading"), class: "link"
+    li.item
+      = link_to "Тарифы", page_path("pricing-plans"), class: "link"
+    li.item
+      = link_to "Аналитика", page_path("analytics"), class: "link"
+    li.item
+      = link_to "Обучение", page_path("learning"), class: "link"
+    li.item
+      = link_to "Открыть счёт", page_path("open-account"), class: "link account account_left"
+    li.item
+      = link_to "Демо счёт", page_path("open-demo-account"), class: "link account account_right"
+    li.item
+      = link_to raw('<i class="fa fa-user"></i> Вход в ЛК'), "https://clients.open.ru", class: "link"

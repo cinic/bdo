@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Переменные
+   ========================================================================== */
+$gray: #535455;
+$dark-gray: #ececec;
+$light-gray: #f7f7f7;
+$blue: #abd4ea;
+$dark-blue: #53b2df;
+$light-blue: #74c0e4;
+$white: #ffffff;
+$orange: #ff9239;
+$black: #000000;
+$br-left: 4px 0 0 4px;
+$br-right: 0 4px 4px 0; 
+
+@mixin transition($transition-property, $transition-time, $method) {
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  -ms-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
+}

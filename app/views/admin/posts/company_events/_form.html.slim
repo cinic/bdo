@@ -1,0 +1,30 @@
+.span8.column 
+  = form_for [:admin,:posts,@admin_posts_company_event] do |f|
+    - if @admin_posts_company_event.errors.any?
+      #error_explanation
+        h2 = "#{pluralize(@admin_posts_company_event.errors.count, "error")} prohibited this admin_posts_company_event from being saved:"
+        ul
+          - @admin_posts_company_event.errors.full_messages.each do |message|
+            li = message
+    .field-box
+      = f.label :date, "Дата"
+      = f.datetime_field :date, class: "span8 datepicker inline-input"
+    .field-box
+      = f.label :title, "Заголовок"
+      = f.text_field :title, class: "span8 inline-input"
+    .field-box
+      = f.label :body, "Текст"
+      .wysi-column
+        = f.text_area :body, rows: 4, :ckeditor => {toolbar: "bdo"}, class: "span8 ckeditor"
+    .field-box
+      = f.label :published do
+        = f.check_box :published
+        |&nbsp;Опубликовать
+    .field-box = f.submit 'Сохранить', class: "btn-flat primary"
+javascript:
+  $(function(){
+    // datepicker plugin
+    $( ".datepicker" ).datepicker( {format: "dd.mm.yyyy"} ).on( "changeDate", function (ev) {
+        $(this).datepicker( "hide" );
+    });
+  })

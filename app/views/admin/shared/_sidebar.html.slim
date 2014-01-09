@@ -1,0 +1,8 @@
+sidebar#sidebar-nav
+  ul#dashboard-menu
+    = li_with_link_to_unles_current_with_class raw('<i class="fa fa-tachometer"></i><span>Дашбоард</span>'), "active", admin_path
+    = li_with_link_to_unles_current_with_class raw('<i class="fa fa-pencil"></i><span>Публикации</span>'), "active", admin_posts_path
+    = li_with_link_to_unles_current_with_class raw('<i class="fa fa-globe"></i><span>Эмитенты</span>'), "active", admin_posts_issuer_events_path
+    = li_with_link_to_unles_current_with_class raw('<i class="fa fa-file-text-o"></i><span>Новости</span>'), "active", admin_posts_company_events_path
+    = li_with_link_to_unles_current_with_class raw('<i class="fa fa-user"></i><span>Проспекты</span>'), "active", admin_prospects_path
+

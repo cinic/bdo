@@ -1,0 +1,7 @@
+- content_for :page_class, "form-page"
+- content_for :page_title, "Добавление новости компании"
+.row-fluid.form-wrapper
+
+  == render 'form'
+
+  = link_to 'Назад', admin_posts_company_events_path

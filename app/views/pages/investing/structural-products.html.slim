@@ -1,0 +1,99 @@
+- content_for :title, "Структурные продукты"
+- content_for :meta_description, ""
+- content_for :meta_keywords, ""
+- content_for :page_content_class, "page-structural-products"
+= render partial: "shared/sub_menu", locals: {items: [["Модельные портфели", "investing/model-portfolios"],["Структурные продукты", "investing/structural-products"],["Open Advisor", "investing/open-advisor"],["Личный брокер", "investing/personal-broker"]]}
+section.slide.cover.structural-products
+  .layout.group
+    .content.pull-right
+      h1.title Структурные&nbsp;продукты
+      p 
+        |Лучшая альтернатива банковским вкладам. Заданый риск и высокая потенциальная безопасность.
+
+      a.btn.white href="#product-types" Подробнее
+section#product-types.slide.white
+  .layout.product-teasers
+    h2.title Мы предлагаем структурные продукты
+    .items
+      .item
+        h3.title.bg-left
+          span.defensive Защитные
+        p СП – готовое финансовое решение с высокой потенциальной доходностью и заданным уровнем риска.  
+      .item
+        h3.title.bg-left 
+          span.coupon Купонные
+        p Купонные продукты позволяют получать доходности на уровне рыночных, однако более стабильно, чем при прямом инвестировании за счет наличия гарантированной выплаты. 
+      .item
+        h3.title.bg-left
+          span.securities Ценные бумаги
+        p Продукты для держателей акции — возможность получить на свои бумаги больше.
+section.slide.gray.bordered
+  .layout.existing-products
+    h2.title Действующие продукты
+    article.item.defensive.group#id-1
+      figure.graph
+        = image_tag "application/pages/investing/structural-products/example.png", width: "220"
+        .product-params
+          table
+            tr
+              td
+                |Базовый актив
+              td
+                |Сахар
+            - 5.times do
+              tr
+                td
+                  |Валюта инвестирования
+                td
+                  |3 000 000 рублей
+                
+      .wrap
+        h3.title.bg-left Сахарный сезон
+        p Российский рынок акций – это «клондайк» инвестиционных идей для тех, кто ищет возможность для дополнительного дохода. Зарабатывайте самостоятельно на росте или падении ценных бумаг или воспользуйтесь готовыми инвестиционными стратегиями от профессионалов рынка.
+        p Российский рынок акций – это «клондайк» инвестиционных идей для тех, кто ищет возможность для дополнительного дохода. Зарабатывайте самостоятельно на росте или падении ценных бумаг или воспользуйтесь готовыми инвестиционными стратегиями от профессионалов рынка.
+        p Российский рынок акций – это «клондайк» инвестиционных идей для тех, кто ищет возможность для дополнительного дохода. Зарабатывайте самостоятельно на росте или падении ценных бумаг или воспользуйтесь готовыми инвестиционными стратегиями от профессионалов рынка.
+        p Российский рынок акций – это «клондайк» инвестиционных идей для тех, кто ищет возможность для дополнительного дохода. Зарабатывайте самостоятельно на росте или падении ценных бумаг или воспользуйтесь готовыми инвестиционными стратегиями от профессионалов рынка.
+        p Российский рынок акций – это «клондайк» инвестиционных идей для тех, кто ищет возможность для дополнительного дохода. Зарабатывайте самостоятельно на росте или падении ценных бумаг или воспользуйтесь готовыми инвестиционными стратегиями от профессионалов рынка.
+
+        .actions
+          a.btn.round-left href="#id-1" Свернуть
+          |&nbsp;
+          a.btn.round-right href="#id-1" Купить
+    article.item.securities.group#id-2
+      figure.graph
+        = image_tag "application/pages/investing/structural-products/example.png", width: "220"
+      .wrap
+        h3.title.bg-left Сахарный сезон
+        p Российский рынок акций – это «клондайк» инвестиционных идей для тех, кто ищет возможность для дополнительного дохода. Зарабатывайте самостоятельно на росте или падении ценных бумаг или воспользуйтесь готовыми инвестиционными стратегиями от профессионалов рынка.
+        .actions
+          a.btn.round-left href="#id-2" Подробнее
+          |&nbsp;
+          a.btn.round-right href="#id-2" Купить
+section.slide.white
+  .layout.existing-products
+    h2.title Исполненные продукты
+    article.item.defensive.group#id-1
+      figure.graph
+        = image_tag "application/pages/investing/structural-products/example.png", width: "220"
+      .wrap
+        h3.title.bg-left Сахарный сезон
+        p Российский рынок акций – это «клондайк» инвестиционных идей для тех, кто ищет возможность для дополнительного дохода. Зарабатывайте самостоятельно на росте или падении ценных бумаг или воспользуйтесь готовыми инвестиционными стратегиями от профессионалов рынка.
+        a.btn href="#id-1" Подробнее
+    article.item.securities.group#id-2
+      figure.graph
+        = image_tag "application/pages/investing/structural-products/example.png", width: "220"
+      .wrap
+        h3.title.bg-left Сахарный сезон
+        p Российский рынок акций – это «клондайк» инвестиционных идей для тех, кто ищет возможность для дополнительного дохода. Зарабатывайте самостоятельно на росте или падении ценных бумаг или воспользуйтесь готовыми инвестиционными стратегиями от профессионалов рынка.
+        a.btn href="#id-2" Подробнее
+section.page-teasers
+  .teasers.layout
+    a.item href="javascript:void()"
+      i.icon.mutual-funds
+      h5.title Паевые фонды
+    a.item href="javascript:void()"
+      i.icon.npf
+      h5.title НПФ / НПС
+    a.item.icon href="javascript:void()"
+      i.icon.trust-management
+      h5.title Доверительное управление

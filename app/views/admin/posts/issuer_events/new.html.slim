@@ -1,0 +1,6 @@
+- content_for :page_class, "form-page"
+- content_for :page_title, "Добавление новости эмитента"
+.row-fluid.form-wrapper
+  == render 'form'
+
+  = link_to 'Назад', admin_posts_issuer_events_path

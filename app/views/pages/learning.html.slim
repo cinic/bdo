@@ -1,0 +1,103 @@
+- content_for :title, "Обучение"
+- content_for :meta_description, ""
+- content_for :meta_keywords, ""
+- content_for :page_content_class, "page-learning"
+section.slide.cover.training
+  .layout.group 
+    .content.pull-right
+      h1.title Обучение
+      p 
+        |То-есть у человека может быть делема, как ему
+        br
+        |поднять свой скилл в инвестициях/трейдинге:
+        br
+        |например, дистационно, просматривая вебинары,
+        br
+        |присутствуя очно на мастер классе. либо
+        br
+        |индивидуальные занятия
+      a.btn.white Подробнее
+section.events-header.gray
+  .layout.group
+    h2.title.pull-left События
+    form.filter.pull-left
+      .form-row.pull-left.item
+        = select_tag "city", options_for_select(["Москва", "Санкт-Петербург", "Воронеж", "Новосибирск"]), prompt: "Город"
+      .form-row.pull-left.item
+        = select_tag "market", options_for_select(["Валютный", "Фондовый", "Внебиржевой"]), prompt: "Рынок"
+      .form-row.pull-left.item
+        = select_tag "level", options_for_select(["Новичок", "Профессионал", "Инвестор"]), prompt: "Уровень"
+      .form-row.pull-left.item
+        = select_tag "type", options_for_select(["Семинар", "Вебинар", "Мастер–класс"]), prompt: "Тип"
+      .form-row.pull-left.item
+        = select_tag "payment", options_for_select(["Бесплатно", "Платно"]), prompt: "Оплата"
+      .form-row.pull-left.item
+        = date_field_tag "date", "", placeholder: "Дата"
+ul.learning-events
+  li.item.group
+    .layout
+      h3.title.seminar Расчет лучшего соотношения риск / профит в системе объемного анализа
+      .tags 
+        span.item Москва 
+        span.item Финансовый&nbsp;рынок 
+        span.item Бесплатно 
+        span.item Профессионалу
+  li.item.group
+    .layout
+      h3.title.webinar Расчет лучшего соотношения риск / профит в системе объемного анализа. Расчет лучшего соотношения риск / профит в системе объемного анализа
+      .tags 
+        span.item Петербург 
+        span.item Финансовый&nbsp;рынок
+        span.item Наличными 
+        span.item Профессионалу 
+        span.item Семинар
+  li.item.group
+    .layout
+      h3.title.seminar Расчет лучшего соотношения риск / профит в системе 
+      .tags 
+        span.item Санкт-Петербург
+        span.item Профессионалу
+  li.item.group
+    .layout
+      h3.title.seminar Расчет лучшего соотношения риск / профит в системе объемного анализа
+      .tags 
+        span.item Санкт-Петербург 
+        span.item Мастеркласс 
+        span.item Профессионалу 
+        span.item Фондовый&nbsp;рынок 
+  li.item.group
+    .layout
+      h3.title.webinar Расчет лучшего соотношения риск / профит в системе объемного анализа. Расчет лучшего соотношения риск / профит в системе объемного анализа
+      .tags 
+        span.item Санкт-Петербург 
+  li.item.group
+    .layout
+      h3.title.masterclass Расчет лучшего соотношения риск / профит в системе 
+      .tags 
+        span.item Санкт-Петербург 
+  li.item.group
+    .layout
+      h3.title.seminar Расчет лучшего соотношения риск / профит в системе объемного анализа. Расчет лучшего соотношения риск / профит в системе объемного анализа
+      .tags 
+        span.item Санкт-Петербург 
+        span.item Семинар 
+  li.item.group
+    .layout
+      h3.title.webinar Расчет лучшего соотношения риск / профит в системе    
+      .tags 
+        span.item Санкт-Петербург 
+        span.item Вебинар 
+        span.item В кредит
+.layout.actions
+  a.btn href="#" Показать еще
+section.page-teasers
+  .teasers
+    a.item href="javascript:void()"
+      i.icon.training-remote
+      h5.title Дистанционное обучение
+    a.item href="javascript:void()"
+      i.icon.training-individual
+      h5.title Индивидуальное обучение
+    a.item href="javascript:void()"
+      i.icon.training-coach
+      h5.title Тренер по трейдингу

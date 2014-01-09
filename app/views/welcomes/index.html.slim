@@ -1,0 +1,20 @@
+h1 Listing welcomes
+
+table
+  tr
+    th
+    th
+    th
+
+  /- @welcomes.each do |welcome|
+    /tr
+      /td = link_to 'Show', welcome
+      /td = link_to 'Edit', edit_welcome_path(welcome)
+      /td = link_to 'Destroy', welcome, :confirm => 'Are you sure?', :method => :delete
+
+br
+= @ips[:city]
+= request.url.inspect
+= @cookies
+
+/= link_to 'New Welcome', new_welcome_path

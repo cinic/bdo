@@ -1,0 +1,62 @@
+- content_for :title, "Тарифы"
+- content_for :meta_description, ""
+- content_for :meta_keywords, ""
+- content_for :page_content_class, "page-pricing-plans"
+section.slide.white
+  .layout.rates
+    h1.title Подобрать тариф
+    .items
+      .item
+        h2.title.bg-left
+          |&laquo;
+          b Универсальный
+          |&raquo;
+        p Для инвесторов, которые не имеют четкого плана относительно своих оборотов в день совершения сделок, а также не прогнозируют точный объем подаваемых торговых поручений (в рублях).
+        .actions
+          = link_to "Подробнее", page_path("pricing-plans/currency"), class: "btn orange round-left"
+          a.btn.orange.round-right Подключить
+      .item
+        h2.title.bg-left
+          |&laquo;
+          b Валютный
+          |&raquo;
+        p Этот тариф больше всего подходить клиентам, совершающих операции с иностранной валютой (как спекулятивные, так и инвестиционные), но не выводящих иностранную валюту ее с брокерского счета.
+        .actions 
+          = link_to "Подробнее", page_path("pricing-plans/currency"), class: "btn orange round-left"
+          a.btn.orange.round-right Подключить
+      .item
+        h2.title.bg-left
+          |&laquo;
+          b Профессионал
+          |&raquo;              
+        p Для клиентов, чей торговый оборот в день, составляет не менее 3 млн рублей, а  также для среднесрочных спекулянтов, удерживающих позиции с «плечом», так как стоимость использования «плеча» минимальна.
+        .actions
+          = link_to "Подробнее", page_path("pricing-plans/currency"), class: "btn orange round-left"
+          a.btn.orange.round-right Подключить              
+      .item
+        h2.title.bg-left
+          |&laquo;
+          b Инвестор
+          |&raquo;
+        p Привлекательные условия для начинающих инвесторов – комиссия 45 рублей за выполненное поручение,  0,045% от трейда и до 14% годовых при использовании брокерского «плеча».
+        .actions
+          = link_to "Подробнее", page_path("pricing-plans/currency"), class: "btn orange round-left"
+          a.btn.orange.round-right Подключить
+      .item
+        h2.title.bg-left
+          |&laquo;
+          b Инвестор +
+          |&raquo;              
+        p Этот тариф подходит для клиентов, которые периодически совершают торговые операции, при этом объем каждого торгового поручения составляет не менее 500 000 рублей.
+        .actions
+          = link_to "Подробнее", page_path("pricing-plans/currency"), class: "btn orange round-left"
+          a.btn.orange.round-right Подключить
+      .item
+        h2.title.bg-left
+          |&laquo;
+          b Конверсионный
+          |&raquo;
+        p Для клиентов, которые собираются покупать иностранную валюту и выводить на свой банковский счет.
+        .actions
+          = link_to "Подробнее", page_path("pricing-plans/currency"), class: "btn orange round-left"
+          a.btn.orange.round-right Подключить

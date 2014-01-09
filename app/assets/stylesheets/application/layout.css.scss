@@ -1,0 +1,313 @@
+@import "vars";
+/* ==========================================================================
+   Общие стили
+   ========================================================================== */
+body {
+  min-width: 980px;
+  font: 12px/1.5 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  &.sub-nav-fixed { 
+    >.header { margin-bottom: 46px; }
+  }
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.group:before,
+.group:after {
+  content: " ";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  *zoom: 1;
+}
+
+.layout {
+  width: 980px;
+  margin: 0 auto;
+  &.layout--half {
+    width: 50%;
+  }
+}
+.bg-white { background-color: white; }
+.bg-gray { background-color: $dark-gray; }
+.centered { text-align: center; }
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  padding: 6px 20px;
+  min-width: 86px;
+  background-color: $dark-blue;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  @include transition(background-color, 0.2s, ease-in-out);
+  &.white {
+    color: #13516f;
+    background: white;
+  }
+  &.blue {
+    background: $blue;
+  }
+  &:hover {
+    background: $orange;
+    color: white;
+  }
+  &.orange {
+    background: $orange;
+    &:hover {
+      background: $gray;
+    }
+  }
+  &.round-left {
+    border-radius: $br-left;
+  }
+  &.round-right {
+    border-radius: $br-right;
+  }
+}
+input.btn,
+button.btn {
+  border: 0;
+}
+
+
+/* ==========================================================================
+   Block HEADER
+   ========================================================================== */
+header.header {
+  background: #f6f7f7;
+  padding: 10px 0;
+  height: 35px;
+  .logo {
+    float: left;
+    
+    img { width:153px; }
+
+  }
+    /* Главное меню
+       ========================================================================== */
+    .main-menu {
+      float: right;
+      margin: 10px 0 0;
+      >.list {
+        margin: 0;
+        >.item {
+          display: inline-block;
+          margin: 0 10px;
+          >.link {
+            color: #1d1e1f;
+            text-decoration: none;
+            text-transform: uppercase;
+            @include transition(all, 0.2s, ease-in-out);
+            &:hover,
+            &.active {
+              color: $dark-blue;
+              text-decoration: underline;
+            }
+            /* иконки от FontAwesome, возможно уберём из продакшен версии */
+            .fa {
+              font-size: 20px;
+              vertical-align: middle;
+              color: $dark-blue;
+              margin-right: 6px;
+            }
+
+            /* кнопоки открыть счёт */
+            &.account {
+              margin: 0 -10px;
+              padding: 5px 14px;
+              background: $orange;
+              color: #fff;
+              &:hover,
+              &.active {
+                background: #53b2df;
+                text-decoration: none;
+              }
+            }
+            &.account_left {
+              border-radius: $br-left;
+              
+            }
+            &.account_right {
+              border-radius: $br-right;
+              
+            }
+          }
+        }
+      }
+    }
+}
+
+/* ==========================================================================
+   Sub nav
+   ========================================================================== */
+.sub-nav {
+  background-color: $dark-gray;
+  border-top: 1px solid #e5e5e5;
+  .title {
+    display: block;
+    float: left;
+    padding: 4px 0 5px;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  ul {
+    float: right;
+    padding: 0;
+    margin: 6px 0 0;
+    list-style: none;
+    font-size: 12px;
+
+    li {
+      float: left;
+      line-height: 24*1.5px;
+    }
+  }
+  li:last-child .item { margin-right: 0; }
+  .item {
+    margin: 0 16px;
+    color: #484c58;
+    text-decoration: none;
+    @include transition(all, 0.2s, ease-in-out);
+    &:hover { color: $dark-blue; }
+  }
+  &.fixed {
+    position: fixed;
+    top: -46px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+/* ==========================================================================
+   Block FOOTER
+   ========================================================================== */
+.footer {
+  background: #2b3038;
+  margin: 0;
+  padding: 36px 0 18px;
+  .address {
+    float: left;
+    height: 50px;
+    font-style: normal;
+    .list {
+      margin: 0;
+      padding: 0;
+      .item {
+        display: block;
+        float: left;
+        color: white;
+        &:first-child { margin-right: 50px; }
+        .fa {
+          font-size: 40px;
+          vertical-align: middle;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .advanced-menu {
+    float: right;
+    height: 50px;
+    .list {
+      margin: 0;
+      padding: 0;
+      margin: 9px 0 0 0;
+      .item {
+        display: inline-block;
+        margin: 0 5px;
+        .link {
+          text-transform: uppercase;
+          color: white;
+          border: 1px solid transparent;
+          padding: 5px;
+          border-radius: 4px;
+          text-decoration: none;
+          @include transition(all, 0.2s, ease-in-out);
+          &:hover {
+            border: 1px solid #00bbe4;
+            color: #00bbe4;
+          }
+        }
+      } 
+    }
+  }
+  .copyright {
+    float: left;
+    color: white;
+    margin: 80px 0 0;
+    a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      @include transition(all, 0.2s, ease-in-out);
+      &:hover {
+        color: $blue;
+        text-decoration: underline;
+      }
+    }
+  }
+  .social {
+    float: right;
+    margin: 70px 0 0;
+    .item {
+      display: inline-block;
+      font-size: 32px;
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      @include transition(color, 0.2s, ease-in-out);
+      &:hover {
+        color: $gray;
+      }
+    } 
+  }
+}
+.no-borderradius {
+  .main-menu,
+  .advanced-menu {
+    .list {
+      .item {
+        margin-right: 0 !important;
+      }
+    }
+  }
+  .content__OpenAdvisor {
+    .cover {
+      h2 {
+      width:670px !important;
+      }
+    }
+  }
+  .icon-map-marker {
+    margin-left:25px !important;
+  }
+  .cover__dividing-line,
+  .dividing-line_white {
+    background: white;
+  }
+  .dividing-line_blue {
+    background: $dark-blue;
+  }  
+  .dividing-line_dark-blue {
+    background: $blue;
+  }
+  .form {
+    input {
+      padding: 10px 10px 0px 18px !important;
+    }
+  }
+}

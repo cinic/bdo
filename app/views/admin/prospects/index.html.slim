@@ -1,0 +1,40 @@
+- content_for :page_class, "prospects"
+- content_for :page_title, "Проспекты"
+.row-fluid
+  table.table.table-hover
+    thead
+      tr
+        th.span5
+          | Имя Фамилия
+        th.span5
+          span.line
+          | Email и Телефон 
+        th.span5
+          span.line
+          | Город
+        th.span5
+          span.line
+          | Продукт
+        th.span5
+          span.line
+          | Путь по сайту
+    tbody
+      - @prospects.each do |prospect|
+        tr
+          td
+            /= link_to post.first_name, [:admin,:posts,prospect], class: "name"
+            = prospect.first_name + " " + prospect.last_name
+          td.description
+            = prospect.email
+            br
+            = prospect.mobile
+          td
+            = prospect.city
+          td
+            = prospect.product
+          td
+            - if prospect.url.kind_of?(Array)
+              ol
+                - prospect.url.each do |item|
+                  li
+                    = link_to item, "http://localhost:3000/" + item

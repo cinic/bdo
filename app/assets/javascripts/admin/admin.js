@@ -1,0 +1,11 @@
+//= require jquery
+//= require jquery_ujs
+//= require ckeditor/init
+//= require jquery.ui.core
+//= require jquery.ui.widget
+//= require jquery.ui.mouse
+//= require jquery.ui.draggable
+//= require jquery.ui.resizable
+//= require jquery.ui.slider
+//= require turbolinks
+//= require_tree .

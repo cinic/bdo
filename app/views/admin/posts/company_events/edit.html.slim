@@ -1,0 +1,9 @@
+- content_for :page_class, "posts"
+- content_for :page_title, "Редактирование новости компании"
+.row-fluid
+
+  == render 'form'
+
+  = link_to 'Показать', [:admin,:posts,@admin_posts_company_event]
+  '|
+  = link_to 'Назад', admin_posts_company_events_path

@@ -1,0 +1,15 @@
+/*
+ *= require_self
+ *= require ./bootstrap/bootstrap
+ *= require ./bootstrap/bootstrap-responsive
+ *= require ./bootstrap/bootstrap-overrides
+ *= require admin/layout
+ *= require admin/elements
+ *= require admin/icons
+ *= require font-awesome
+ *= require jquery.ui.core
+ *= require jquery.ui.theme
+ *= require jquery.ui.resizable
+ *= require jquery.ui.slider
+ *= require_tree .
+ */

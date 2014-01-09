@@ -1,0 +1,36 @@
+- content_for :title, "Открыть демо счёт"
+- content_for :meta_description, ""
+- content_for :meta_keywords, ""
+- content_for :page_content_class, "page-demo-account"
+- content_for :prospect_product, "Открытие демо счёта"
+.reg-demo-theme
+	.themes
+		.reg-demo-theme__bg--default
+			.reg-demo-theme__pic--default
+		.reg-demo-theme__bg--quik
+			.reg-demo-theme__pic--quik
+			.reg-demo-theme__text
+				h2 Преимущества QUIK:
+				ul
+					li Широкий выбор акций российских компаний, торговля фьчерсами и облигациями;
+					li Удобный интерфейс;
+					li Встроенный язык программирования;
+					li Контроль портфеля в режиме online и общение с другими пользователями.
+		.reg-demo-theme__bg--mt5
+			.reg-demo-theme__pic--mt5
+			.reg-demo-theme__text
+				h2 Преимущества MetaTrader5:
+				ul
+					li Удобен для торговли на срочном рынке;
+					li Возможность создания торговых роботов;
+					li Использвание различных стилей торговли;
+					li Широкий выбор инструментов для технического анализа.
+	.layout
+		section.feedback
+			h2
+				| Откройте демо–счёт
+				br прямо сейчас
+			/- if notice
+				/p#notice = notice
+			/- else
+				/= render "shared/form_1"

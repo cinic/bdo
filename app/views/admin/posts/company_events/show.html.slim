@@ -1,0 +1,15 @@
+- content_for :page_class, "posts"
+- content_for :page_title, @admin_posts_company_event.title
+
+.row-fluid
+  - if notice
+    .alert.alert-success
+      i.fa.fa-check-circle
+      = notice
+
+  article
+    = @admin_posts_company_event.body.html_safe
+
+  = link_to 'Редактировать', edit_admin_posts_company_event_path(@admin_posts_company_event)
+  '|
+  = link_to 'Назад', admin_posts_company_events_path

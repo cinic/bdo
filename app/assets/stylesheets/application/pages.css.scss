@@ -1,0 +1,834 @@
+@import "vars";
+/* ==========================================================================
+   Default styles
+   ========================================================================== */
+
+/* Слайды
+  ========================================================================== */
+.slide {
+  .title {
+    position: relative;
+    margin: 0 0 16px;
+    padding: 0 0 10px;
+    font-size: 36px;
+    text-align: center;
+    /* Рисуем полоску под заголовком */
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -16px;
+      width: 32px;
+      height: 1px;
+      background: #53b2df;
+      content: "";
+    }
+    /* Оттягиваем полоску заголовка влево */
+    &.bg-left { text-align: left; }
+    &.bg-left:after {
+      left: 0;
+      margin-left: 0;
+    }
+  }
+  /* Обложки */
+  &.cover {
+    min-height: 500px;
+    font-size: 18px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+    /* Главная страница */
+    &.index { 
+      background: image-url("application/layout/10.jpg") no-repeat center center;
+      .content {
+        margin: 5.03333333333333em 0;
+      }
+    }
+    &.open-advisor { 
+      background: image-url("application/img-02.jpg") no-repeat center top;
+    }
+    &.trading { 
+      background: image-url("application/pages/covers/trading.png") no-repeat center top;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/trading.png"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/trading.png"), sizingMethod='scale');
+    }
+    &.training { 
+      background: image-url("application/pages/covers/training.png") no-repeat center top;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/training.png"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/cover/training.png"), sizingMethod='scale');
+    }
+    &.investing { 
+      background: image-url("application/pages/covers/investing.jpg") no-repeat center top;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/investing.jpg"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/cover/investing.jpg"), sizingMethod='scale');
+    }
+    &.structural-products { 
+      background: image-url("application/pages/covers/structural-products.jpg") no-repeat center top;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/structural-products.jpg"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/cover/structural-products.jpg"), sizingMethod='scale');
+    }
+    &.personal-broker {
+      background: image-url("application/pages/covers/personal-broker.png") no-repeat center top;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/personal-broker.png"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/personal-broker.png"), sizingMethod='scale');
+    }
+
+    .title {
+      padding: 0 0 28px;
+      font-size: 45px;
+      text-transform: uppercase;
+      &:after {
+        margin-left: -32px;
+        width: 64px;
+        background: white;
+        content: "";
+      }
+    }
+
+    .content {
+      margin: 8.33333333333333em 0;
+      width: 490px;
+      text-align: center;
+      color: #fff;
+    }
+    p {
+      margin: 26px 0;
+      font-family: Georgia, serif;
+      font-style: italic;
+    }
+  }
+  &.white {
+    background-color: white;
+  }
+  &.gray {
+    background-color: $dark-gray;
+  }
+  &.blue {
+    background-color: $dark-blue;
+  }
+  &.bordered {
+    border-top: 4px solid $dark-blue;
+    border-bottom: 4px solid $dark-blue;
+  }
+}
+/* Product Teasers
+  ========================================================================== */
+.product-teasers {
+  text-align: center;
+  .items {
+    padding: 30px 0;
+    .item {
+      display: inline-block;
+      width: 220px;
+      vertical-align: top;
+      text-align: left;
+      margin: 0 11px;
+      position: relative;
+      .title {
+        padding: 0;
+        font-size: 25px;
+        line-height: 24px;
+        background: $dark-blue;
+        text-align: left;
+        padding-top: 170px;
+        span {
+          display: block;
+          padding: 15px 0;
+          line-height: 24px;
+          background: white;
+          &:before {
+            display: block;
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 100%;
+            height: 170px;
+            content: "";
+          }
+        }
+        .model-portfolios {
+          &:before {
+            background: image-url("application/teasers.modeling.portfolios.png") no-repeat 50% 50%;
+          }
+        }
+        .structural-products {
+          &:before {
+            background: image-url("application/teasers.structural.products.png") no-repeat 50% 50%;
+          }
+        }
+        .trading-signals {
+          &:before {
+            background: image-url("application/teasers.trading.signals.png") no-repeat 50% 50%;
+          }
+        }
+        .active-trading {
+          &:before {
+            background: image-url("application/teasers.trading.png") no-repeat 50% 50%;
+          }
+        }
+        .defensive {
+          &:before {
+            background: image-url("application/pages/product-teasers/structural-products-defensive.png") no-repeat 50% 50%;
+          }
+        }
+        .coupon {
+          &:before {
+            background: image-url("application/pages/product-teasers/structural-products-coupon.png") no-repeat 50% 50%;
+          }
+        }
+        .securities {
+          &:before {
+            background: image-url("application/pages/product-teasers/structural-products-securities.png") no-repeat 50% 50%;
+          }
+        }
+      }
+      p {
+        min-height: 50px;
+      }
+    }
+  }
+}
+
+/* Awards
+  ========================================================================== */
+.awards-list {
+  padding: 0;
+  list-style: none;
+  .item {
+    float: left;
+    margin: 30px 0 30px 80px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 14px;
+    span {
+      color: #01bcf3;
+      font-size: 15px;
+    }
+    &:first-child { margin-left: 0; }
+  }
+  .awards--1st-place {
+    background: image-url("application/awards.moscow.exchange.png") no-repeat 0 50%;
+    width: 153px;
+    padding-left: 200px;
+  }
+  .awards--best-year {
+    background: image-url("application/awards.best.year.png") no-repeat 0 50%;
+    width: 165px;
+    padding-left: 64px;
+  }
+  .awards--aaa {
+    background: image-url("application/awards.aaa.png") no-repeat 0 50%;
+    width: 150px;
+    padding-left: 75px;
+  }
+}
+
+/* Page TEASERS
+  ========================================================================== */
+.page-teasers {
+  background: $dark-blue;
+  .teasers {
+    text-align: center;
+    .item {
+      display: inline-block;
+      text-decoration: none;
+      color: $white;
+      width: 33.3333%;
+      padding: 35px 0;
+      &:hover {
+        background: $light-blue;
+      }
+      .icon {
+        width: 63px;
+        height: 63px;
+        display: inline-block;
+        &.algo {
+          background: image-url("application/pages/teasers/algo.png") no-repeat 50% 50%;
+        }
+        &.services {
+          background: image-url("application/pages/teasers/services.png") no-repeat 50% 50%;
+        }
+        &.training {
+          background: image-url("application/pages/teasers/training.png") no-repeat 50% 50%;
+        }
+        &.training-remote {
+          background: image-url("application/pages/teasers/training-remote.png") no-repeat 50% 50%;
+        }
+        &.training-individual {
+          background: image-url("application/pages/teasers/training-individual.png") no-repeat 50% 50%;
+        }
+        &.training-coach {
+          background: image-url("application/pages/teasers/training-coach.png") no-repeat 50% 50%;
+        }
+        &.ask-question {
+          background: image-url("application/pages/teasers/ask-question.png") no-repeat 50% 50%;
+        }
+        &.structural-products {
+          background: image-url("application/pages/teasers/structural-products.png") no-repeat 50% 50%;
+        }
+        &.webinar {
+          background: image-url("application/pages/teasers/webinar.png") no-repeat 50% 50%;
+        }
+        /* Page investing */
+        &.npf {
+          background: image-url("application/pages/teasers/npf.png") no-repeat 50% 50%;
+        }
+        &.trust-management {
+          background: image-url("application/pages/teasers/trust-management.png") no-repeat 50% 50%;
+        }
+        &.mutual-funds {
+          background: image-url("application/pages/teasers/mutual-funds.png") no-repeat 50% 50%;
+        }
+      }
+      .title {
+        position: relative;
+        margin: 0;
+        padding: 12px 0;
+        font-size: 14px;
+        font-weight: 300;
+        &:after {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          margin-left: -12px;
+          width: 24px;
+          height: 1px;
+          background-color: white;
+          content: "";
+        }
+      }
+      p {
+        margin: 5px 0;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   Стили для страниц
+   ========================================================================== */
+/* INDEX
+   ========================================================================== */
+.page-index {
+  /* Subsection Cover
+   ========================================================================== */
+  .cover {
+    background: $dark-blue;
+    color: #fff;
+    .content {
+      .description {
+        float: left;
+        img {
+          margin: 20px 0 10px;
+        }
+      }
+      .example {
+        float: right;
+        margin-right: -490px;
+        width:350px;
+        height: 297px;
+        text-align: left;
+      }
+    }
+  }
+  
+  /* News, Invest ideas
+   ========================================================================== */
+  .news-list,
+  .invest-ideas {
+    float: left;
+    margin: 0 0 50px 30px;
+    padding: 20px 30px;
+    width:415px;
+    height: 440px;
+    vertical-align: top;
+    background: $dark-gray;
+    >.title {
+      margin: 0 0 8px;
+      padding: 0;
+      font-size: 30px;
+      &:after { display: none; }
+    }
+    .item {
+      margin: 0 0 30px;
+      >.title {
+        margin: 0;
+        padding: 0;
+        font-size: 27px;
+        font-weight: 600;
+        &:after { display: none; }
+      }
+    }
+  }
+  .news-list { margin: 0; }
+}
+/* TRADING
+   ========================================================================== */
+.page-trading {
+  /* Subsection COMFORTABLY
+   ========================================================================== */
+  .comfortably {
+    text-align: center;
+    padding: 50px 0;
+    p {
+      font-family: Georgia, serif;
+      font-size: 16px;
+      font-style: italic;
+    }
+  }
+  /* Subsection TOOLS
+   ========================================================================== */
+  .tools {
+    text-align: center;
+    padding: 50px 0;
+    >p {
+      font-family: Georgia, serif;
+      font-size: 16px;
+      font-style: italic;
+    }
+    .items {
+      padding: 30px 0;
+      .item {
+        display: inline-block;
+        width: 220px;
+        vertical-align: top;
+        text-align: left;
+        margin: 0 11px;
+        .img {
+          width:220px;
+          height: 170px;
+          background: $dark-blue;
+          text-align: center;
+          .image_one {
+            background: image-url("application/tools.stocks.bonds.png") no-repeat;
+            width:172px;
+            height: 102px;
+            display: inline-block;
+            margin: 35px 0 0;
+          }
+          .image_two {
+            background: image-url("application/tools.international.stocks.png") no-repeat;
+            width:127px;
+            height: 126px;
+            display: inline-block;
+            margin: 23px 0 0;
+          }
+          .image_three {
+            background: image-url("application/tools.currency.png") no-repeat;
+            width:97px;
+            height: 109px;
+            display: inline-block;
+            margin: 30px 0 0;
+          }
+          .image_four {
+            background: image-url("application/tools.futures.options.png") no-repeat;
+            width:78px;
+            height: 102px;
+            display: inline-block;
+            margin: 35px 0 0; 
+          }
+        }
+        h3 {
+          margin: 5px 0;
+          font-size: 25px;
+        }
+        p {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .platform {
+    .items {
+      margin: 20px 0 0;
+      .item {
+        display: inline-block;
+        width: 490px;
+        vertical-align: top;
+        margin: 0;
+        .image {
+          display: inline-block;
+          width: 185px;
+          height: 266px;
+          vertical-align: top;
+          margin-right: 15px;
+        }
+        .meta-trader {
+          background: image-url("application/platform.meta-trader.png") no-repeat;
+        }
+        .quick {
+          background: image-url("application/platform.quick.png") no-repeat;
+        }
+        .description {
+          display: inline-block;
+          width: 290px;
+          text-align: left;
+          h3 {
+            font-weight: 600;
+            font-size: 30px;
+            margin: 0;
+          }
+          .icons {
+            font-size: 36px;
+            color: $dark-blue;
+            .fa {
+              margin: 0 8px 0 0;
+            }
+          }
+          p {
+            font-weight: 400;
+            font-size: 13px;
+            padding-right: 28px;
+          }
+        }
+      }
+    }
+  }
+  /* Subsection RATES
+   ========================================================================== */
+  .rates {
+    padding: 50px 0;
+  }
+}
+/* RATES
+   ========================================================================== */
+.rates { 
+  padding: 50px 0;
+  .item {
+    display: inline-block;
+    width: 270px;
+    height:270px;
+    vertical-align: top;
+    margin: 2px;
+    padding: 30px 25px;
+    background: $dark-gray;
+    position: relative;
+
+    .title { 
+      line-height: 30px;
+      font-size: 28px;
+      b { font-weight: 600; }
+    }
+    p {
+      font-family: Georgia, serif;
+      font-size: 15px;
+      font-style: italic;
+    }
+    .actions {
+      position: absolute;
+      bottom: 30px;
+      a:first-child { margin-right: 1px; }
+    }
+  }
+}
+/* Pricing Plan
+   ========================================================================== */
+.rates-detail {
+  padding: 30px 0;
+  text-align: center;
+  .item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px;
+    text-align: left;
+    width:310px;
+    table {
+      width: 100%;
+      margin: 0 0 5px;
+      tr {
+        background: #eaeaea;
+        font-size: 10px;
+        &:nth-child(odd) td {
+         background: #e1e1e1;
+        }
+        td {
+          padding: 10px;
+          text-align: right;
+          &:nth-child(odd) {
+           text-align: left;
+          }
+        }
+      }
+      th {
+        background: $dark-blue;
+        color: $white;
+        font-size: 12px;
+        padding: 10px;
+      }
+    }
+  }
+  .btn {
+    margin: 20px 0 0;
+  }
+}
+/* Learning
+   ========================================================================== */
+.page-learning {
+  .events-header {
+    padding: 12px 0;
+    background: $dark-gray;
+
+    .title {
+      font-size: 24px;
+    }
+  }
+  /* Фильтр событий */
+  .filter {
+    margin-left: 20px;
+    padding: 6px 0 0;
+    line-height: 30px;
+
+    .item {
+      margin-left: 20px;
+    }
+  }
+  .learning-events {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .item {
+      padding: 18px 0;
+      
+      .title {
+        float: left;
+        padding-left: 30px;
+        width: 645px;
+        font-size: 14px;
+        &.webinar {
+          background: image-url("application/pages/learning/icon-webinar.png") no-repeat 0 50%;
+        }
+        &.seminar {
+          background: image-url("application/pages/learning/icon-seminar.png") no-repeat 0 50%;
+        }
+        &.masterclass {
+          background: image-url("application/pages/learning/icon-masterclass.png") no-repeat 0 50%;
+        }
+      }
+      .tags {
+        float: right;
+        width: 305px;
+        line-height: 21px;
+
+        .item {
+          display: inline-block;
+          margin: 0 2px 2px 0;
+          padding: 4px;
+          font-size: 10px;
+          line-height: 14px;
+          background-color: #cecece;
+          border-radius: 2px;
+        }
+      }
+      &:nth-child(odd) {
+        background-color: $white;
+      }
+      &:nth-child(even) {
+        background-color: $light-gray;
+      }
+    }
+  }
+  /* Показать ещё */
+  .actions {
+    padding: 18px 0;
+    text-align: center;
+  }
+}
+
+/* Open account
+   ========================================================================== */
+.page-open-account {
+  .slide {
+    background: image-url("application/layout/10.jpg") no-repeat 50% 50%;
+  }
+  .form-layout,
+  .description-layout { padding: 36px 0; }
+  .form-layout {
+    float: left;
+    width: 430px;
+
+    /* Элементы формы */
+    .form-row { 
+      margin: 0 0 5px 0;
+      &.consent,
+      &.actions {
+        line-height: 36px;
+      }
+      .field_with_errors { display: inline; }
+    }
+    label {
+      color: white;
+    }
+    .input-text {
+      padding: 0 3%;
+      width: 94%;
+      line-height: 36px;
+      border: 0;
+    }
+    .input-checkbox {
+      margin-right: 6px;
+    }
+    .input-text::-webkit-input-placeholder { color: $dark-blue; }
+    .input-text:-moz-placeholder { color: $dark-blue; }
+  }
+  .description-layout {
+    float: right;
+    width: 450px;
+    color: white;
+
+    p:first-child { margin-top: 0; }
+  }
+}
+
+/* Investing
+   ========================================================================== */
+.page-investing {
+  .slide {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+    border-bottom: 4px solid #fff;
+    
+    &.model-portfolios {
+      background: image-url("application/pages/investing/model-portfolios-teaser.jpg") no-repeat left 50%;
+    }
+    &.structural-products {
+      background: image-url("application/pages/investing/structural-products-teaser.jpg") no-repeat 20% 50%;
+    }
+    &.open-advisor {
+      background: image-url("application/pages/investing/open-advisor-teaser.jpg") no-repeat left 50%;
+    }
+    &.personal-broker {
+      background: image-url("application/pages/investing/personal-broker-teaser.jpg") no-repeat left 50%;
+    }
+    .product {
+      padding: 60px 2em 60px 3em;
+      width: 430px;
+      font-size: 15px;
+      .params,
+      .description {
+        margin-bottom: 2em;
+        padding: 0;
+        font-family: Georgia, serif;
+        font-style: italic;
+      }
+      .params {
+        list-style: none;
+        text-align: center;
+      }
+
+    }
+
+    &.pull-left {
+      float: none;
+      margin-right: 50%;
+      width: 50%;
+      >.item {
+        position: relative;
+        margin-right: -100%;
+        width: 100%;
+        z-index: 1;
+        >.product { 
+          float: left;
+        }
+        &:before {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 100%;
+          margin-right: -100px;
+          width: 150px;
+          content: "";
+          -moz-transform: skewX(-10deg);
+          -ms-transform: skewX(-10deg);
+          -o-transform: skewX(-10deg);
+          -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+          z-index: -1;
+        }
+      }
+    }
+    &.pull-right {
+      float: none;
+      margin-left: 50%;
+      width: 50%;
+      >.item {
+        position: relative;
+        margin-left: -100%;
+        width: 100%;
+        z-index: 1;
+        >.product { float: right; }
+        &:before {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 100%;
+          margin-left: -100px;
+          width: 150px;
+          content: "";
+          -moz-transform: skewX(-10deg);
+          -ms-transform: skewX(-10deg);
+          -o-transform: skewX(-10deg);
+          -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+          z-index: -1;
+        }
+      }
+    }
+    /* Бэкграунды для скосов */
+    .item.bg-gray:before { background-color: $dark-gray; }
+    .item.bg-white:before { background-color: white; }
+  }
+  
+}
+
+/* Structural products
+   ========================================================================== */
+.page-structural-products {
+  .product-teasers,
+  .existing-products {
+    padding: 50px 0;
+  }
+
+  .product-teasers .item {
+    margin: 0 1%;
+    width: 31%;
+  }
+  .existing-products {
+    .item {
+      padding: 40px 104px 40px 240px;
+      border-bottom: 1px solid #cbcbcb;
+      &:last-child { border: 0; }
+      &.defensive { background: image-url("application/pages/investing/structural-products/type-defensive.png") no-repeat 104px 60px; }
+      &.coupon { background: image-url("application/pages/investing/structural-products/type-coupon.png") no-repeat 104px 60px; }
+      &.securities { background: image-url("application/pages/investing/structural-products/type-securities.png") no-repeat 104px 60px; }
+    }
+    .wrap {
+      float: left;
+      width: 365px;
+    }
+    .graph {
+      float: right;
+      padding: 18px 0 0;
+      width: 222px;
+      .product-params {
+        margin: 18px -104px 0 0;
+        font-size: 10px;
+        table {
+          width: 100%;
+          td {
+            padding: 9px 18px;
+            color: #2f323b;
+          }
+          tr:first-child td {
+            font-size: 12px;
+            background-color: $dark-blue;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
