@@ -1,32 +1,32 @@
-# Unicorn configuration file to be running by unicorn_init.sh with capistrano task
-# read an example configuration before: http://unicorn.bogomips.org/examples/unicorn.conf.rb
-# 
-# working_directory, pid, paths - internal Unicorn variables must to setup
-# worker_process 4              - is good enough for serve small production application
-# timeout 30                    - time limit when unresponded workers to restart
-# preload_app true              - the most interesting option that confuse a lot of us,
-#                                 just setup is as true always, it means extra work on 
-#                                 deployment scripts to make it correctly
-# BUNDLE_GEMFILE                - make Gemfile accessible with new master
-# before_fork, after_fork       - reconnect to all dependent services: DB, Redis, Sphinx etc.
-#                                 deal with old_pid only if CPU or RAM are limited enough
-#
-# config/server/production/unicorn.rb
- 
- 
-app_path          = "/home/rails/apps/bdo/current"
- 
-working_directory "#{app_path}"
-pid               "/home/unicorn/pids/unicorn.pid"
-stderr_path       "/home/unicorn/log/unicorn.log"
-stdout_path       "/home/unicorn/log/unicorn.log"
- 
-listen            "/home/unicorn/sockets/unicorn.production.sock"
-worker_processes  2
-timeout           30
-preload_app       true
- 
- 
+env = ENV["RAILS_ENV"] || "development"
+if env == "production"
+  root = "/home/cinic/bdo/production/current"
+  working_directory root
+  user("cinic","cinic")
+  pid "#{root}/tmp/pids/unicorn.pid"
+  stderr_path "#{root}/log/unicorn.stderr.log"
+  stdout_path "#{root}/log/unicorn.stdout.log"
+
+  listen "#{root}/tmp/sockets/unicorn.ifoxy.sock", :backlog => 64
+end
+worker_processes 4
+timeout 30
+preload_app true
+GC.respond_to?(:copy_on_write_friendly=) and
+  GC.copy_on_write_friendly = true
+before_fork do |server, worker|
+  old_pid = "#{root}/tmp/pids/unicorn.pid.oldbin"
+  if File.exists?(old_pid) && server.pid != old_pid
+    begin
+      Process.kill("QUIT", File.read(old_pid).to_i)
+    rescue Errno::ENOENT, Errno::ESRCH
+      # someone else did our job for us
+    end
+  end
+end
+
+# Force the bundler gemfile environment variable to
+# reference the capistrano "current" symlink
 before_exec do |_|
-  ENV["BUNDLE_GEMFILE"] = File.join(app_path, 'Gemfile')
+  ENV["BUNDLE_GEMFILE"] = File.join(root, 'Gemfile')
 end

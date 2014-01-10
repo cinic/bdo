@@ -1,13 +1,15 @@
 set :stage, :production
+set :rvm_type, :user
+set :deploy_to, '/home/cinic/bdo/production'
 
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{198.199.125.38}
-role :web, %w{198.199.125.38}
-role :db,  %w{198.199.125.38}
+role :app, %w{cinic@bdo.ifoxy.net}
+role :web, %w{cinic@bdo.ifoxy.net}
+role :db,  %w{cinic@bdo.ifoxy.net}
 
 # Extended Server Syntax
 # ======================
@@ -15,7 +17,7 @@ role :db,  %w{198.199.125.38}
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server '198.199.125.38', roles: %w{web app db}, primary: :true
+server 'bdo.ifoxy.net', roles: %w{web app}, primary: :true
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
