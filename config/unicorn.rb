@@ -7,7 +7,7 @@ if env == "production"
   stderr_path "#{root}/log/unicorn.stderr.log"
   stdout_path "#{root}/log/unicorn.stdout.log"
 
-  listen "#{root}/tmp/sockets/unicorn.ifoxy.sock", :backlog => 64
+  listen "#{root}/tmp/sockets/unicorn.sock", :backlog => 64
 end
 worker_processes 4
 timeout 30
