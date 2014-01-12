@@ -1,5 +1,23 @@
 $(function(){
-  
+  //Шапка
+  var lastScrollTop = 0, delta = 5;
+  $(window).scroll(function(e) {
+      var t = $(this).scrollTop();
+      if (Math.abs(lastScrollTop - t) <= delta)
+          return;
+      t > lastScrollTop ? $("header.header").queue(function() {
+          $(this).addClass("min");
+          $(this).dequeue()
+      }) : $("header.header").queue(function() {
+          $(this).removeClass("min");
+          $(this).dequeue()
+      });
+      lastScrollTop = t;
+      t <= 0 && $("header.header").removeClass("min")
+  });
+  $("header.header").hover(function() {
+    $(this).removeClass("min");
+  });
   // Плавное появление суб меню
   /*$( window ).scroll( function() {
     if( $(window).scrollTop() > 101 ) {

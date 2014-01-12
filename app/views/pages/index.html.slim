@@ -48,6 +48,7 @@ section.slide.white
   .layout.group
     .news-list
       h3.title Новости
+      = render partial: "shared/news/list", collection: @news_list, as: :item
       .item
         h4.title
           |&laquo;

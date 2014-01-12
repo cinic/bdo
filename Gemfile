@@ -74,15 +74,12 @@ group :test do
 end
 
 # Use Capistrano for deployment
-#gem "capistrano", "~> 3.0.1", group: :development
-# Use Capistrano for deployment
 group :development do
   gem 'capistrano', '~> 3.0'
   gem 'capistrano-bundler'
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-rvm', github: 'capistrano/rvm'
 end
-#gem "rvm-capistrano", group: :development
 
 # Use debugger
 gem 'debugger', group: [:development, :test]

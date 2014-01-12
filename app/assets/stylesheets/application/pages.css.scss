@@ -32,12 +32,13 @@
   }
   /* Обложки */
   &.cover {
-    min-height: 500px;
+    height: 480px;
     font-size: 18px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover !important;
+    overflow: hidden;
     /* Главная страница */
     &.index { 
       background: image-url("application/layout/10.jpg") no-repeat center center;
@@ -87,7 +88,7 @@
     }
 
     .content {
-      margin: 8.33333333333333em 0;
+      margin: 4.33333333333333em 0;
       width: 490px;
       text-align: center;
       color: #fff;
@@ -129,7 +130,6 @@
         padding: 0;
         font-size: 25px;
         line-height: 24px;
-        background: $dark-blue;
         text-align: left;
         padding-top: 170px;
         span {
@@ -145,41 +145,44 @@
             width: 100%;
             height: 170px;
             content: "";
+            background-color: $dark-blue;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
           }
         }
         .model-portfolios {
           &:before {
-            background: image-url("application/teasers.modeling.portfolios.png") no-repeat 50% 50%;
+            background-image: image-url("application/teasers.modeling.portfolios.png");
           }
         }
         .structural-products {
           &:before {
-            background: image-url("application/teasers.structural.products.png") no-repeat 50% 50%;
+            background-image: image-url("application/teasers.structural.products.png");
           }
         }
         .trading-signals {
           &:before {
-            background: image-url("application/teasers.trading.signals.png") no-repeat 50% 50%;
+            background-image: image-url("application/teasers.trading.signals.png");
           }
         }
         .active-trading {
           &:before {
-            background: image-url("application/teasers.trading.png") no-repeat 50% 50%;
+            background-image: image-url("application/teasers.trading.png");
           }
         }
         .defensive {
           &:before {
-            background: image-url("application/pages/product-teasers/structural-products-defensive.png") no-repeat 50% 50%;
+            background-image: image-url("application/pages/product-teasers/structural-products-defensive.png");
           }
         }
         .coupon {
           &:before {
-            background: image-url("application/pages/product-teasers/structural-products-coupon.png") no-repeat 50% 50%;
+            background-image: image-url("application/pages/product-teasers/structural-products-coupon.png");
           }
         }
         .securities {
           &:before {
-            background: image-url("application/pages/product-teasers/structural-products-securities.png") no-repeat 50% 50%;
+            background-image: image-url("application/pages/product-teasers/structural-products-securities.png");
           }
         }
       }

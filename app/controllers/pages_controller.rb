@@ -1,8 +1,8 @@
-# coding: utf-8
+# encoding: utf-8
 class PagesController < ApplicationController
   include HighVoltage::StaticPage
   
-  before_filter :set_cookies, :set_params
+  before_filter :set_cookies, :set_params, :init_pages_data
 
   def create
     @prospect = Prospect.new(prospect_params) || {}
@@ -49,5 +49,9 @@ class PagesController < ApplicationController
 
     def prospect_params
     	params.require(:prospect).permit(:first_name, :last_name, :patronymic, :email, :mobile, :consent)
+    end
+
+    def init_pages_data
+      @news_list = CompanyEvent.all
     end
 end
