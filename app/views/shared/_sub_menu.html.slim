@@ -4,4 +4,5 @@ nav.sub-nav
     ul.group
       - items.each do |item|
         li
-          = link_to item[0], page_path(item[1]), class: "item"
+          /= link_to item[0], page_path(item[1]), class: "item"
+          = li_with_link_to_unles_current item[0], page_path(item[1]), class: "item"

@@ -32,7 +32,7 @@
   }
   /* Обложки */
   &.cover {
-    height: 480px;
+    height: 400px;
     font-size: 18px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -43,7 +43,7 @@
     &.index { 
       background: image-url("application/layout/10.jpg") no-repeat center center;
       .content {
-        margin: 5.03333333333333em 0;
+        margin: 2.33333333333333em 0;
       }
     }
     &.open-advisor { 
@@ -88,7 +88,7 @@
     }
 
     .content {
-      margin: 4.33333333333333em 0;
+      margin: 2.33333333333333em 0;
       width: 490px;
       text-align: center;
       color: #fff;
@@ -123,16 +123,15 @@
       display: inline-block;
       width: 220px;
       vertical-align: top;
-      text-align: left;
       margin: 0 11px;
       position: relative;
       .title {
         padding: 0;
         font-size: 25px;
         line-height: 24px;
-        text-align: left;
         padding-top: 170px;
-        span {
+        span,
+        a {
           display: block;
           padding: 15px 0;
           line-height: 24px;
@@ -148,6 +147,7 @@
             background-color: $dark-blue;
             background-repeat: no-repeat;
             background-position: 50% 50%;
+            border-radius: 20px;
           }
         }
         .model-portfolios {
@@ -168,6 +168,11 @@
         .active-trading {
           &:before {
             background-image: image-url("application/teasers.trading.png");
+          }
+        }
+        .unit-fund {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/investing-unit-fund.png");
           }
         }
         .defensive {
@@ -315,6 +320,9 @@
 /* INDEX
    ========================================================================== */
 .page-index {
+  /* Product teasers
+   ========================================================================== */
+  .product-teasers { padding: 30px 0; }
   /* Subsection Cover
    ========================================================================== */
   .cover {

@@ -2,7 +2,7 @@
 - content_for :meta_description, ""
 - content_for :meta_keywords, ""
 - content_for :page_content_class, "page-structural-products"
-= render partial: "shared/sub_menu", locals: {items: [["Модельные портфели", "investing/model-portfolios"],["Структурные продукты", "investing/structural-products"],["Open Advisor", "investing/open-advisor"],["Личный брокер", "investing/personal-broker"]]}
+= render "pages/investing/menu"
 section.slide.cover.structural-products
   .layout.group
     .content.pull-right
@@ -16,15 +16,15 @@ section#product-types.slide.white
     h2.title Мы предлагаем структурные продукты
     .items
       .item
-        h3.title.bg-left
+        h3.title
           span.defensive Защитные
         p СП – готовое финансовое решение с высокой потенциальной доходностью и заданным уровнем риска.  
       .item
-        h3.title.bg-left 
+        h3.title
           span.coupon Купонные
         p Купонные продукты позволяют получать доходности на уровне рыночных, однако более стабильно, чем при прямом инвестировании за счет наличия гарантированной выплаты. 
       .item
-        h3.title.bg-left
+        h3.title
           span.securities Ценные бумаги
         p Продукты для держателей акции — возможность получить на свои бумаги больше.
 section.slide.gray.bordered

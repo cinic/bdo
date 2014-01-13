@@ -18,6 +18,11 @@ $(function(){
   $("header.header").hover(function() {
     $(this).removeClass("min");
   });
+
+  $('.no-touch  a[href^="#"]').on( 'click', function(e) {
+      e.preventDefault();
+      $('body').stop().scrollTo($(this).attr('href'), 800);
+  });
   // Плавное появление суб меню
   /*$( window ).scroll( function() {
     if( $(window).scrollTop() > 101 ) {

@@ -20,29 +20,32 @@ section.slide.cover.index
         = image_tag "application/pages/index/example.graph.png", alt: "Структурный продукт Сахарный Сезон"
 section.slide.white
   .product-teasers
+    h2.title Готовые решения
     .items
       .item
-        h3.title.bg-left
+        h3.title
           span.model-portfolios Модельные портфели
         p Потенциальная доходность 45% годовых
         = link_to "Подробнее", page_path("investing/model-portfolios"), class: "btn"
       .item
-        h3.title.bg-left
+        h3.title
           span.structural-products Структурные продукты
         p Надежность банка, доходность биржи
         = link_to "Подробнее", page_path("investing/structural-products"), class: "btn"
       .item
-        h3.title.bg-left 
+        h3.title
           span.trading-signals Торговые сигналы
         p Роботы торгуют за Вас
         = link_to "Подробнее", page_path("investing/open-advisor"), class: "btn"
       .item
-        h3.title.bg-left
-          span.active-trading
-            |Трейдинг
+        h3.title
+          span.unit-fund
+            |Паевые
             br
+            |фонды
             br
-        p Контролируйте свой доход
+        /p Контролируйте свой доход
+        p Диверсификация рисков даже для минимальных инвестиций
         = link_to "Подробнее", page_path("trading"), class: "btn"
 section.slide.white
   .layout.group
