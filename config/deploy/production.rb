@@ -7,9 +7,9 @@ set :deploy_to, '/home/cinic/bdo/production'
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{cinic@bdo.ifoxy.net}
-role :web, %w{cinic@bdo.ifoxy.net}
-role :db,  %w{cinic@bdo.ifoxy.net}
+role :app, %w{cinic@95.85.53.122}
+role :web, %w{cinic@95.85.53.122}
+role :db,  %w{cinic@95.85.53.122}
 
 # Extended Server Syntax
 # ======================
@@ -17,7 +17,7 @@ role :db,  %w{cinic@bdo.ifoxy.net}
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server 'bdo.ifoxy.net', roles: %w{web app}, primary: :true
+server '95.85.53.122', roles: %w{web app db}, my_property: :my_value
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
@@ -27,8 +27,8 @@ server 'bdo.ifoxy.net', roles: %w{web app}, primary: :true
     #verbose: :debug,
     user: "cinic",
     port: 2605,
-    keys: %w(/home/cinic/.ssh/id_rsa),
-    forward_agent: true,
+    keys: %w(~/.ssh/id_rsa),
+    forward_agent: false,
     auth_methods: %w(publickey)
   }
 # and/or per server
