@@ -61,9 +61,10 @@ group :production do
   gem 'unicorn'
 end
 group :development, :test do
+  gem 'rspec'
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'factory_girl_rails'
-  gem 'mongoid-rspec', '>= 1.6.0', github: 'evansagge/mongoid-rspec'
+  #gem 'mongoid-rspec', '>= 1.6.0', github: 'evansagge/mongoid-rspec'
   gem 'email_spec'
 end
 group :test do
