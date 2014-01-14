@@ -4,6 +4,9 @@ html
     title = yield(:page_title) + " | ОТКРЫТИЕ–Брокер"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag    "admin/admin", media: "all", "data-turbolinks-track" => true
+    javascript:
+      // Исправление для ckeditor
+      var CKEDITOR_BASEPATH = '/assets/ckeditor/';
     = javascript_include_tag "admin/admin", "data-turbolinks-track" => true
     = csrf_meta_tags
   body
