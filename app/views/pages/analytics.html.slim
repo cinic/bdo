@@ -1,11 +1,211 @@
 - content_for :title, "Аналитика"
 - content_for :meta_description, ""
 - content_for :meta_keywords, ""
-
-.content
-	.layout
-		section.feedback
-
-			h2
-				| Откройте аналитика
-				br прямо сейчас
+- content_for :page_content_class, "page-analytics"
+section.slide.white.analytics
+  .layout.group
+    .content
+      .stocks
+        .column
+          ul.list
+            li.item
+              = image_tag "analytics.temp-01.png", "class" => "shedule"
+              span.name MICEX-10
+              span.value 3128.08
+              span.changing
+                |(-47.46)
+            li.item
+              = image_tag "analytics.temp-01.png", "class" => "shedule"
+              span.name MICEX-10
+              span.value 3128.08
+              span.changing
+                |(-47.46)
+            li.item
+              = image_tag "analytics.temp-01.png", "class" => "shedule"
+              span.name MICEX-10
+              span.value 3128.08
+              span.changing
+                |(-47.46)
+        .column
+          ul.list
+            li.item
+              = image_tag "analytics.temp-01.png", "class" => "shedule"
+              span.name MICEX-10
+              span.value 3128.08
+              span.changing
+                |(-47.46)
+            li.item
+              = image_tag "analytics.temp-01.png", "class" => "shedule"
+              span.name MICEX-10
+              span.value 3128.08
+              span.changing
+                |(-47.46)
+            li.item
+              = image_tag "analytics.temp-01.png", "class" => "shedule"
+              span.name MICEX-10
+              span.value 3128.08
+              span.changing
+                |(-47.46)
+        .column
+          ul.list
+            li.item
+              = image_tag "analytics.temp-01.png", "class" => "shedule"
+              span.name MICEX-10
+              span.value 3128.08
+              span.changing
+                |(-47.46)
+            li.item
+              = image_tag "analytics.temp-01.png", "class" => "shedule"
+              span.name MICEX-10
+              span.value 3128.08
+              span.changing
+                |(-47.46)
+            li.item
+              = image_tag "analytics.temp-01.png", "class" => "shedule"
+              span.name MICEX-10
+              span.value 3128.08
+              span.changing
+                |(-47.46)
+      .invest-ideas.pull-left
+        h3.tittle Инвест идеи
+        .item
+          h4.tittle-date 12.06.2012
+          h5.tittle AUDUSD — закрываем идею
+          p
+            |27 августа мы рекомендовали к покупке австралийски1 доллар с горизонтом инвестирования 3-8 недель. Австралиец достиг обоих целевых значений, и мы предпочли зафиксировать прибыль по сделке на уровне 0,9669...
+        .item
+          h4.tittle-date 12.06.2012
+          figure
+            = image_tag "analitycs.invest.img-1.png", "class" => "invest-idea"
+          h5.tittle AUDUSD — закрываем идею
+          p
+            |27 августа мы рекомендовали к покупке австралийски1 доллар с горизонтом инвестирования 3-8 недель. Австралиец достиг обоих целевых значений, и мы предпочли зафиксировать прибыль по сделке на уровне 0,9669...
+      .top-list-trader.pull-left
+        h3.tittle  Топ лист трейдера
+        .item
+          h4.tittle-date 12.06.2012
+          h5.tittle Россети (1 час)
+          p
+            |16 сентября начинается прием заявок на участие в конкурсе «Лучший частный инвестр 2013». Ежегодный конкурс «Лучший частный инвестр» — традиционное соревнование, организуемое Московской биржей...
+        .item
+          h4.tittle-date 12.06.2012
+          figure
+            = image_tag "analitycs.invest.img-1.png", "class" => "top-list"
+          h5.tittle Россети (1 час)
+          p
+            |16 сентября начинается прием заявок на участие в конкурсе «Лучший частный инвестр 2013». Ежегодный конкурс «Лучший частный инвестр» — традиционное соревнование, организуемое Московской биржей...
+      a.btn Показать еще
+section.slide.white.analytics
+  .layout.group
+    .economic-events.pull-left
+      h3.tittle Календарь событий
+      table
+        tr
+          td colspan = "7"
+            |12.06.2012
+        tr
+          td 2:00 AM
+          td CHF
+          td
+            i.impact.low
+          td Trade Balance
+          td.better 2.49B
+          td 2.32B
+          td
+            |1.68B
+            i.fa.fa-chevron-up
+        tr
+          td 4:00 AM
+          td GBP
+          td
+            i.impact.medium
+          td MPC Member Bean Speaks
+          td
+          td
+          td
+        tr
+          td 4:30 AM
+          td GBP
+          td
+            i.impact.medium
+          td Public Sector Net Borrowing
+          td
+          td 10.4B
+          td 11.5B
+        tr
+          td 8:30 AM
+          td CAD
+          td
+            i.impact.high
+          td Core Retail Sales m/m 
+          td
+          td 0.2%
+          td 1.0%
+        tr
+          td
+          td CAD
+          td
+            i.impact.high
+          td Retail Sales m/m 
+          td
+          td 0.3%
+          td 0.6%
+      table
+        tr
+          td colspan = "7"
+            |12.06.2012
+        tr
+          td 2:00 AM
+          td CHF
+          td
+            i.impact.low
+          td Trade Balance
+          td.worse 2.49B
+          td 2.32B
+          td
+            |1.68B
+            i.fa.fa-chevron-down
+        tr
+          td 4:00 AM
+          td GBP
+          td
+            i.impact.medium
+          td MPC Member Bean Speaks
+          td
+          td
+          td
+        tr
+          td 4:30 AM
+          td GBP
+          td
+            i.impact.medium
+          td Public Sector Net Borrowing
+          td
+          td 10.4B
+          td 11.5B
+        tr
+          td 8:30 AM
+          td CAD
+          td
+            i.impact.high
+          td Core Retail Sales m/m 
+          td
+          td 0.2%
+          td 1.0%
+        tr
+          td
+          td CAD
+          td
+            i.impact.high
+          td Retail Sales m/m 
+          td
+          td 0.3%
+          td 0.6%
+    .market-date.pull-left
+      h3.tittle Маркет дата
+      .item
+        h4.tittle-date 12.06.2012
+        p ESH12
+        figure
+          = image_tag "application/analitycs.temp-02.png", "class" => "market-img"
+    a.btn Показать еще
