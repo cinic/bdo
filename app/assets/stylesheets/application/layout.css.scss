@@ -8,6 +8,7 @@ body {
   max-width: 1440px;
   min-width: 980px;
   font: 12px/1.5 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000;
   &.sub-nav-fixed { 
     >.header { margin-bottom: 46px; }
   }
@@ -281,7 +282,7 @@ header.header {
       margin: 0 10px;
       @include transition(all, 0.2s, ease-in-out);
       &:hover {
-        color: $blue;
+        color: $dark-blue;
         text-decoration: underline;
       }
     }
