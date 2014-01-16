@@ -7,5 +7,5 @@
 //= require jquery.ui.draggable
 //= require jquery.ui.resizable
 //= require jquery.ui.slider
-//= require turbolinks
+// require turbolinks
 //= require_tree .
