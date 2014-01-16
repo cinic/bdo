@@ -22,7 +22,7 @@ section#model-portfolios.slide.white.group.pull-left.model-portfolios
         li Управление счетом онлайн через Личный кабинет
         li Рекомендации команды экспертов каждую неделю
       p.centered
-        a.btn Подробнее
+        = link_to "Подробнее", page_path("investing/model-portfolios"), class: "btn"
 section.slide.gray.pull-right.structural-products.group
   .pull-left.bg-gray.item
     .structural-products.product
@@ -54,7 +54,7 @@ section.slide.white.pull-left.group.open-advisor
         li 24 стратегии на выбор
         li Полный контроль счета в режиме онлайн
       p.centered
-        a.btn Подробнее
+        = link_to "Подробнее", page_path("investing/open-advisor"), class: "btn"
 section.slide.gray.pull-right.personal-broker.group
   .pull-left.bg-gray.item
     .personal-broker.product
