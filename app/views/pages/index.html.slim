@@ -23,49 +23,35 @@ section.slide.white
     h2.title Готовые решения
     .items
       .item
-        h3.title
-          span.model-portfolios Модельные портфели
-        p Потенциальная доходность 45% годовых
-        = link_to "Подробнее", page_path("investing/model-portfolios"), class: "btn"
+        a href="#{page_path('investing/model-portfolios')}"
+          h3.title
+            span.model-portfolios Модельные портфели
+          p.lead Потенциальная доходность 45% годовых
       .item
-        h3.title
-          span.structural-products Структурные продукты
-        p Надежность банка, доходность биржи
-        = link_to "Подробнее", page_path("investing/structural-products"), class: "btn"
+        a href="#{page_path('investing/structural-products')}"
+          h3.title
+            span.structural-products Структурные продукты
+          p.lead Надежность банка, доходность биржи
       .item
-        h3.title
-          span.trading-signals Торговые сигналы
-        p Роботы торгуют за Вас
-        = link_to "Подробнее", page_path("investing/open-advisor"), class: "btn"
+        a href="#{page_path('investing/open-advisor')}"
+          h3.title
+            span.trading-signals Торговые сигналы
+          p.lead Роботы торгуют за Вас
       .item
-        h3.title
-          span.unit-fund
-            |Паевые
-            br
-            |фонды
-            br
-        /p Контролируйте свой доход
-        p Диверсификация рисков даже для минимальных инвестиций
-        = link_to "Подробнее", page_path("trading"), class: "btn"
+        a href="#{page_path('trading')}"
+          h3.title
+            span.unit-fund
+              |Паевые
+              br
+              |фонды
+              br
+          p.lead Диверсификация рисков даже для минимальных инвестиций
 section.slide.white
   .layout.group
     .news-list
       h3.title Новости
       = render partial: "shared/news/list", collection: @news_list, as: :item
-      .item
-        h4.title
-          |&laquo;
-          b Лучший инвестр 2013
-          |&raquo;
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ultrices est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ut ultrices felis. Proin sed tincidunt erat, non euismod est. Sed in tellus non mi egestas porta vel sed sapien.
-        a.btn href="#" Подробнее
-      .item
-        h4.title
-          |&laquo;
-          b Лучший инвестр 2013
-          |&raquo;
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ultrices est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ut ultrices felis. Proin sed tincidunt erat, non euismod est. Sed in tellus non mi egestas porta vel sed sapien.
-        a.btn href="#" Подробнее
+      = link_to "больше новостей", "#", class: "btn"
     .invest-ideas
       h3.title Инвест идеи
       .item
