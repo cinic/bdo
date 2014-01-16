@@ -509,7 +509,7 @@
     padding: 50px 0;
   }
 }
-/* PAGE RATES
+/* RATES
    ========================================================================== */
 .rates { 
   padding: 50px 0;
@@ -540,7 +540,7 @@
     }
   }
 }
-/* PAGE Pricing Plan
+/* Pricing Plan
    ========================================================================== */
 .rates-detail {
   padding: 30px 0;
@@ -580,7 +580,7 @@
     margin: 20px 0 0;
   }
 }
-/* PAGE Learning
+/* Learning
    ========================================================================== */
 .page-learning {
   .events-header {
@@ -950,7 +950,7 @@
     }
   }
 }
-/* Page ANALITYCS
+/* ANALITYCS
    ========================================================================== */
 .page-analytics {
   .analytics {
@@ -1122,7 +1122,7 @@
     }
   }
 }
-/* PAGE TOOLS
+/* TOOLS
    ========================================================================== */
 .page-tools {
   .tools { 
@@ -1166,3 +1166,188 @@
     }
   }
 }
+/* OPEN ADVISOR
+   ========================================================================== */
+.page-open-advisor {
+  /* 1) Subsection COVER
+   ========================================================================== */
+  .open-advisor {
+    .content {
+      color: $black;
+      width: 650px;
+      h2 {
+        text-align:left;
+        font-size: 42px;
+        span {
+          display: block;
+        }
+      }
+      h3 {
+        font: italic 121px Georgia;
+        color:$dark-blue;
+        margin: -80px 0 0; 
+      }
+      p {
+        font: italic 18px Georgia;
+        margin: -25px 0 0 100px;
+      }
+    }
+  }
+  /* Subsection YIELD
+   ========================================================================== */
+  .yield {
+    padding: 60px 0;
+    .content {
+      text-align: center;
+      .schedule {
+        clear:both;
+        margin: 15px 0 0;
+      }
+      table {
+        border: none;
+        border-spacing: 0;
+        width: 958px;
+        margin: 40px auto;
+        text-align: left;
+        font-weight: 300;
+        font-size: 13px;
+        tr {
+          height: 35px;
+          background: #d9d9d9;
+          td {
+            padding: 10px;
+          }
+          .line_font-style {
+            font-weight: 600;
+          }
+          .icon_color {
+            color: #505050;
+            padding-left: 15px;
+            font-size: 20px;
+          }
+          .icon-download {
+            font-size: 20px;
+          }
+        }
+        .line_white {
+          background: $white;
+        }
+        .line_gray {
+          background: $light-gray;
+        }
+      }
+      .btn-show-more {
+        &:hover {
+          background: $orange;
+        }
+      }
+    }
+  }
+  /* Subsection DESCRIPTION
+   ========================================================================== */
+ .description {
+    background: $dark-blue image-url("application/open.advisor.description.bg.png") no-repeat center bottom;
+    filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/open.advisor.description.bg.png', sizingMethod='scale')";
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/open.advisor.description.bg.png', sizingMethod='scale')";
+    height:615px;
+    color: $white;
+    position: relative;
+    .content {
+      width: 650px;
+      margin: 100px 0 0;
+      .title {
+        text-align: left;
+      }
+      p {
+        font: italic 18px Georgia;
+      }
+      article {
+        background: $dark-gray;
+        position: absolute;
+        padding: 10px;
+        color: $dark-blue;
+        border-radius: 4px;
+        top: 330px;
+        right: 90px;
+      }
+    }
+  }
+  /* Subsection CONNECT OPTIONS
+   ========================================================================== */
+  .connect-options {
+    padding: 30px 0;
+    text-align: center;
+    table {
+      border: none;
+      border-spacing: 0;
+      width: 958px;
+      margin: 40px auto;
+      text-align: left;
+      font-weight: 300;
+      font-size: 13px;
+      tr {
+        height: 35px;
+        background: #d9d9d9;
+        font-weight: 400;
+        font-size: 13px;
+        td {
+          padding: 10px 10px 10px 20px;
+        }
+        .col__left {
+          background: #74c0e4;
+          color: $white;
+          font-size: 14px;
+        }
+        .col__right {
+          background: $dark-blue;
+          color: $white;
+          font-size: 14px;
+        }
+        .col__right__icon {
+          background: image-url("application/open.advisor.pro.png");
+          width:46px;
+          height:20px;
+          display: block;
+          float: right;
+        }
+        .col__left__icon {
+          background: image-url("application/open.advisor.lite.png");
+          width:25px;
+          height:25px;
+          display: block; 
+          float: right;
+        }
+      }
+      tr {
+        &:nth-child(odd) {
+          background: $white;
+        }
+        &:nth-child(even) {
+          background: $light-gray;
+        }
+        th {
+          background: $orange;
+          height:30px;
+          text-align: center;
+          color: $white;
+          font-size: 16px;
+        }
+      }
+      .line_button {
+        text-align: center;
+        .btn-connect-left {
+          background: $light-blue;
+          &:hover {
+            background: $dark-blue;
+          }
+        }
+        .btn-connect-right {
+          &:hover {
+            background: $light-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
