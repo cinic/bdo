@@ -3,10 +3,10 @@ html
   head
     title
         = (yield(:title) + " | " unless yield(:title).blank?).to_s + "ОТКРЫТИЕ Брокер" 
-    = stylesheet_link_tag   "application/application", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag   "application/application", media: "all"
     = csrf_meta_tags
   body class="#{yield(:page_content_class)}"
     == render "shared/header"
     = yield
     == render "shared/footer"
-    = javascript_include_tag "application/application", "data-turbolinks-track" => true
+    = javascript_include_tag "application/application"
