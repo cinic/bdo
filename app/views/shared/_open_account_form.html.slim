@@ -6,7 +6,7 @@
         - @prospect.errors.full_messages.each do |message|
           li = message
   .form-row
-    = f.text_field :first_name, class: "input-text", placeholder: "Имя"
+    = f.text_field :first_name, class: "input-text", placeholder: "Имя", autofocus: true
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Фамилия"
   .form-row

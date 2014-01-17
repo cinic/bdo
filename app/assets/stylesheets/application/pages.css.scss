@@ -34,10 +34,6 @@
   &.cover {
     height: 450px;
     font-size: 18px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover !important;
     overflow: hidden;
     /* Главная страница */
     &.index { 
@@ -68,11 +64,14 @@
       background: image-url("application/pages/covers/structural-products.jpg") no-repeat center top;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/structural-products.jpg"), sizingMethod='scale');
       -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/cover/structural-products.jpg"), sizingMethod='scale');
+      .title {
+        font-size: 38px;
+      }
     }
     &.personal-broker {
-      background: image-url("application/pages/covers/personal-broker.jpeg") no-repeat center top;
-      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/personal-broker.png"), sizingMethod='scale');
-      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/personal-broker.png"), sizingMethod='scale');
+      background: image-url("application/pages/covers/personal-broker.jpg") no-repeat center top;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/personal-broker.jpg"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/personal-broker.jpg"), sizingMethod='scale');
     }
 
     .title {
@@ -88,7 +87,7 @@
     }
 
     .content {
-      margin: 3.33333333333333em 0;
+      margin: 100px 0 0;
       width: 490px;
       text-align: center;
       color: #fff;

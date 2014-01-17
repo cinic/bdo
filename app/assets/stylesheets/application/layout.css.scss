@@ -225,7 +225,7 @@ header.header {
 .footer {
   background: #2b3038;
   margin: 0;
-  padding: 36px 0 18px;
+  padding: 9px 0 18px;
   .address {
     float: left;
     height: 50px;
@@ -257,15 +257,12 @@ header.header {
         display: inline-block;
         margin: 0 5px;
         .link {
-          text-transform: uppercase;
           color: white;
-          border: 1px solid transparent;
+          /*border: 1px solid white;*/
           padding: 5px;
           border-radius: 4px;
-          text-decoration: none;
           @include transition(all, 0.2s, ease-in-out);
           &:hover {
-            border: 1px solid #00bbe4;
             color: #00bbe4;
           }
         }
@@ -275,21 +272,19 @@ header.header {
   .copyright {
     float: left;
     color: white;
-    margin: 80px 0 0;
+    margin: 36px 0 0;
     a {
       color: white;
-      text-decoration: none;
       margin: 0 10px;
       @include transition(all, 0.2s, ease-in-out);
       &:hover {
-        color: $dark-blue;
-        text-decoration: underline;
+        color: #00bbe4;
       }
     }
   }
   .social {
     float: right;
-    margin: 70px 0 0;
+    margin: 26px 0 0;
     .item {
       display: inline-block;
       font-size: 32px;
@@ -298,7 +293,7 @@ header.header {
       text-decoration: none;
       @include transition(color, 0.2s, ease-in-out);
       &:hover {
-        color: $gray;
+        color: #00bbe4;
       }
     } 
   }
