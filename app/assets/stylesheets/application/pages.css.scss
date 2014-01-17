@@ -203,6 +203,61 @@
             background-image: image-url("application/pages/product-teasers/structural-products-securities.png");
           }
         }
+        .stocks-bond {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/stocks-bond.png");
+          }
+        }
+        .international-stock {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/international-stock.png");
+          }
+        }
+        .currency {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/currency.png");
+          }
+        }
+        .futures-option {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/futures-option.png");
+          }
+        }
+        .consultant {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/consultant.png");
+          }
+        }
+        .service {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/service.png");
+          }
+        }
+        .command {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/command.png");
+          }
+        }
+        .access {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/access.png");
+          }
+        }
+        .news {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/news.png");
+          }
+        }
+        .career {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/career.png");
+          }
+        }
+        .contact {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/contact.png");
+          }
+        }
       }
       p,
       .lead {
@@ -433,53 +488,14 @@
       font-style: italic;
     }
     .items {
-      padding: 30px 0;
       .item {
-        display: inline-block;
-        width: 220px;
-        vertical-align: top;
         text-align: left;
-        margin: 0 11px;
-        .img {
-          width:220px;
-          height: 170px;
-          background: $dark-blue;
-          text-align: center;
-          .image_one {
-            background: image-url("application/tools.stocks.bonds.png") no-repeat;
-            width:172px;
-            height: 102px;
-            display: inline-block;
-            margin: 35px 0 0;
+        .title {
+          span {
+            &:before {
+              border-radius: 0;
+            }
           }
-          .image_two {
-            background: image-url("application/tools.international.stocks.png") no-repeat;
-            width:127px;
-            height: 126px;
-            display: inline-block;
-            margin: 23px 0 0;
-          }
-          .image_three {
-            background: image-url("application/tools.currency.png") no-repeat;
-            width:97px;
-            height: 109px;
-            display: inline-block;
-            margin: 30px 0 0;
-          }
-          .image_four {
-            background: image-url("application/tools.futures.options.png") no-repeat;
-            width:78px;
-            height: 102px;
-            display: inline-block;
-            margin: 35px 0 0; 
-          }
-        }
-        h3 {
-          margin: 5px 0;
-          font-size: 25px;
-        }
-        p {
-          font-weight: 400;
         }
       }
     }
@@ -492,21 +508,11 @@
         width: 490px;
         vertical-align: top;
         margin: 0;
-        .image {
-          display: inline-block;
-          width: 185px;
-          height: 266px;
-          vertical-align: top;
-          margin-right: 15px;
-        }
-        .meta-trader {
-          background: image-url("application/platform.meta-trader.png") no-repeat;
-        }
-        .quick {
-          background: image-url("application/platform.quick.png") no-repeat;
+        figure {
+          margin:0 15px 0 0;
         }
         .description {
-          display: inline-block;
+          overflow: hidden;
           width: 290px;
           text-align: left;
           h3 {
@@ -890,45 +896,13 @@
       font-style: italic;
     }
     .items {
-      padding: 30px 0;
       .item {
-        display: inline-block;
-        width: 220px;
-        vertical-align: top;
         text-align: left;
-        margin: 0 11px;
-        .img {
-          width:220px;
-          height: 170px;
-          background: $dark-blue;
-          text-align: center;
-          .image_one {
-            background: image-url("application/about.consultant.png") no-repeat;
-            width:92px;
-            height: 123px;
-            display: inline-block;
-            margin: 25px 0 0;
-          }
-          .image_two {
-            background: image-url("application/about.services.png") no-repeat;
-            width:120px;
-            height: 109px;
-            display: inline-block;
-            margin: 32px 0 0;
-          }
-          .image_three {
-            background: image-url("application/about.command.png") no-repeat;
-            width:161px;
-            height: 96px;
-            display: inline-block;
-            margin: 37px 0 0;
-          }
-          .image_four {
-            background: image-url("application/about.access.png") no-repeat;
-            width:93px;
-            height: 123px;
-            display: inline-block;
-            margin: 23px 0 0;
+        .title {
+          span {
+            &:before {
+              border-radius: 0;
+            }
           }
         }
       }
@@ -1434,104 +1408,79 @@
     text-align: center;
   }
 }
-/* PERSONAL BROKER
+/* COMPANY
    ========================================================================== */
 .page-company {
-  /* Subsection ABOUT
-   ========================================================================== */
-  .about {
-    text-align: center;
-    padding: 50px 0;
-    >p {
-      font-family: Georgia, serif;
-      font-size: 16px;
-      font-style: italic;
-    }
-    .items {
-      padding: 30px 0;
-      .item {
-        display: inline-block;
-        width: 220px;
-        vertical-align: top;
-        text-align: left;
-        margin: 0 11px;
-        .img {
-          width:220px;
-          height: 170px;
-          background: $dark-blue;
-          text-align: center;
-          .image_one {
-            background: image-url("application/about.consultant.png") no-repeat;
-            width:92px;
-            height: 123px;
-            display: inline-block;
-            margin: 25px 0 0;
-          }
-          .image_two {
-            background: image-url("application/about.services.png") no-repeat;
-            width:120px;
-            height: 109px;
-            display: inline-block;
-            margin: 32px 0 0;
-          }
-          .image_three {
-            background: image-url("application/about.command.png") no-repeat;
-            width:161px;
-            height: 96px;
-            display: inline-block;
-            margin: 37px 0 0;
-          }
-          .image_four {
-            background: image-url("application/about.access.png") no-repeat;
-            width:93px;
-            height: 123px;
-            display: inline-block;
-            margin: 23px 0 0;
+  .company {
+    .product-teasers {
+      .items {
+        .item {
+          text-align: left;
+          .title {
+            &:after {
+              display: none;
+            }
+            span {
+              &:before {
+                border-radius: 0;
+              }
+            }
           }
         }
       }
     }
+    .content {
+      padding: 30px 0;
+      text-align: center;
+      p {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-size: 15px;
+      }
+    }
   }
-  /* Subsection HOWEVER
-   ========================================================================== */
-  .however {
-    text-align: center;
-    position: relative;
+  .securities {
+    padding: 40px 0 20px;
     .title {
-      font-size: 36px;
-      padding: 20px 0 10px;
-    }
-    >p {
       font-family: Georgia, serif;
-      font-size: 16px;
       font-style: italic;
-    }
-    .img {
-      background: image-url("application/however.bg.png") no-repeat center top;
-      height: 745px;
-      background-size: cover;
-      position: relative;
-      top: 15px;
-    }
-    .button {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      margin-left: -490px;
-      z-index: 10;
+      font-size: 36px;
+      color: #ffffff;
     }
   }
-  /* Subsection RATES
-   ========================================================================== */
-  .rates {
-    padding: 70px 0 50px;
-    text-align: center;
+  .transcript, .terms {
+    margin: 30px 0;
+    text-align: left;
+    width: 600px;
+    .caption {
+      font-size: 32px;
+      padding: 0 0 10px;
+    }
+    ol, ul {
+      margin: 0 0 0 20px;
+      padding: 0;
+      li {
+        margin: 3px 0 0;
+      }
+    }
   }
-  /* Subsection TEASERS
-   ========================================================================== */
-  .teasers {
+  .executives {
+    overflow:hidden;
+    padding: 25px 0 15px;
+    text-align:left;
     .item {
-      width: 25%;
+      width: 450px;
+      margin: 0 10px 0 0;
+      figure {
+        margin:0 10px 0 0;
+      }
+      .description {
+        overflow:hidden;
+        .title {
+          font-size: 24px;
+          line-height: 30px;
+        }
+      }
     }
   }
 }
