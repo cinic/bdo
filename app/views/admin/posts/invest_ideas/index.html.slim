@@ -1,0 +1,44 @@
+- content_for :page_class, "posts"
+- content_for :page_title, "Инвест идеи"
+.table-wrapper.products-table.section
+  .row-fluid
+    table.table.table-hover
+      thead
+        tr
+          th.span3
+            input type="checkbox"
+            | Заголовок
+          th.span3
+            span.line
+            | Автор
+          th.span3
+            span.line
+            | Состояние
+          th.span3
+            span.line
+            | Статус и операции
+      tbody
+        - @admin_posts_invest_ideas.each do |post|
+          tr
+            td
+              input type="checkbox"
+              = link_to post.title, [:admin,:posts,post], class: "name"
+            td.description
+              = post.author
+            td.release
+              - if post.release
+                span.label Завершена
+              - else 
+                span.label.label-success В процессе
+            td
+              - if post.published
+                span.label.label-success Опубликована
+              - else 
+                span.label Не опубликована
+              ul.actions
+                li
+                  = link_to "Редактировать", posts_edit_smth_path(post)
+                li.last
+                  = link_to "Удалить", [:admin,:posts,post], :confirm => "Are you sure?", :method=>:delete
+
+  = link_to 'Добавить идею', new_admin_posts_invest_idea_path, class: "btn-flat"

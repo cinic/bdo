@@ -8,7 +8,7 @@ OpenBroker::Application.routes.draw do
     delete 'sessions', to: 'sessions#destroy'
     resources :news
     namespace :posts do
-      resources :company_events, :issuer_events
+      resources :company_events, :issuer_events, :invest_ideas
     end
     resources :posts, only: [:index]
     resources :prospects, only: [:index, :show]

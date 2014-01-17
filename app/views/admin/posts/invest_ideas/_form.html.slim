@@ -1,0 +1,55 @@
+.span8.column 
+  = form_for [:admin,:posts,@admin_posts_invest_idea] do |f|
+    - if @admin_posts_invest_idea.errors.any?
+      #error_explanation
+        h2 = "#{pluralize(@admin_posts_invest_idea.errors.count, "error")} prohibited this admin_posts_invest_idea from being saved:"
+        ul
+          - @admin_posts_invest_idea.errors.full_messages.each do |message|
+            li = message
+    .field-box
+      = f.label :date, "Дата"
+      = f.datetime_field :date, class: "span8 datepicker inline-input"
+    .field-box
+      = f.label :title, "Заголовок"
+      = f.text_field :title, class: "span8 inline-input"
+    .field-box
+      = f.label :period, "Горизонт инвестирования"
+      = f.text_field :period, class: "span8 inline-input"
+    .field-box
+      = f.label :tool, "Финансовый инструмент"
+      = f.text_field :tool, class: "span8 inline-input"
+    .field-box
+      = f.label :marketplace, "Торговая площадка"
+      = f.text_field :marketplace, class: "span8 inline-input"
+    .field-box
+      = f.label :yield, "Ожидания доходности"
+      = f.text_field :yield, class: "span8 inline-input"
+    .field-box
+      = f.label :risk, "Ожидания риска"
+      = f.text_field :risk, class: "span8 inline-input"
+    .field-box
+      = f.label :liquidity, "Дневная ликвидность"
+      = f.text_field :liquidity, class: "span8 inline-input"
+    .field-box
+      = f.label :percentage, "Рекомендуемая доля портфеля"
+      = f.text_field :percentage, class: "span8 inline-input"
+    .field-box
+      = f.label :body, "Текст"
+      .wysi-column
+        = f.text_area :body, rows: 4, :ckeditor => {toolbar: "bdo"}, class: "span8 ckeditor"
+    .field-box
+      = f.label :release do
+        = f.check_box :release
+        |&nbsp;Завершена
+    .field-box
+      = f.label :published do
+        = f.check_box :published
+        |&nbsp;Опубликовать
+    .field-box = f.submit 'Сохранить', class: "btn-flat primary"
+javascript:
+  $(function(){
+    // datepicker plugin
+    $( ".datepicker" ).datepicker( {format: "dd.mm.yyyy"} ).on( "changeDate", function (ev) {
+        $(this).datepicker( "hide" );
+    });
+  })

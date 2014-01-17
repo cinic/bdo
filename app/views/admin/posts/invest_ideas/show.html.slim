@@ -1,0 +1,22 @@
+- content_for :page_class, "posts"
+- content_for :page_title, @admin_posts_invest_idea.title
+
+.row-fluid
+  - if notice
+    .alert.alert-success
+      i.fa.fa-check-circle
+      = notice
+  ul
+    li Горизонт инвестирования: #{@admin_posts_invest_idea.period}
+    li Финансовый инструмент: #{@admin_posts_invest_idea.tool}
+    li Торговая площадка: #{@admin_posts_invest_idea.marketplace}
+    li Ожидания доходности: #{@admin_posts_invest_idea.yield}%
+    li Ожидания риска: #{@admin_posts_invest_idea.risk}%
+    li Дневная ликвидность: #{@admin_posts_invest_idea.liquidity}
+    li Рекомендуемая доля портфеля: #{@admin_posts_invest_idea.percentage}
+  article
+    = @admin_posts_invest_idea.body.html_safe
+
+  = link_to 'Редактировать', edit_admin_posts_invest_idea_path(@admin_posts_invest_idea)
+  '|
+  = link_to 'Назад', admin_posts_invest_ideas_path
