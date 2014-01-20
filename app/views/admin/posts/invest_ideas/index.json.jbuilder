@@ -1,4 +1,4 @@
-json.array!(@admin_posts_company_events) do |admin_posts_company_event|
-  json.extract! admin_posts_company_event, :id
-  json.url admin_posts_company_event_url(admin_posts_company_event, format: :json)
+json.array!(@admin_posts_invest_ideas) do |admin_posts_invest_idea|
+  json.extract! admin_posts_invest_idea, :id
+  json.url admin_posts_invest_idea_url(admin_posts_invest_idea, format: :json)
 end
