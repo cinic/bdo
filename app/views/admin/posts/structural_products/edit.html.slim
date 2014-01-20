@@ -1,0 +1,9 @@
+- content_for :page_class, "posts"
+- content_for :page_title, "Редактирование Инвест идеи"
+.row-fluid
+
+  == render 'form'
+
+  = link_to 'Показать', [:admin,:posts,@admin_posts_structural_product]
+  '|
+  = link_to 'Назад', admin_posts_structural_products_path

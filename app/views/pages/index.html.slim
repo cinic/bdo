@@ -54,14 +54,8 @@ section.slide.white
       = link_to "больше новостей", "#", class: "btn"
     .invest-ideas
       h3.title Инвест идеи
-      .item
-        h4.title
-          |&laquo;
-          b Покупка Газпром GZPX
-          |&raquo;
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ultrices est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ut ultrices felis. Proin sed tincidunt erat, non euismod est. Sed in tellus non mi egestas porta vel sed sapien. Lorem ipsum dolor sit amet, Cum sociis natoque penatibusconsectetur adipiscing elit. Maecenas ut ultrices est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-        p = image_tag "application/invest.img.table.png" 
-        a.btn href="#" Подробнее
+      = render partial: "shared/invest-ideas/list", collection: @idea_list, as: :item
+      = link_to "больше идей", "#", class: "btn"
 section.slide.gray
   ul.awards-list.layout.group
     li.item.awards--1st-place

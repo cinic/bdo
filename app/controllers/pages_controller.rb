@@ -52,6 +52,9 @@ class PagesController < ApplicationController
     end
 
     def init_pages_data
-      @news_list = CompanyEvent.all
+      if current_page.include?('index')
+        @news_list = CompanyEvent.all
+        @idea_list = InvestIdea.all
+      end
     end
 end
