@@ -8,7 +8,6 @@ CKEDITOR.editorConfig = function( config )
         /*,
         { name: 'links', items : [ 'Link','Unlink','Anchor' ] }*/
     ];
-    config.baseHref = 'https://static.bdo.ifoxy.net/assets/ckeditor/';
     config.coreStyles_bold = { element : 'b', overrides : 'strong' };
     config.coreStyles_italic = { element : 'i', overrides : 'em' };
     config.pasteFromWordRemoveFontStyles = true;
