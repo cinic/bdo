@@ -3,6 +3,7 @@ html
   head
     title
         = (yield(:title) + " | " unless yield(:title).blank?).to_s + "ОТКРЫТИЕ Брокер" 
+    = javascript_include_tag "application/modernizr.custom"
     = stylesheet_link_tag   "application/application", media: "all"
     = csrf_meta_tags
   body class="#{yield(:page_content_class)}"

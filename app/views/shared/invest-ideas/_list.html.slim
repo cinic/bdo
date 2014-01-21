@@ -1,0 +1,9 @@
+article.item
+  - created_at = Date.strptime(item.created_at.to_s, "%Y-%m-%d %H:%M:%S %Z").strftime("%d.%m.%Y")
+  h4.title
+    = item.title
+  .lead
+    = truncate(strip_tags(item.body), length: 220, escape: false, omission: '... ' )
+    = link_to "подробнее", "#", class: 'more'
+  time datetime="#{created_at}"
+    = created_at

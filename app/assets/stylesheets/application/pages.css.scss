@@ -766,16 +766,16 @@
     border-bottom: 4px solid #fff;
     
     &.model-portfolios {
-      background: image-url("application/pages/investing/model-portfolios-teaser.jpg") no-repeat left 50%;
+      background: image-url("application/pages/covers/model-portfolio.jpg") no-repeat left 50%;
     }
     &.structural-products {
-      background: image-url("application/pages/investing/structural-products-teaser.jpg") no-repeat 20% 50%;
+      background: image-url("application/pages/covers/structural-products.jpg") no-repeat right 50%;
     }
     &.open-advisor {
-      background: image-url("application/pages/investing/open-advisor-teaser.jpg") no-repeat left 50%;
+      background: image-url("application/pages/covers/open-advisor.jpg") no-repeat left 50%;
     }
     &.personal-broker {
-      background: image-url("application/pages/investing/personal-broker-teaser.jpg") no-repeat left 50%;
+      background: image-url("application/pages/covers/personal-broker.jpg") no-repeat left 50%;
     }
     .product {
       padding: 60px 2em 60px 3em;
