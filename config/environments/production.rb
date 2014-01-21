@@ -12,7 +12,8 @@ OpenBroker::Application.configure do
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
-  config.action_controller.perform_caching = true
+  # Disable when use CDN
+  #config.action_controller.perform_caching = true
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
@@ -61,7 +62,7 @@ OpenBroker::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-  config.assets.precompile += ['admin.js', 'application.js', 'admin.css', 'application.css','modernizr.custom.js', 'fonts']
+  config.assets.precompile += ['admin/admin.js', 'admin/admin.css', 'application/modernizr-custom.js', 'fonts']
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
