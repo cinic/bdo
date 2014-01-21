@@ -23,4 +23,32 @@ $(function(){
       e.preventDefault();
       $('body').stop().scrollTo($(this).attr('href'), 800);
   });
+  // Карты филиалов
+  $('.link-branch').click(function(e) {
+    e.preventDefault();
+    var elem = this;
+    if ( $(this).hasClass( 'active' ) ) {
+      return;
+    }
+      $('#map').slideToggle('slow', function() {$(this).detach()});
+      $(this).parent().parent().parent().append('<div id="map" class="branch-map"></div>');
+      $('#map').slideToggle('slow', function() { 
+        var myMap, fullScreen = false;
+        myMap = new ymaps.Map('map', {
+          center: [$(elem).attr('data-latitude'), $(elem).attr('data-long')],
+          zoom: 15
+
+        }),
+        myPlacemark = new ymaps.Placemark([$(elem).attr('data-latitude'), $(elem).attr('data-long')], {
+            iconContent: 'O',
+            balloonContent: [$(elem).attr('alt')],
+            hintContent: [$(elem).attr('alt')]
+        }, {
+            preset: 'twirl#blueIcon'
+        });
+        myMap.geoObjects
+          .add(myPlacemark)
+      });
+      $(this).toggleClass('active');
+  });
 })

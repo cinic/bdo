@@ -1,0 +1,66 @@
+- content_for :title, "Партнёрство"
+- content_for :meta_description, ""
+- content_for :meta_keywords, ""
+- content_for :page_content_class, "page-partners"
+section.slide.cover.partners
+  .layout.group
+    .content.pull-right
+      h1.title Партнёрство
+      p 
+        |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque sapien sem, ac vulputate turpis tincidunt id. Integer turpis nisi, pulvinar id tellus ultricies, condimentum rutrum sapien.
+      a.btn.white href="#terms" Подробнее
+section.slide.white
+  #terms.layout.terms.product-teasers
+    h2.title Партнерство с ОТКРЫТИЕ Брокер
+    p
+      |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque sapien sem, ac vulputate turpis tincidunt id. Integer turpis nisi, pulvinar id tellus ultricies, condimentum rutrum sapien.
+    .items
+      .item
+        h3.title.bg-left
+          span.reliability
+            |Надежность
+            br
+            |компании
+        p.lead Aliquam fermentum, dui quis lacinia congue, sem sapien.
+      .item
+        h3.title.bg-left
+          span.experience
+            |Многолетний
+            br
+            |опыт
+        p.lead Aliquam fermentum, dui quis lacinia congue, sem sapien.
+      .item
+        h3.title.bg-left
+          span.support
+            |Всесторонняя
+            br
+            |поддержка
+        p.lead Aliquam fermentum, dui quis lacinia congue, sem sapien.
+      .item
+        h3.title.bg-left
+          span.toolbar
+            |Линейка
+            br
+            |инструментов
+        p.lead Aliquam fermentum, dui quis lacinia congue, sem sapien.
+section.slide.gray
+  .layout.cooperation
+      h2.title Виды сотрудничества
+      .items
+        .item.partner
+          h2.title Партнер
+          p
+            |Aliquam a enim placerat, porttitor dolor id, tristique neque. Pellentesque nec accumsan lorem. Duis semper sed elit at vehicula. Suspendisse volutpat, neque.
+          a.btn href="#" Отправить заявку
+        .item.agent
+          h2.title Агент
+          p
+            |Aliquam a enim placerat, porttitor dolor id, tristique neque. Pellentesque nec accumsan lorem. Duis semper sed elit at vehicula. Suspendisse volutpat, neque.
+          a.btn href="#" Отправить заявку
+section.slide.blue
+  .layout.group
+    .form-layout
+      - if notice
+        p#notice = notice
+      - else
+        = render "shared/partners_form"
