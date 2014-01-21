@@ -14,6 +14,7 @@ class Prospect
   field :crm_id, type: String
   field :ip, type: String
   field :product, type: String
+  field :referrer, type: String
   field :consent, type: Mongoid::Boolean
 
   validates :consent, inclusion: { in: [true], message: ' – необходимо отметить.' }
