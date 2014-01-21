@@ -86,7 +86,18 @@ input.btn,
 button.btn {
   border: 0;
 }
-
+/* Ссылки */
+.link,
+.link-branch {
+  color: $dark-blue;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover,
+  &.active {
+    color: $dark-blue;
+    text-decoration: none;
+  } 
+}
 
 /* ==========================================================================
    Block HEADER

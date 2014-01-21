@@ -73,6 +73,11 @@
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/personal-broker.jpg"), sizingMethod='scale');
       -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/personal-broker.jpg"), sizingMethod='scale');
     }
+    &.partners {
+      background: image-url("application/pages/covers/partners.png") no-repeat center top;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/partners.png"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/partners.png"), sizingMethod='scale');
+    }
 
     .title {
       padding: 0 0 28px;
@@ -255,6 +260,26 @@
         .contact {
           &:before {
             background-image: image-url("application/pages/product-teasers/contact.png");
+          }
+        }
+        .reliability {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/reliability.png");
+          }
+        }
+        .experience {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/experience.png");
+          }
+        }
+        .support {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/support.png");
+          }
+        }
+        .toolbar {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/toolbar.png");
           }
         }
       }
@@ -1169,28 +1194,6 @@
 /* OPEN ADVISOR
    ========================================================================== */
 .page-open-advisor {
-  /* 1) Subsection COVER
-   ========================================================================== */
-  .open-advisor {
-    .content {
-      color: $black;
-      h2 {
-        text-align:left;
-        span {
-          display: block;
-        }
-      }
-      h3 {
-        font: italic 121px Georgia;
-        color:$dark-blue;
-        margin: -60px 0 0; 
-      }
-      p {
-        font: italic 18px Georgia;
-        margin: -25px 0 0 100px;
-      }
-    }
-  }
   /* Subsection YIELD
    ========================================================================== */
   .yield {
@@ -1481,5 +1484,201 @@
         }
       }
     }
+  }
+}
+/* NEWS
+   ========================================================================== */
+.page-news {
+  .news {
+    padding: 30px 0;
+    .item {
+      padding: 20px 0;
+      width: 650px;
+      .title {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+    .action {
+      text-align: center;
+      &:before {
+        width:100%;
+        height: 2px;
+        content:"";
+        background: $light-gray;
+        display: inline-block;
+        margin: 20px 0;
+      }
+    }
+  }
+}
+/* BRANCH
+   ========================================================================== */
+.page-branch {
+  .branch {
+    padding: 30px 0 0;
+    h1.title {
+      text-transform: uppercase;
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .filter {
+    text-align: center;
+    padding: 30px 0;
+    form {
+      label {
+        color: #ffffff;
+        vertical-align: middle;
+        font-weight: 100;
+        font-size: 32px;
+        height: 20px;
+        margin: 0 5px 0 0;
+      }
+      input {
+        height: 20px;
+        padding: 5px 0;
+        width: 400px;
+      }
+    }
+  }
+  .branch-list {
+    list-style:none;
+    padding: 0;
+    li {
+      .branch-map {
+        width: 100%;
+        height: 300px;
+        display: none;
+      }
+      ul {
+        margin: 15px auto;
+        li {
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 25px;
+          text-align: right;
+          &:first-child {
+            font-size: 24px; 
+            font-weight: 100;
+            width: 160px;
+            margin-left: 0;
+            text-align: left;
+          }
+        }
+        li + li + li {
+          text-align: left;
+        }
+      }
+    }
+  }
+  .caption {
+    margin: 40px 0 0 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: $dark-blue;
+    span {
+      font-weight: 100;
+      font-size: 16px;
+    }
+  }
+}
+/* PARTNERS
+   ========================================================================== */
+.page-partners {
+  .terms {
+    padding: 30px 0; 
+    .items {
+      .item {
+        text-align: left;
+        .title {
+          span {
+            &:before {
+              border-radius: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .cooperation {
+    padding: 30px 0;
+    .items {
+      width: 670px;
+      margin: 0 auto;
+      .item {
+        display: inline-block;
+        vertical-align: top;
+        width: 280px;
+        padding: 30px 15px 30px 30px;
+        margin: 0 5px;
+        background: #ffffff;
+        &:before {
+          display: block;
+          content: "";
+          padding: 150px 0 0;
+        }
+        .btn {
+          margin: 20px 0 10px 50px;
+        }
+      }
+      .partner {
+        &:before {
+          background: image-url("application/pages/partners/partner.png") no-repeat 50% 50%;
+        }
+      }
+      .agent {
+        &:before {
+          background: image-url("application/pages/partners/agent.png") no-repeat 50% 50%;
+        }
+      }
+    }
+  }
+  .form-layout,
+    { padding: 36px 0 51px; }
+  .form-layout {
+    width: 430px;
+    margin: 0 auto;
+
+    /* Элементы формы */
+    .form-row { 
+      margin: 0 0 5px 0;
+      &.consent,
+      &.actions {
+        line-height: 36px;
+      }
+      &.actions {
+        width: 100%;
+        padding: 10px 0 7px;
+        position: absolute;
+        text-align: center;
+        left: 0;
+        background: $light-blue;
+        .light-blue {
+          background: $light-blue;
+          &:hover {
+            background: $orange;
+          }
+        }
+      }
+      .field_with_errors { display: inline; }
+    }
+    label {
+      color: white;
+    }
+    .input-text {
+      padding: 0 3%;
+      width: 94%;
+      line-height: 36px;
+      border: 0;
+    }
+    .input-checkbox {
+      margin-right: 6px;
+    }
+    .input-text::-webkit-input-placeholder { color: $dark-blue; }
+    .input-text:-moz-placeholder { color: $dark-blue; }
   }
 }
