@@ -3,7 +3,7 @@ class InvestIdea < Post
   field :period, type: String
   field :tool, type: String
   field :marketplace, type: String
-  field :yield, type: Integer
+  field :expectation_yields, type: Integer
   field :risk, type: Integer
   field :liquidity, type: Integer
   field :percentage, type: Integer
