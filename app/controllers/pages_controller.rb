@@ -44,7 +44,7 @@ class PagesController < ApplicationController
         cookies[:url] = {value: cookies[:url]  + ',' + params[:id], expires: 7.day.from_now} if cookies[:url].split(',').last != params[:id]
       else
         cookies[:url] = {value: params[:id], expires: 7.day.from_now}
-        cookies[:from] = request.refferer
+        cookies[:from] = request.referrer
       end
     end
 
