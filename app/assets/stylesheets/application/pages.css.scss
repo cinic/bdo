@@ -44,11 +44,13 @@
     }
     &.open-advisor { 
       background: image-url("application/pages/covers/open-advisor.jpg") no-repeat center top;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/open-advisor.jpg"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/open-advisor.jpg"), sizingMethod='scale');
     }
     &.trading { 
-      background: image-url("application/pages/covers/trading.png") no-repeat center top;
-      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/trading.png"), sizingMethod='scale');
-      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/trading.png"), sizingMethod='scale');
+      background: image-url("application/pages/covers/trading.jpg") no-repeat center top;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/trading.jpg"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/trading.jpg"), sizingMethod='scale');
     }
     &.training { 
       background: image-url("application/pages/covers/training.png") no-repeat center top;
@@ -614,14 +616,17 @@
       tr {
         background: #eaeaea;
         font-size: 10px;
-        &:nth-child(odd) td {
+        &.gray {
          background: #e1e1e1;
+        }
+        th {
+          text-align: left;
         }
         td {
           padding: 10px;
-          text-align: right;
-          &:nth-child(odd) {
-           text-align: left;
+          text-align: left;
+          &.pull-right {
+            text-align: right;
           }
         }
       }
@@ -635,6 +640,12 @@
   }
   .btn {
     margin: 20px 0 0;
+  }
+  .info {
+    margin: 50px 0 0;
+    text-align: left;
+    font-size: 11px;
+    line-height: 16px;
   }
 }
 /* Learning
@@ -695,10 +706,7 @@
           border-radius: 2px;
         }
       }
-      &:nth-child(odd) {
-        background-color: $white;
-      }
-      &:nth-child(even) {
+      &.light-gray {
         background-color: $light-gray;
       }
     }
@@ -737,7 +745,7 @@
     .input-text {
       padding: 0 3%;
       width: 94%;
-      line-height: 36px;
+      height: 36px;
       border: 0;
     }
     .input-checkbox {
@@ -754,7 +762,12 @@
     p:first-child { margin-top: 0; }
   }
 }
-
+.lt-ie9 {
+  .input-text {
+    height: 26px !important;
+    padding: 10px 0 0 5px !important;
+  }
+}
 /* Investing
    ========================================================================== */
 .page-investing {
@@ -764,18 +777,26 @@
     -o-background-size: cover;
     background-size: cover !important;
     border-bottom: 4px solid #fff;
-    
+    height: 450px;
     &.model-portfolios {
       background: image-url("application/pages/covers/model-portfolio.jpg") no-repeat left 50%;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/model-portfolio.jpg"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/model-portfolio.jpg"), sizingMethod='scale');
     }
     &.structural-products {
       background: image-url("application/pages/covers/structural-products.jpg") no-repeat right 50%;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/structural-products.jpg"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/structural-products.jpg"), sizingMethod='scale');
     }
     &.open-advisor {
       background: image-url("application/pages/covers/open-advisor.jpg") no-repeat left 50%;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/open-advisor.jpg"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/open-advisor.jpg"), sizingMethod='scale');
     }
     &.personal-broker {
       background: image-url("application/pages/covers/personal-broker.jpg") no-repeat left 50%;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/personal-broker.jpg"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/personal-broker.jpg"), sizingMethod='scale');
     }
     .product {
       padding: 60px 2em 60px 3em;
@@ -794,7 +815,7 @@
       }
 
     }
-
+    .item { height: 450px; }
     &.pull-left {
       float: none;
       margin-right: 50%;
@@ -854,10 +875,18 @@
     /* Бэкграунды для скосов */
     .item.bg-gray:before { background-color: $dark-gray; }
     .item.bg-white:before { background-color: white; }
-  }
-  
+  }  
 }
-
+.lt-ie9 {
+  .page-investing {
+    .slide.pull-left,
+    .slide.pull-right {
+      > .item:before {
+        display:none;
+      }
+    }
+  }
+}
 /* Structural products
    ========================================================================== */
 .page-structural-products {
@@ -946,12 +975,15 @@
       font-size: 16px;
       font-style: italic;
     }
-    .img {
+    img {
       background: image-url("application/however.bg.png") no-repeat center top;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/however.bg.png"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/however.bg.png"), sizingMethod='scale');
       height: 745px;
       background-size: cover;
-      position: relative;
-      top: 15px;
+      background-attachment: scroll;
+      margin: 15px 0 -5px;
+      width: 100%;
     }
     .button {
       position: absolute;
@@ -1072,17 +1104,17 @@
           td {
             padding: 7px 5px;
           }
-        }
-        tr:nth-child(odd) {
-          background: $light-gray;
+          &.light-gray {
+            background: $light-gray;
+          }
+          &.dark-gray {
+            background: $dark-gray;
+          }
         }
         tr:first-child {
           color: $white;
           background-color: $dark-blue;
           font-weight: 600;
-        }
-        tr:nth-child(even) {
-          background: $dark-gray;
         }
         td:first-child {
           padding: 8px 5px 8px 15px;
@@ -1294,13 +1326,8 @@
         td {
           padding: 10px 10px 10px 20px;
         }
-        .col__left {
-          background: #74c0e4;
-          color: $white;
-          font-size: 14px;
-        }
-        .col__right {
-          background: $dark-blue;
+        &.blue {
+          background: $dark-blue !important;
           color: $white;
           font-size: 14px;
         }
@@ -1317,6 +1344,9 @@
           height:25px;
           display: block; 
           float: right;
+        }
+        &.line_white {
+          background: $white;
         }
       }
       tr {
@@ -1336,17 +1366,7 @@
       }
       .line_button {
         text-align: center;
-        .btn-connect-left {
-          background: $light-blue;
-          &:hover {
-            background: $dark-blue;
-          }
-        }
-        .btn-connect-right {
-          &:hover {
-            background: $light-blue;
-          }
-        }
+        background: $dark-blue !important;
       }
     }
   }
@@ -1396,10 +1416,7 @@
           border-radius: 2px;
         }
       }
-      &:nth-child(even) {
-        background-color: $white;
-      }
-      &:nth-child(odd) {
+      &.dark-gray {
         background-color: $dark-gray;
       }
     }
@@ -1421,11 +1438,6 @@
           .title {
             &:after {
               display: none;
-            }
-            span {
-              &:before {
-                border-radius: 0;
-              }
             }
           }
         }

@@ -188,6 +188,14 @@ header.header {
       }
     }
 }
+.lt-ie9 {
+  .account_left {
+      margin: 0 !important;
+  }
+  .account_right {
+    margin: 0 0 0 -9px !important; 
+  }
+}
 
 /* ==========================================================================
    Sub nav
