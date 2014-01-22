@@ -11,7 +11,7 @@ footer.footer
     nav.advanced-menu
       ul.list
         li.item
-          a.link href="#" О компании
+          = link_to_with_current_class "О компании", "active", page_path("about"), class: "link"
         li.item
           a.link href="#" Институционалам
         li.item

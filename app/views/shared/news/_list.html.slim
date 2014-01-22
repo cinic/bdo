@@ -4,6 +4,6 @@ article.item
     = item.title
   .lead
     = truncate(strip_tags(item.body), length: 160, escape: false, omission: '... ' )
-    = link_to "подробнее", "#", class: 'more'
+    = link_to "подробнее", news_item_path(item), class: 'more'
   time datetime="#{created_at}"
     = created_at

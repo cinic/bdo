@@ -1,6 +1,6 @@
 class Ckeditor::AttachmentFile < Ckeditor::Asset
   has_mongoid_attached_file :data,
-                            :url => "/upload/attachments/:id/:filename",
+                            :url => server_url + "/upload/attachments/:id/:filename",
                             :path => ":rails_root/public/upload/attachments/:id/:filename"
 
   validates_attachment_size :data, :less_than => 10.megabytes

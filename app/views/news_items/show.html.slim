@@ -1,0 +1,16 @@
+- content_for :title, "Новости компании"
+- content_for :meta_description, ""
+- content_for :meta_keywords, ""
+- content_for :page_content_class, "page-news"
+= render "pages/about/menu"
+section.news
+  .layout.group 
+    = render partial: "shared/news/list", collection: @news_item, as: :item
+    article.item
+      - created_at = Date.strptime(@news_item.created_at.to_s, "%Y-%m-%d %H:%M:%S %Z").strftime("%d.%m.%Y %H:%m")
+      h2.title
+        = @news_item.title
+      = @news_item.body.html_safe
+      time datetime="#{created_at}"
+        = created_at
+    = link_to "К списку новостей", news_items_path, class: 'btn'

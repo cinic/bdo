@@ -51,10 +51,10 @@ section.slide.white
     .news-list
       h3.title Новости
       = render partial: "shared/news/list", collection: @news_list, as: :item
-      = link_to "больше новостей", "#", class: "btn"
+      = link_to "больше новостей", page_path("about/news"), class: "btn"
     .invest-ideas
       h3.title Инвест идеи
-      = render partial: "shared/invest-ideas/list", collection: @idea_list, as: :item
+      = render partial: "shared/invest-ideas/list", collection: @idea_list[0..1], as: :item
       = link_to "больше идей", "#", class: "btn"
 section.slide.gray
   ul.awards-list.layout.group

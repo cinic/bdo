@@ -5,6 +5,7 @@
 = render "pages/about/menu"
 section.news
   .layout.group 
+    = render partial: "shared/news/list", collection: @news_list[0..5], as: :item
     .item
       h3.title.bg-left
         span 12.03.2013

@@ -44,7 +44,7 @@ class PagesController < ApplicationController
         cookies[:url] = {value: cookies[:url]  + ',' + params[:id], expires: 7.day.from_now} if cookies[:url].split(',').last != params[:id]
       else
         cookies[:url] = {value: params[:id], expires: 7.day.from_now}
-        cookies[:from] = request.refferer
+        cookies[:from] = request.referrer
       end
     end
 
@@ -53,9 +53,7 @@ class PagesController < ApplicationController
     end
 
     def init_pages_data
-      if current_page.include?('index')
-        @news_list = CompanyEvent.all
-        @idea_list = InvestIdea.all
-      end
+      @news_list = CompanyEvent.all.limit(2).desc(:created_at) if current_page.include?('index')
+      @idea_list = InvestIdea.all.limit(2).desc(:created_at) if current_page.include?('index')
     end
 end

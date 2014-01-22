@@ -27,8 +27,8 @@ task "assets:precompile" => :environment do
     this_digest = file.match(fingerprint)[1]
     if (this_digest == latest_digest)
       # This file's digest matches latest digest, copy
-      puts 'Matching digest, moving ' + file
-      FileUtils.mv file, nondigest, verbose: true
+      puts 'Matching digest, copying ' + file
+      FileUtils.cp file, nondigest, verbose: true
     else
       # This file's digest doesn't match latest digest, ignore
       puts 'Latest digest: ' + latest_digest

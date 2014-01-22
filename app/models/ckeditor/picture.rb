@@ -1,6 +1,6 @@
 class Ckeditor::Picture < Ckeditor::Asset
   has_mongoid_attached_file :data,
-                            :url  => "/upload/pictures/:id/:style_:basename.:extension",
+                            :url  => server_url + "/upload/pictures/:id/:style_:basename.:extension",
                             :path => ":rails_root/public/upload/pictures/:id/:style_:basename.:extension",
                             :styles => { :content => '800>', :thumb => '118x100#' }
 
