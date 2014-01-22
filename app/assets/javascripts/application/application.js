@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require_tree ./jquery/
+//= require ./pages
 // require jquery_ujs
 // require turbolinks
 // require_tree .

@@ -53,9 +53,7 @@ class PagesController < ApplicationController
     end
 
     def init_pages_data
-      if current_page.include?('index')
-        @news_list = CompanyEvent.all
-        @idea_list = InvestIdea.all
-      end
+      @news_list = CompanyEvent.all.limit(2).desc(:created_at) if current_page.include?('index')
+      @idea_list = InvestIdea.all.limit(2).desc(:created_at) if current_page.include?('index')
     end
 end

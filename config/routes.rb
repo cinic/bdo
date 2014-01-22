@@ -14,8 +14,13 @@ OpenBroker::Application.routes.draw do
     resources :prospects, only: [:index, :show]
   end
 
+  #Блок с новостями
+  resources :news_items, path: '/about/news', format: false, only: [:index, :show]
+  ###
+  #Главная страница и HightVoltage
   get '/index', to: redirect('/')
   get "/*id", to: 'pages#show', as: :page, :format => false, :constraints => HighVoltage::Constraints::RootRoute
   post "/*id", to: 'pages#create', :format => false, :constraints => HighVoltage::Constraints::RootRoute
+  ###
   root to: 'pages#show', id: 'index'
 end

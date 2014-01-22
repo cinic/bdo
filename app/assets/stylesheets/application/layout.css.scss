@@ -273,8 +273,10 @@ header.header {
           padding: 5px;
           border-radius: 4px;
           @include transition(all, 0.2s, ease-in-out);
-          &:hover {
+          &:hover,
+          &.active {
             color: #00bbe4;
+            text-decoration: none;
           }
         }
       } 

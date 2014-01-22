@@ -4,9 +4,10 @@ html
     title = yield(:page_title) + " | ОТКРЫТИЕ–Брокер"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag    "admin/admin", media: "all"
+    - ckeditor_path = Rails.env.production? ? "https://static.bdo.ifoxy.net/assets/ckeditor/" : "/assets/ckeditor/"
     javascript:
       // Исправление для ckeditor
-      var CKEDITOR_BASEPATH = 'https://static.bdo.ifoxy.net/assets/ckeditor/';
+      var CKEDITOR_BASEPATH = "#{ckeditor_path}";
     = javascript_include_tag "admin/admin"
     = csrf_meta_tags
   body

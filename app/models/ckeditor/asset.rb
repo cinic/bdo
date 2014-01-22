@@ -4,6 +4,6 @@ class Ckeditor::Asset
   include Ckeditor::Backend::Paperclip
 
   def self.server_url
-    OpenBroker::Application.config.action_controller.asset_host if Rails.env.production?
+    OpenBroker::Application.config.action_controller.asset_host ||= ""
   end
 end
