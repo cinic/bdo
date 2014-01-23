@@ -604,12 +604,13 @@
 .rates-detail {
   padding: 30px 0;
   text-align: center;
-  .item {
+  .alignment {
     display: inline-block;
     vertical-align: top;
+  }
+  .item {
     margin: 0 5px;
     text-align: left;
-    width:310px;
     table {
       width: 100%;
       margin: 0 0 5px;
@@ -646,6 +647,15 @@
     text-align: left;
     font-size: 11px;
     line-height: 16px;
+  }
+  .span1 {
+    width: 940px;
+  }
+  .span2 {
+    width: 470px;
+  }
+  .span3 {
+    width: 310px;
   }
 }
 /* Learning
