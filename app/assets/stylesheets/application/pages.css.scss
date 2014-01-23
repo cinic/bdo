@@ -73,6 +73,11 @@
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/personal-broker.jpg"), sizingMethod='scale');
       -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/personal-broker.jpg"), sizingMethod='scale');
     }
+    &.model-portfolio {
+      background: image-url("application/pages/covers/model-portfolio.jpg") no-repeat center top;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/model-portfolio.jpg"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/model-portfolio.jpg"), sizingMethod='scale');
+    }
     &.partners {
       background: image-url("application/pages/covers/partners.png") no-repeat center top;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/partners.png"), sizingMethod='scale');
@@ -93,7 +98,7 @@
 
     .content {
       margin: 100px 0 0;
-      width: 490px;
+      width: 550px;
       text-align: center;
       color: #fff;
     }
