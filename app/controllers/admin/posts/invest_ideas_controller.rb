@@ -70,6 +70,6 @@ before_action :set_admin_posts_invest_idea, only: [:show, :edit, :update, :destr
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_posts_invest_idea_params
-      params.require(:invest_idea).permit(:title,:body,:date,:published,:tool,:period,:marketplace,:yield,:risk,:liquidity,:percentage,:release)
+      params.require(:invest_idea).permit(:title,:body,:date,:published,:tool,:period,:marketplace,:expected_profit,:risk,:liquidity,:percentage,:release)
     end
 end

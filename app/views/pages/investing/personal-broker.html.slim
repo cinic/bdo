@@ -2,15 +2,14 @@
 - content_for :meta_description, ""
 - content_for :meta_keywords, ""
 - content_for :page_content_class, "page-personal-broker"
-= render "pages/investing/menu"
 section.slide.cover.personal-broker
   .layout.group
     .content.pull-right
       h2.title Личный брокер!
       p
-        |Личный брокер.
+        |Персональный подход к приумножению вашего капитала!
         br
-        |Заданый риск и высокая потенциальная безопасность. Заданый риск и высокая потенциальная безопасность. Заданый риск и высокая потенциальная безопасность.Заданый риск и высокая потенциальная безопасность.
+        |Доступ к инвестициям в любые активы по всему миру.
       a.btn.white Подробнее
 section.slide.white
   #about.layout.about.product-teasers
@@ -44,31 +43,31 @@ section.slide.gray.however
     h2.title Как это работает?
     p
       |Личный брокер располагает всей необходимой информацией для поиска и предоставления клиенту качественных инвестиционных решений для наиболее эффективного вложения средств и для минимизации рисков клиента    
-  = image_tag "application/however.bg.png"
+  = image_tag "application/pages/investing/personal-broker/however.jpg"
   .layout.button
-    a.btn.white Подобрать тариф
+    a.btn.white href="#tarifs" Подобрать тариф
 section.slide.white
   #tarifs.layout.rates
     h2.title Подобрать тариф
     .items
       .item
-        h2.title.bg-left
+        h2.title
           |&laquo;
           b Личный Брокер
           |&raquo;
         p Низкая комиссия за использование инструментов маржинальной торговли и от 0,04 рубля за сделку – для тех, кто привык зарабатывать на рынках, как профессионал.
         .actions
-          a.btn.orange.round-left Подробнее
-          a.btn.orange.round-right Подключить
+          = link_to "Подробнее", page_path("pricing-plans/personal-broker"), class: "btn orange round-left"
+          = link_to "Подключить", "#", class: "btn orange round-right"
       .item
-        h2.title.bg-left
+        h2.title
           |&laquo;
           b Личный&nbsp;Брокер&nbsp;+
           |&raquo;
         p Привлекательные условия для начинающих инвесторов – комиссия 45 рублей за выполненное поручение,  0,045% от трейда и до 14% годовых при использовании брокерского «плеча».
         .actions 
-          a.btn.orange.round-left Подробнее
-          a.btn.orange.round-right Подключить
+          = link_to "Подробнее", page_path("pricing-plans/personal-broker-plus"), class: "btn orange round-left"
+          = link_to "Подключить", "#", class: "btn orange round-right"
 section.page-teasers
   .teasers
     a.item href="javascript:void()"
