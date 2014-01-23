@@ -1,16 +1,18 @@
-- content_for :title, "Личный брокер"
+- content_for :title, "Модельные портфели"
 - content_for :meta_description, ""
 - content_for :meta_keywords, ""
-- content_for :page_content_class, "page-personal-broker"
+- content_for :page_content_class, "page-model-portfolios"
 = render "pages/investing/menu"
-section.slide.cover.personal-broker
+section.slide.cover.model-portfolio
   .layout.group
     .content.pull-right
-      h2.title Личный брокер!
+      h2.title Модельные портфели
       p
-        |Личный брокер.
+        |Минимум времени на управление вложениями
         br
-        |Заданый риск и высокая потенциальная безопасность. Заданый риск и высокая потенциальная безопасность.
+        |Знание рынка и опыт торгов не нужны
+        br
+        |Регулярные рекомендации профессионалов
       a.btn.white Подробнее
 section.slide.white
   #about.layout.about.product-teasers
@@ -44,7 +46,7 @@ section.slide.gray.however
     h2.title Как это работает?
     p
       |Личный брокер располагает всей необходимой информацией для поиска и предоставления клиенту качественных инвестиционных решений для наиболее эффективного вложения средств и для минимизации рисков клиента    
-  = image_tag "application/however.bg.png"
+  .img
   .layout.button
     a.btn.white Подобрать тариф
 section.slide.white
