@@ -10,7 +10,7 @@ FactoryGirl.define do
     period "1-2 month"
     tool "MMTS"
     marketplace "MICEX"
-    expectation_yields 20
+    expected_profit 20
     risk 11
     liquidity 470
     percentage 20

@@ -3,10 +3,10 @@ class InvestIdea < Post
   field :period, type: String
   field :tool, type: String
   field :marketplace, type: String
-  field :expectation_yields, type: Integer
+  field :expected_profit, type: Integer
   field :risk, type: Integer
   field :liquidity, type: Integer
   field :percentage, type: Integer
   field :release, type: Mongoid::Boolean, default: false
-  validates :body, :period, :tool, :marketplace, :yield, :risk, :liquidity, :percentage, presence: true
+  validates :body, :period, :tool, :marketplace, :expected_profit, :risk, :liquidity, :percentage, presence: true
 end
