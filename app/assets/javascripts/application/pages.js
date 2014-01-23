@@ -52,3 +52,10 @@ $(function(){
       $(this).toggleClass('active');
   });
 })
+  // Гармошка документы
+  $(document).ready(function(){
+    $(".accordion .accordion_content").hide();
+    $(".accordion .round-left").click(function(){
+        $(".accordion_content").slideToggle("normal")
+     });
+  });
