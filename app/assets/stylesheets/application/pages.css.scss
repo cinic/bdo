@@ -994,20 +994,14 @@
       font-style: italic;
     }
     img {
-      background: image-url("application/however.bg.png") no-repeat center top;
-      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/however.bg.png"), sizingMethod='scale');
-      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/however.bg.png"), sizingMethod='scale');
-      height: 745px;
-      background-size: cover;
-      background-attachment: scroll;
       margin: 15px 0 -5px;
       width: 100%;
     }
     .button {
       position: absolute;
-      bottom: 20px;
-      left: 50%;
-      margin-left: -490px;
+      bottom: 54px;
+      left: 0;
+      width: 100%;
       z-index: 10;
     }
   }
