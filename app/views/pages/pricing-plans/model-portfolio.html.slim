@@ -5,7 +5,7 @@
 section.rates-detail.slide.white
   .layout
     h1.title Модельный портфель
-    .row-fluid
+    .alignment
       .span3.item
         table
           tr
@@ -13,6 +13,20 @@ section.rates-detail.slide.white
           tr
             td Независимо от объема операции
             td.pull-right 0,2%    
+      .span3.item
+        table
+          tr
+            th colspan="2" Фьючерсы и опционы
+          tr
+            td 10 рублей за контракт
+            td.pull-right Тариф указан без учета сборов ТС
+          tr.gray
+            td Прием поручения на сделку по телефону
+            td.pull-right Бесплатно
+          tr
+            td Просмотр иностранных котировок и индексов через терминалы QUIK (фьючерсы на индексы, нефть и пр.) 
+            td.pull-right 295 рублей в месяц
+    .alignment
       .span3.item 
         table
           tr
@@ -33,8 +47,8 @@ section.rates-detail.slide.white
           tr.gray
             td Иностранная валюта
             td.pull-right 0,02% от суммы вывода***
-    .row-fluid
-      .span2.item
+    .alignment
+      .span3.item
         table
           tr
             th colspan="2" Валюта
@@ -47,19 +61,6 @@ section.rates-detail.slide.white
           tr
             td Комиссии брокера за совершение СВОП
             td.pull-right 3,54 рублей за сделку независимо от объема сделки. Также взимает сбор ТС составляющий 0,0005% от оборота по первой части сделки СВОП но не менее 1 руб. за сделку
-      .span2.item
-        table
-          tr
-            th colspan="2" Фьючерсы и опционы
-          tr
-            td 10 рублей за контракт
-            td.pull-right Тариф указан без учета сборов ТС
-          tr.gray
-            td Прием поручения на сделку по телефону
-            td.pull-right Бесплатно
-          tr
-            td Просмотр иностранных котировок и индексов через терминалы QUIK (фьючерсы на индексы, нефть и пр.) 
-            td.pull-right 295 рублей в месяц
     = link_to 'Подключить', page_path('open-account'), {class: 'btn', id: 'open-account-in-price'}
     p.info
       |«Плечо» - подразумевается возможность использования заемных средств и/или механизма частичного предварительного обеспечения для торговли ценными бумагами с расчетами в режиме Т+2. Годовой процент указан справочно.        
