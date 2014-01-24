@@ -107,9 +107,8 @@ header.header {
   left: 0;
   top: 0;
   right: 0;
-  padding: 13px 0 14px;
   width: 100%;
-  height: 35px;
+  height: 62px;
   background-color: #f6f7f7;
   z-index: 100;
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -128,7 +127,9 @@ header.header {
     -o-transform: translateY(-50px);
     transform: translateY(-50px);
   }
-
+  >.layout {
+    padding: 13px 0 7px;
+  }
   .logo {
     float: left;
     
@@ -202,6 +203,7 @@ header.header {
    ========================================================================== */
 .sub-nav {
   background-color: $dark-gray;
+  background-color: rgba(236, 236, 236, .6);
   border-top: 1px solid #e5e5e5;
   .title {
     display: block;
@@ -228,7 +230,7 @@ header.header {
     color: #484c58;
     text-decoration: none;
     @include transition(all, 0.2s, ease-in-out);
-    &:hover { color: $dark-blue; }
+    &:hover { color: $orange; }
   }
   &.fixed {
     position: fixed;
