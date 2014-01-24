@@ -1,8 +1,8 @@
-- content_for :title, "Новости компании"
+- content_for :page_title, "Новости компании"
+- content_for :title, @news_item.title
 - content_for :meta_description, ""
 - content_for :meta_keywords, ""
 - content_for :page_content_class, "page-news"
-= render "pages/about/menu"
 section.news
   .layout.group 
     = render partial: "shared/news/list", collection: @news_item, as: :item
