@@ -1,0 +1,225 @@
+- content_for :title, "Раскрытие информации"
+- content_for :meta_description, ""
+- content_for :meta_keywords, ""
+- content_for :page_content_class, "page-disclosure"
+= render "pages/about/menu"
+section.slide.white.disclosure
+  .layout.group 
+    .content
+      h2.title
+        |Раскрытие информации
+      a.link href="insiders" Инсайдерам
+ul.disclosure-events
+  li.item.even
+    .layout.group
+      .section.group
+        .selection.group
+          i.fa.fa-file-text-o.pull-left
+          h3.title.pull-left Паспорт ОАО «Брокерский дом «ОТКРЫТИЕ»
+          .actions.pull-right 
+            a.btn.orange Скачать
+  li.item
+    .layout.group
+      .selection.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Письмо «О деятельности по противодействию легализации (отмыванию) доходов, полученных преступным путем, и финансированию терроризма»
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.even
+    .layout.group
+      .selection.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Политика конфиденциальности при работе с персональными данными
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item
+    .layout.group
+      .selection.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Лица, которым ОАО «Брокерский дом «ОТКРЫТИЕ» может передавать персональные данные субъектов персональных данных и поручать обработку персональных данных субъектов
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.even
+    .layout.group
+      .selection.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Расчет размера собственных средств на
+        form.own-funds.pull-left
+          .form-row.pull-left
+            = select_tag "month", options_for_select(["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"]), prompt: "Месяц"
+          .form-row.pull-left
+            = select_tag "year", options_for_select(["2013 г.", "2012 г.", "2011 г.", "2010 г.", "2009 г."]), prompt: "Год"
+        span.publication.pull-left
+          |Дата публикации: 
+          |17.12.2013
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.accordion
+    .layout.group
+      .selection.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Учредительные документы компании
+        .actions.pull-right 
+          a.btn.orange.accordion-link Развернуть
+      ul.accordion-first
+        li
+          .selection.group
+            form.constituent-docs.pull-left
+              .form-row.pull-left
+                = select_tag "sort", options_for_select(["устав"]), prompt: "Вид документа"
+              .form-row.pull-left
+                = select_tag "date", options_for_select(["21 января 2014", "30 октября 2013", "13 августа 2013", "07 июня 2013", "09 января 2013"]), prompt: "Дата наступления основания"
+            span.publication.pull-left
+              |Дата публикации: 
+              |17.12.2013
+            .actions.pull-right 
+              a.btn.orange Скачать
+  li.item.even.accordion
+    .layout.group
+      .selection.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Аффилированные лица
+        .actions.pull-right 
+          a.btn.orange.accordion-link Развернуть
+      table.affiliates.accordion-first
+        tr.odd
+          td Вид документа
+          td Отчетный период
+          td Дата наступления основания
+          td Дата публикации
+          td Текст документа
+        tr
+          td
+            form.constituent-docs.pull-left
+              .form-row.pull-left
+                = select_tag "sort", options_for_select(["Изменения в список аффилированных лиц по состоянию на 31.12.2013", "Изменения в список аффилированных лиц по состоянию на 29.10.2013"]), prompt: "Вид документа"
+          td 4 квартал
+          td 29.10.2013
+          td 29.10.2013
+          td
+            a.btn.orange Скачать
+  li.item.accordion
+    .layout.group
+      .selection.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Общее собрание акционеров
+        .actions.pull-right 
+          a.btn.orange.accordion-link Развернуть
+      ul.accordion-first
+        li
+          .selection.group
+            form.meeting-shareholder.pull-left
+              .form-row.pull-left
+                = select_tag "sort", options_for_select(["О созыве общего собрания акционеров эмитента ОАО Брокерский дом ОТКРЫТИЕ"]), prompt: "Вид документа"
+            span.publication.pull-left
+              |Дата публикации: 
+              |12.12.2013
+            .actions.pull-right 
+              a.btn.orange Скачать
+  li.item.even.accordion
+    .layout.group
+      .selection.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Правила ведения реестра акционеров
+        .actions.pull-right 
+          a.btn.orange.accordion-link Развернуть
+      ul.accordion-first
+        li
+          .selection.group
+            form.meeting-shareholder.pull-left
+              .form-row.pull-left
+                = select_tag "sort", options_for_select(["Правила ведения реестра владельцев именных ценных бумаг ОАО Брокерский дом ОТКРЫТИЕ"]), prompt: "Вид документа"
+            span.publication.pull-left
+              |Дата публикации: 
+              |12.12.2013
+            .actions.pull-right 
+              a.btn.orange Скачать
+  li.item
+    .layout.group
+      .selection.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left  Годовой отчет
+        form.annual-report.pull-left
+          .form-row.pull-left
+            = select_tag "year", options_for_select(["2012 г.", "2011 г.", "2010 г.", "2009 г.", "2008 г.", "2007 г."]), prompt: "Отчетный период"
+        span.relevant.pull-left
+          |Дата наступления: 
+          |17.12.2013
+        span.publication.pull-left
+          |Дата публикации: 
+          |17.12.2013
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.even
+    .layout.group
+      .selection.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Бухгалтерская отчетность
+        form.own-funds.pull-left
+          .form-row.pull-left
+            = select_tag "year", options_for_select(["2012 г.", "2011 г.", "2010 г.", "2009 г.", "2008 г."]), prompt: "Отчетный период"
+        span.relevant.pull-left
+          |Дата наступления: 
+          |17.12.2013
+        span.publication.pull-left
+          |Дата публикации: 
+          |17.12.2013
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item
+    .layout.group
+      .selection.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left  Балансы и Отчеты о прибылях и убытках
+        form.own-funds.pull-left
+          .form-row.pull-left
+            = select_tag "date", options_for_select(["на 31 марта 2013 года", "на 30 июня 2013 года"]), prompt: "на 30 сентября 2013 года"
+          .form-row.pull-left
+            = select_tag "year", options_for_select(["Отчет о прибылях и убытках"]), prompt: "Баланс"
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.even
+    .layout.group
+      .selection.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Аудиторское заключение
+        form.audit-report.pull-left
+          .form-row.pull-left
+            = select_tag "year", options_for_select(["на 31 декабря 2012 года", "на 31 декабря 2011 года"]), prompt: "Дата"
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.accordion
+    .layout.group
+      .selection.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Реквизиты ОАО "Брокерский дом "ОТКРЫТИЕ"
+        .actions.pull-right 
+          a.btn.orange.accordion-link Развернуть
+      table.affiliates.accordion-first
+        tr.even
+          td Полное наименование организации:
+          td Открытое акционерное общество "Брокерский дом "ОТКРЫТИЕ"
+        tr
+          td Сокращенное наименование:
+          td ОАО "Брокерский дом "ОТКРЫТИЕ"
+        tr.even
+          td Почтовый адрес:
+          td 115114, г. Москва, Летниковская улица, дом 2, стр.4
+        tr
+          td Юридический адрес:
+          td 115114, г. Москва, Летниковская улица, дом 2, стр.4
+        tr.even
+          td Телефоны:
+          td (495) 232-99-66
+        tr
+          td Факс:
+          td (495) 956-47-00
+        tr.even
+          td Регистрация:
+          td
+            |Компания зарегистрирована Московской регистрационной палатой 28 декабря 1995 года (регистрационный номер N039.182). Общество создано с целью извлечения прибыли и для осуществления профессиональной деятельности на рынке ценных бумаг.
+            br
+            |ОГРН 1027739704772 Свидетельство о внесении записи в ЕГРЮЛ от 05.12.2002 г., выдано Управлением МНС по г. Москве, серия 77 № 007079400
+        tr
+          td Генеральный директор:
+          td Авксентьева Валерия Викторовна

@@ -1,75 +1,313 @@
 - content_for :title, "Документы"
 - content_for :meta_description, ""
 - content_for :meta_keywords, ""
-- content_for :page_content_class, "page-documentation"
+- content_for :page_content_class, "page-docs"
 = render "pages/docs/menu"
-section.documentation
+section.docs
   .layout.group 
     .content
       h1.title
         |Регламентные документы:
-        br Брокерские услуги (Международные рынки)
-      a.link История изменений
-ul.documentation-events
+        br
+        |Брокерские услуги (Международные рынки)
+      a.link href="revision/brokerage-foregn" История изменений
+ul.docs-events
   li.item.group.dark-gray
     .layout
-      h3.title.docs Уведомление клиента о запрете манипулирования на рынке ценных бумаг
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Договор на брокерское обслуживание на иностранных торговых площадках
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group
     .layout
-      h3.title.docs Договор на брокерское обслуживание
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 1 к Договору. Перечень иностранных торговых площадок
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group.dark-gray
     .layout
-      h3.title.docs Приложение 1 к договору. Регламент обслуживания клиентов ОАО "Брокерский дом" 
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 2 к Договору. Тарифы
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложения 3 к Договору. Лист присоединения к договору
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть 
+      ul.accordion-first
+        li
+          a.title-link href="#"
+            | 3а. Лист присоединения к договору для юридческих лиц
+        li
+          a.title-link href="#"
+            | 3б. Лист присоединения к договору для физических лиц
+  li.item.group.dark-gray.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложения 4 к Договору. Документы необходимые для заключения договора
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть
+      ul.accordion-first
+        li
+          a.title-link href="#"
+            | 4а. Документы для юридических лиц - резидентов РФ
+        li
+          a.title-link href="#"
+            | 4б. Документы для физических лиц
+        li
+          a.title-link href="#"
+            | 4в. Документы для юридических лиц - нерезидентов РФ
+  li.item.group.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложения 5 к Договору. Заявления на обслуживание
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть
+      ul.accordion-first
+        li
+          a.title-link href="#"
+            | 5а. Заявление на обслуживание (для юридических лиц)
+        li
+          a.title-link href="#"
+            | 5б. Заявление на обслуживание (для физических лиц)
+        li
+          a.title-link href="#"
+            | 5в. Информационное сообщение (для юридических лиц)
+        li
+          a.title-link href="#"
+            | 5г. Информационное сообщение (для физических лиц)
+  li.item.group.dark-gray.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложения 6 к Договору. Анкеты
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть
+      ul.accordion-first
+        li
+          a.title-link href="#"
+            | 6а. Анкета клиента - юридического лица
+        li
+          a.title-link href="#"
+            | 6б. Анкета клиента - физического лица
+        li
+          a.title-link href="#"
+            | 6в. Анкета представителя клиента
+        li
+          a.title-link href="#"
+            | 6г. Анкета выгодоприобретателя клиента
   li.item.group
     .layout
-      h3.title.docs Перечень кредитных организаций, в которых Брокеру открыты счета для утчета денежных средств клиентов
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 7 к Договору. Список приоритетности бирж/площадок
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group.dark-gray
     .layout
-      h3.title.docs Приложение 1 к договору. Регламент обслуживания клиентов ОАО "Брокерский дом" 
-      .actions
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать 
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложения 8 к Договору. Извещение об открытии счетов
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group
     .layout
-      h3.title.docs Перечень кредитных организаций, в которых Брокеру открыты счета для утчета денежных средств клиентов 
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 9 к Договору. Заявление на открытие отдельного СБС
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group.dark-gray.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложения 10 к Договору. Поручения на перевод (вывод) активов
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть
+      ul.accordion-first
+        li
+          a.title-link href="#"
+            | 10а. Поручение на перевод (вывод) денежных средств
+        li
+          a.title-link href="#"
+            | 10б. Поручение на конвертацию
+        li
+          a.title-link href="#"
+            | 10в. Заявление на зачет расходов
+  li.item.group.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложения 11 к Договору. Доверенности
+        .actions.pull-right
+         a.btn.orange.accordion-link Развернуть
+      ul.accordion-first
+        li
+          a.title-link href="#"
+            | 11а. Типовая доверенность (для юридических лиц)
+        li
+          a.title-link href="#"
+            | 11б. Типовая доверенность (для физических лиц)
+        li
+          a.title-link href="#"
+            | 11в. Типовая двуязычная доверенность (для юридических лиц)
+        li
+          a.title-link href="#"
+            | 11г. Доверенность на голосовые сделки (для юридических лиц)
+        li
+          a.title-link href="#"
+            | 11д. Доверенность на голосовые сделки (для физических лиц)
   li.item.group.dark-gray
     .layout
-      h3.title.docs Договор на брокерское обслуживание
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 12 к Договору. Порядок обмена сообщениями
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group
     .layout
-      h3.title.docs Приложение 1 к договору. Регламент обслуживания клиентов ОАО "Брокерский дом"    
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 13 к Договору. Порядок конвертации и реализации ценных бумаг
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group.dark-gray
     .layout
-      h3.title.docs Перечень кредитных организаций, в которых Брокеру открыты счета для утчета денежных средств клиентов    
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложения 14 к Договору. Заявление на получение документов
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложения 15 к Договору. Уведомления об отказе от исполнения Договора
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть
+      ul.accordion-first
+        li
+          a.title-link href="#"
+            | 15а. По инициативе Клиента
+        li
+          a.title-link href="#"
+            | 15б. По инициативе Брокера
+  li.item.group.dark-gray
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 16 к Договору. Заявление о прекращении доверенности
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group
     .layout
-      h3.title.docs Приложение 1 к договору. Регламент обслуживания клиентов ОАО "Брокерский дом"    
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 17 к Договору. Список аффилированных лиц
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group.dark-gray
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 18 к Договору. Перечень документов для юридических лиц - резидентов РФ при изменении сведений
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 19 к Договору. Правила использования ПО QUIK и простой электронной подписи при использовании ПО QUIK
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group.dark-gray
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 20 к Договору. Заявление о регистрации открытого ключа
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 21 к Договору. Уведомление об отмене действия открытого ключа
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group.dark-gray.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 22 к Договору. Поручение на сделку
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть
+      ul.accordion-first
+        li
+          a.title-link href="#"
+            | 22a. Поручение на сделку с ценными бумагами
+        li
+          a.title-link href="#"
+            | 22б. Уведомление об отмене поручения
+        li
+          a.title-link href="#"
+            | 22в. Сводное поручение на сделки с ценными бумагами
+        li
+          a.title-link href="#"
+            | 22г. Поручение на сделку РЕПО
+        li
+          a.title-link href="#"
+            | 22д. Поручение на внебиржевую сделку
+  li.item.group
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 23 к Договору. Уведомление о счете депо Управляющей компании
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group.dark-gray.accordion
+    .layout
+      .section
+        .section.group
+          i.fa.fa-file-text-o.pull-left
+          h3.title.pull-left Приложение 24 к Договору. Доверенность под поручение
+          .actions.pull-right
+            a.btn.orange.accordion-link Развернуть
+      ul.accordion-first
+        li
+          a.title-link href="#"
+            | 24. Доверенность под поручение для юридического лица
+        li
+          a.title-link href="#"
+            | 24а. Доверенность под поручение для физического лица
+  li.item.group
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 25 к Договору. Соглашение об использовании АСП SMS
+        .actions.pull-right 
+          a.btn.orange Скачать
 .layout.action
   a.btn href="#" Скачать все документы одним архивом
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

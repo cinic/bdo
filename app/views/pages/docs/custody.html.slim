@@ -1,75 +1,237 @@
 - content_for :title, "Документы"
 - content_for :meta_description, ""
 - content_for :meta_keywords, ""
-- content_for :page_content_class, "page-documentation"
+- content_for :page_content_class, "page-docs"
 = render "pages/docs/menu"
-section.documentation
+section.docs
   .layout.group 
     .content
       h1.title
         |Регламентные документы:
-        br Депозитарное обслуживание
-      a.link История изменений
-ul.documentation-events
+        br
+        |Депозитарное обслуживание
+      a.link Новая редакция Регламента и приложений. Вступает в силу c 31 января 2014 г.
+      br
+      a.link href="revision/custody" История изменений
+ul.docs-events
   li.item.group.dark-gray
     .layout
-      h3.title.docs Уведомление клиента о запрете манипулирования на рынке ценных бумаг
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Депозитарный Договор
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group
     .layout
-      h3.title.docs Договор на брокерское обслуживание
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Договор о междепозитарных отношениях
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group.dark-gray.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 1 к Договорам - Клиентский регламент (Условия осуществления депозитарной деятельности)
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть 
+      ul.accordion-first
+        li
+          a.title-link href="#"
+            |Приложение 1 к Договорам - Клиентский регламент (Условия осуществления депозитарной деятельности)
+        li
+          a.title-link href="#"
+            |Приложение П-01 к Регламенту. Договор между депозитарием и попечителем счета
+        li
+          a.title-link href="#"
+            |Приложение П-02 к Регламенту. Заявление о присоединении к договору для физических лиц
+        li
+          a.title-link href="#"
+            |Приложение П-03 к Регламенту. Заявление о присоединении к договору для юридических лиц
+        li
+          a.title-link href="#"
+            |Приложение П-04 к Регламенту. Поручение на открытие счета
+        li
+          a.title-link href="#"
+            |Приложение П-05 к Регламенту. Поручение на закрытие счетов
+        li
+          a.title-link href="#"
+            |Приложение П-06 к Регламенту. Поручение о назначении попечителя счета депо
+        li
+          a.title-link href="#"
+            |Приложение П-07 к Регламенту. Поручение о назначении распорядителя счета депо
+        li
+          a.title-link href="#"
+            |Приложение П-08 к Регламенту. Поручение о назначении оператора счета депо
+        li
+          a.title-link href="#"
+            |Приложение П-09 к Регламенту. Поручение об отмене полномочий уполномоченного лица депонента
+        li
+          a.title-link href="#"
+            |Приложение П-10 к Регламенту. Поручение на изменение способов получения отчетных документов
+        li
+          a.title-link href="#"
+            |Приложение П-11 к Регламенту. Поручение об отмене поручения
+        li
+          a.title-link href="#"
+            |Приложение П-12 к Регламенту. Поручение на списание/зачисление ценных бумаг
+        li
+          a.title-link href="#"
+            |Приложение П-13 к Регламенту. Поручение на списание/зачисление ценных бумаг внутри ДКК
+        li
+          a.title-link href="#"
+            |Приложение П-14 к Регламенту. Поручение на списание/зачисление ценных бумаг внутри НРД
+        li
+          a.title-link href="#"
+            |Приложение П-15 к Регламенту. Поручение на блокирование/снятие блокирования ценных бумаг
+        li
+          a.title-link href="#"
+            |Приложение П-16 к Регламенту. Поручение на передачу ценных бумаг в залог/ возврат ценных бумаг из залога
+        li
+          a.title-link href="#"
+            |Приложение П-17 к Регламенту. Поручение о перемещении/ переводе между счетами депо/ разделами одного счета депо
+        li
+          a.title-link href="#"
+            |Приложение П-18а к Регламенту. Поручение о перемещении/ переводе между счетами депо
+        li
+          a.title-link href="#"
+            |Приложение П-18б к Регламенту. Сводное поручение о перемещении/ переводе между счетами депо
+        li
+          a.title-link href="#"
+            |Приложение П-19 к Регламенту. Поручение на обмен инвестиционных паев
+        li
+          a.title-link href="#"
+            |Приложение П-20 к Регламенту. Поручение на погашение инвестиционных паев
+        li
+          a.title-link href="#"
+            |Приложение П-21 к Регламенту. Информационный запрос
+        li
+          a.title-link href="#"
+            |Приложение П-22 к Регламенту. Уведомление об открытии счета депо
+        li
+          a.title-link href="#"
+            |Приложение П-23 к Регламенту. Выписка по счету депо
+        li
+          a.title-link href="#"
+            |Приложение П-24 к Регламенту. Отчет о совершенных депозитарных операциях за период
+        li
+          a.title-link href="#"
+            |Приложение П-24а к Регламенту. Отчет о совершенных депозитарных операциях за период по заданной бумаге
+        li
+          a.title-link href="#"
+            |Приложение П-25 к Регламенту. Отчет о совершенных депозитарных операциях по счету депо депонента
+        li
+          a.title-link href="#"
+            |Приложение П-26 к Регламенту. Отчет об остатке ценных бумаг одного эмитента на счете депо депонента
+        li
+          a.title-link href="#"
+            |Приложение П-27 к Регламенту. Поручение по итогам торговой сессии - сводное поручение (биржевое)
+        li
+          a.title-link href="#"
+            |Приложение П-27а к Регламенту. Поручение по итогам торговой сессии - сводное поручение (внебиржевое)
+        li
+          a.title-link href="#"
+            |Приложение П-27б к Регламенту. Поручение по итогам торговой сессии - сводное поручение (на внешние ценные бумаги)
+        li
+          a.title-link href="#"
+            |Приложение П-28 к Регламенту. Анкета попечителя счета депо
+        li
+          a.title-link href="#"
+            |Приложение П-29 к Регламенту. Анкета оператора счета депо
+        li
+          a.title-link href="#"
+            |Приложение П-30 к Регламенту. Анкета клиента-физического лица
+        li
+          a.title-link href="#"
+            |Приложение П-31 к Регламенту. Анкета клиента-юридического лица
+        li
+          a.title-link href="#"
+            |Приложение П-32 к Регламенту. Анкета представителя клиента
+        li
+          a.title-link href="#"
+            |Приложение П-32а к Регламенту. Анкета выгодоприобретателя Клиента
+        li
+          a.title-link href="#"
+            |Приложение П-33 к Регламенту. Перечень документов для заключения договора
+        li
+          a.title-link href="#"
+            |Приложение П-33а к Регламенту. Список аффилированных лиц
+        li
+          a.title-link href="#"
+            |Приложение П-34 к Регламенту. Информационное сообщение
+        li
+          a.title-link href="#"
+            |Приложение П-35 к Регламенту. Типовая доверенность (для юридических лиц)
+        li
+          a.title-link href="#"
+            |Приложение П-36 к Регламенту. Типовая доверенность (для физических лиц)
+        li
+          a.title-link href="#"
+            |Приложение П-37 к Регламенту. Типовая двуязычная доверенность (для юридических лиц)
+        li
+          a.title-link href="#"
+            |Приложение П-38 к Регламенту. Порядок подачи Поручений
+        li
+          a.title-link href="#"
+            |Приложение П-39 к Регламенту. Соглашение об использовании АСП SMS при обслуживании клиентов в Личном кабинете
+        li
+          a.title-link href="#"
+            |Приложение П-40 к Регламенту. Извещение о выплате и перечислении денежных средств
+  li.item.group
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 2 к Договору - Тарифы на услуги депозитария
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group.dark-gray
     .layout
-      h3.title.docs Приложение 1 к договору. Регламент обслуживания клиентов ОАО "Брокерский дом" 
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
-  li.item.group
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 3 к Договору - Порядок определения расчетной ежедневной стоимости ценных бумаг
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group.accordion
     .layout
-      h3.title.docs Перечень кредитных организаций, в которых Брокеру открыты счета для утчета денежных средств клиентов
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Инструкции по заполнению поручений на инвентарные операции
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть 
+      ul.accordion-first
+        li
+          a.title-link href="#"
+            |Инструкция по заполнению П-12
+        li
+          a.title-link href="#"
+            |Инструкция по заполнению П-13
+        li
+          a.title-link href="#"
+            |Инструкция по заполнению П-14
+        li
+          a.title-link href="#"
+            |Инструкция по заполнению П-15
+        li
+          a.title-link href="#"
+            |Инструкция по заполнению П-16
+        li
+          a.title-link href="#"
+            |Инструкция по заполнению П-17
+        li
+          a.title-link href="#"
+            |Инструкция по заполнению П-18А
+        li
+          a.title-link href="#"
+            |Инструкция по заполнению П-19
+        li
+          a.title-link href="#"
+            |Инструкция по заполнению П-20
   li.item.group.dark-gray
     .layout
-      h3.title.docs Приложение 1 к договору. Регламент обслуживания клиентов ОАО "Брокерский дом" 
-      .actions
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать 
-  li.item.group
-    .layout
-      h3.title.docs Перечень кредитных организаций, в которых Брокеру открыты счета для утчета денежных средств клиентов 
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
-  li.item.group.dark-gray
-    .layout
-      h3.title.docs Договор на брокерское обслуживание
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
-  li.item.group
-    .layout
-      h3.title.docs Приложение 1 к договору. Регламент обслуживания клиентов ОАО "Брокерский дом"    
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
-  li.item.group.dark-gray
-    .layout
-      h3.title.docs Перечень кредитных организаций, в которых Брокеру открыты счета для утчета денежных средств клиентов    
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
-  li.item.group
-    .layout
-      h3.title.docs Приложение 1 к договору. Регламент обслуживания клиентов ОАО "Брокерский дом"    
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Регламент электронного документооборота с использованием электронной подписи
+        .actions.pull-right.pull-right 
+          a.btn.orange Скачать
 .layout.action
   a.btn href="#" Скачать все документы одним архивом
