@@ -1,75 +1,169 @@
 - content_for :title, "Документы"
 - content_for :meta_description, ""
 - content_for :meta_keywords, ""
-- content_for :page_content_class, "page-documentation"
+- content_for :page_content_class, "page-docs"
 = render "pages/docs/menu"
-section.documentation
+section.docs
   .layout.group 
     .content
       h1.title
         |Регламентные документы:
-        br Доверительное управление
-      a.link История изменений
-ul.documentation-events
+        br 
+        |Доверительное управление
+      a.link href="revision/trust" История изменений
+ul.docs-events
   li.item.group.dark-gray
     .layout
-      h3.title.docs Уведомление клиента о запрете манипулирования на рынке ценных бумаг
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Договор ДУ для юридических и физических лиц
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group
     .layout
-      h3.title.docs Договор на брокерское обслуживание
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложения 1. Регламент доверительного управления ценными бумагами и средствами инвестирования в ценные бумаги
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group.dark-gray
     .layout
-      h3.title.docs Приложение 1 к договору. Регламент обслуживания клиентов ОАО "Брокерский дом" 
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 2. Инвестиционная декларация
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group
     .layout
-      h3.title.docs Перечень кредитных организаций, в которых Брокеру открыты счета для утчета денежных средств клиентов
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 3. Порядок расчета вознаграждения доверительного управляющего
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group.dark-gray
     .layout
-      h3.title.docs Приложение 1 к договору. Регламент обслуживания клиентов ОАО "Брокерский дом" 
-      .actions
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать 
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложения 4. Декларация о рисках
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group
     .layout
-      h3.title.docs Перечень кредитных организаций, в которых Брокеру открыты счета для утчета денежных средств клиентов 
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 5. Проспект доверительного управляющего
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group.dark-gray
     .layout
-      h3.title.docs Договор на брокерское обслуживание
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 6. Порядок возврата доверительным управляющим учредителю управления ценных бумаг и/или денежных средств, поступивших доверительному управляющему после расторжения Договора
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group
     .layout
-      h3.title.docs Приложение 1 к договору. Регламент обслуживания клиентов ОАО "Брокерский дом"    
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложения 7. Уведомление о распределении активов в рамках доверительного управления
+        .actions.pull-right 
+          a.btn.orange Скачать
   li.item.group.dark-gray
     .layout
-      h3.title.docs Перечень кредитных организаций, в которых Брокеру открыты счета для утчета денежных средств клиентов    
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 8. Методика оценки стоимости активов
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 9. Анкета клиента
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть 
+      ul.accordion-first
+        li
+          a.title-link href="#"
+            |Для физических лиц
+        li
+          a.title-link href="#"
+            |Для юридических лиц
+        li
+          a.title-link href="#"
+            |Анкета представителя Клиента
+  li.item.group.dark-gray.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 10. Документы, необходимые для заключения Договора доверительного управления
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть 
+      ul.accordion-first
+        li
+          a.title-link href="#"
+            |Для физических лиц
+        li
+          a.title-link href="#"
+            |Для юридических лиц (резиденты)
+        li
+          a.title-link href="#"
+            |Анкета представителя Клиента (нерезиденты)
   li.item.group
     .layout
-      h3.title.docs Приложение 1 к договору. Регламент обслуживания клиентов ОАО "Брокерский дом"    
-      .actions 
-        a.btn.orange.round-left Развернуть
-        a.btn.orange.round-right Скачать
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложения 11. Стратегии управления
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group.dark-gray
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 12. Порядок обмена сообщениями
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 13а. Доверенность
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group.dark-gray
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 13б. Доверенность
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение 14. Заявление о прекращении действия доверенности на представителя клиента
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group.dark-gray
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение №15а Заявление о присоединении к договору физического лица
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение №15б Заявление о присоединении к договору юридического лица
+        .actions.pull-right 
+          a.btn.orange Скачать
+  li.item.group.dark-gray
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Приложение №16 Реквизиты банковских счетов Доверительного управляющего
+        .actions.pull-right 
+          a.btn.orange Скачать
 .layout.action
   a.btn href="#" Скачать все документы одним архивом

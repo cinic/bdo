@@ -1433,21 +1433,17 @@
     list-style: none;
     .item {
       padding: 18px 0;
-      .accordion_content {
-        padding: 30px 0 0 50px;
-        display: none;
-      }
       .title {
-        float: left;
-        padding-left: 30px;
-        width: 645px;
+        vertical-align: middle;
+        padding-left: 10px;
         font-size: 14px;
-        &.docs {
-          background: image-url("application/pages/documentation/icon-docs.png") no-repeat 0 50%;
-        }
+        max-width: 700px;
+      }
+      .fa {
+        font-size: 21px;
+        color: $dark-blue;
       }
       .actions {
-        float: right;
         a:first-child {
           margin-right: 1px;
         }
@@ -1470,6 +1466,26 @@
   .action {
     padding: 50px 0;
     text-align: center;
+  }
+  //Гармошки  style's
+  .accordion {
+    .accordion-first {
+      padding: 15px 0 0 50px;
+      display: none;
+    }
+    .accordion-second {
+      display:none;
+    }
+    h4, .title-link {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 0;
+      cursor: pointer;
+    }
+    h4 {
+      font-weight: 600;
+    }
   }
 }
 /* ABOUT
@@ -1738,5 +1754,142 @@
     }
     .input-text::-webkit-input-placeholder { color: $dark-blue; }
     .input-text:-moz-placeholder { color: $dark-blue; }
+  }
+}
+/* Disclosure
+   ========================================================================== */
+.page-disclosure {
+  .content {
+    text-align:center;
+  }
+  h1.title {
+    margin: 30px 0 10px;
+    line-height: 45px;
+    font-size: 36px;
+  }
+  .link {
+    color: #53b2df;
+    text-decoration: underline; 
+  }
+  .disclosure-events {
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+    .item {
+      padding: 18px 0;
+      .selection {
+        .title {
+          vertical-align: middle;
+          padding-left: 10px;
+          font-size: 14px;
+          max-width: 700px;
+        }
+        .fa {
+          font-size: 21px;
+          color: $dark-blue;
+        }
+        form {
+          margin: 0 10px 0 5px;
+          .form-row {
+            margin: 0 2px;
+            line-height: 24px;
+          }
+        }
+        .publication,
+        .relevant {
+          font-size: 14px;
+          font-weight: 100;
+          margin: 0 0 0 10px;
+        }
+      }
+      .actions {
+        vertical-align: middle;
+        a:first-child {
+          margin-right: 1px;
+        }
+        .item {
+          display: inline-block;
+          margin: 0 2px 2px 0;
+          padding: 4px;
+          font-size: 10px;
+          line-height: 14px;
+          background-color: #cecece;
+          border-radius: 2px;
+        }
+      }
+    }
+    .affiliates {
+      margin: 30px 0 0;
+      .even {
+        td {
+          border: 1px solid #ffffff;
+        }
+      }
+      .odd {
+        td {
+          border: 1px solid $dark-gray;
+        }
+      }
+      tr {
+        height: 30px;
+        td {
+          padding: 10px;
+        }
+      }
+    }
+  }
+  //Гармошки  style's
+  .accordion {
+    .accordion-first {
+      padding: 30px 0 0;
+      display: none;
+      list-style: none;
+      .form-row {
+        margin: 0 10px;
+      }
+    }
+    .accordion-second {
+      display:none;
+    }
+    h4, .title-link {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 0;
+      cursor: pointer;
+    }
+    h4 {
+      font-weight: 600;
+    }
+  }
+  //Цвет четных и нечетных строк
+  .even {
+    background-color: $dark-gray;
+  }
+  .odd {
+    background-color: $white;
+  }
+}
+/* Insiders
+   ========================================================================== */
+.page-insiders {
+  .content {
+    text-align:left;
+  }
+  ul {
+    li {
+      list-style-type: disk;
+    }
+  }
+  .grey {
+    .even {
+      background-color: $dark-gray;
+    }
+    tr {
+      td {
+        border: 1px solid #cec7c7;
+        padding: 5px 10px;
+      }
+    }
   }
 }
