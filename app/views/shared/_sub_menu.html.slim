@@ -1,6 +1,10 @@
+- if yield(:page_title).blank?
+  - nav_title = yield(:title)
+- else
+  - nav_title = yield(:page_title)
 nav.sub-nav
   .layout.group
-    span.title = yield(:title)
+    span.title = nav_title
     ul.group
       - items.each do |item|
         li
