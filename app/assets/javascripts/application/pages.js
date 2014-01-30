@@ -51,6 +51,13 @@ $(function(){
       });
       $(this).toggleClass('active');
   });
+  // филиалы фильтр
+  var filter = $('input#filter');
+    $('ul.branch-list').listfilter({
+      'filter': filter,
+      'alternate': true,
+      'alternateclass': 'other'
+  });
 })
   // Гармошка документы
 $(document).ready(function() {
