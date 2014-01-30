@@ -15,9 +15,9 @@ footer.footer
         li.item
           a.link href="#" Институционалам
         li.item
-          a.link href="#" Партнёрам
+          = link_to_with_current_class "Партнёрам", "active", page_path("partners"), class: "link"
         li.item
-          a.link href="#" Филиалы
+          = link_to_with_current_class "Филиалы", "active", page_path("about/branch"), class: "link"
     .group 
       .copyright
         span © ОАО «Брокерский дом «ОТКРЫТИЕ»
@@ -27,4 +27,3 @@ footer.footer
       .social
         a.item.fa.fa-vk href="http://vk.com/openbroker"
         a.item.fa.fa-facebook href="https://www.facebook.com/openbroker"
-        //a.item.fa.fa-twitter href="https://twitter.com/openbroker"        
