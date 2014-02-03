@@ -13,6 +13,7 @@
 //= require jquery
 //= require_tree ./jquery/
 //= require ./pages
+//= require ./raphael
 // require jquery_ujs
 // require turbolinks
 // require_tree .
