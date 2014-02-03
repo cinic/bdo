@@ -15,10 +15,14 @@
     .field-box
       = f.label :base_active, "Базовый актив"
       = f.text_field :base_active, class: "span8 inline-input"
-    - @admin_posts_structural_product.price.each_with_index do |cost,index|
-      .field-box
-        = f.label "price" + "_" + index.to_s, "Пороговая цена " + (index + 1).to_s
-        = f.text_field :price, name: "structural_product[price][]", class: "span8 inline-input", id: "structural_product_price_" + index.to_s, value: cost
+    .field-box
+      = f.label :price, "Пороговая цена 1"
+      = f.text_field :price, :name => "structural_product[price][]"
+      - @admin_posts_structural_product.price.each do |cost|
+        = f.text_field :price, :name => "structural_product[price][]", cost
+    .field-box
+      = f.label "price", "Пороговая цена 2"
+      = f.text_field "price", class: "span8 inline-input"
     .field-box
       = f.label :release_date, "Дата исполнения"
       = f.text_field :release_date, class: "span8 inline-input"

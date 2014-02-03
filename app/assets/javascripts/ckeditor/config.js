@@ -4,8 +4,8 @@ CKEDITOR.editorConfig = function( config )
     [
         { name: 'document', items : [ 'Source'] },
         { name: 'basicstyles', items : [ 'Bold','Italic','-','RemoveFormat', '-','NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote' ] },
-        { name: 'insert', items : [ 'Image','Table'] },
-        { name: 'links', items : [ 'Link','Unlink' ] }
+        //{ name: 'insert', items : [ 'Image','Table'] },
+        //{ name: 'links', items : [ 'Link','Unlink' ] }
         /*,
         { name: 'links', items : [ 'Link','Unlink','Anchor' ] }*/
     ];

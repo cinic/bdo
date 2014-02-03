@@ -31,6 +31,6 @@
                 li
                   = link_to "Редактировать", posts_edit_smth_path(post)
                 li.last
-                  = link_to "Удалить", [:admin,:posts,post], data: { confirm: "Are you sure?", method: :delete}
+                  = link_to "Удалить", [:admin,:posts,post], :confirm => "Are you sure?", :method=>:delete
 
   = link_to 'Добавить новость', new_admin_posts_company_event_path, class: "btn-flat"

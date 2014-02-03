@@ -41,7 +41,6 @@ before_action :set_admin_posts_structural_product, only: [:show, :edit, :update,
   # PATCH/PUT /admin/posts/structural_products/1
   # PATCH/PUT /admin/posts/structural_products/1.json
   def update
-    puts admin_posts_structural_product_params
     respond_to do |format|
       if @admin_posts_structural_product.update(admin_posts_structural_product_params)
         format.html { redirect_to [:admin,:posts,@admin_posts_structural_product], notice: 'Invest idea was successfully updated.' }
@@ -71,8 +70,7 @@ before_action :set_admin_posts_structural_product, only: [:show, :edit, :update,
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_posts_structural_product_params
-      puts params[:structural_product]
-      params.require(:structural_product).permit(:title, :body, :date, :published, :base_active, :release_date, :entry_threshold, :currency,
-        :target_yield, :capital_protection, :maximum_profit, :maximum_risk, :participation_rate, :coupon, :release, {price: []})
+      params.require(:structural_product).permit(:title, :body, :date, :published, :base_active, :price, :release_date, :entry_threshold, :currency,
+        :target_yield, :capital_protection, :maximum_profit, :participation_rate, :coupon, :release)
     end
 end
