@@ -735,6 +735,7 @@
     /* Элементы формы */
     .form-row { 
       margin: 0 0 5px 0;
+      position:relative;
       &.consent,
       &.actions {
         line-height: 36px;
@@ -768,6 +769,273 @@
   .input-text {
     height: 26px !important;
     padding: 10px 0 0 5px !important;
+  }
+}
+/* Open demo-account
+   ========================================================================== */
+.page-demo-account {
+  .cover {
+    min-height: 576px;
+  }
+  .form-layout {
+    float: left;
+    width: 430px;
+    font-size: 13px;
+    /* Элементы формы */
+    .form-row { 
+      margin: 0 0 5px 0;
+      position:relative;
+      &.consent,
+      &.actions {
+        line-height: 36px;
+      }
+      .field_with_errors { display: inline; }
+    }
+    label {
+      color: white;
+    }
+    .input-text {
+      padding: 0 3%;
+      width: 94%;
+      height: 36px;
+      border: 0;
+    }
+    .input-checkbox {
+      margin-right: 6px;
+    }
+    .input-text::-webkit-input-placeholder { color: $dark-blue; }
+    .input-text:-moz-placeholder { color: $dark-blue; }
+  }
+  .description-layout {
+    float: right;
+    width: 450px;
+    color: white;
+
+    p:first-child { margin-top: 0; }
+  }
+}
+  .reg-demo-theme {
+    position: relative;
+    height: 576px;
+    border: none;
+  }
+  .reg-demo-default,
+  .reg-demo-quik,
+  .reg-demo-mt5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 576px;
+  }
+  .reg-demo-quik,
+  .reg-demo-mt5 {
+    display: none;
+  }
+  .reg-demo-default { 
+    background: image-url("application/pages/covers/open-demo-default.jpg") no-repeat 50% 50%;
+  }
+  .reg-demo-quik {
+    background: image-url("application/pages/covers/open-demo-quick.jpg") no-repeat 50% 50%; 
+  }
+  .reg-demo-mt5 {
+    background: image-url("application/pages/covers/open-demo-mt5.jpg") no-repeat 50% 50%;
+  }
+  .reg-demo-theme__text {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    width: 200px;
+    margin-left: -40px;
+  }
+  .form-layout {
+    .theme_text {
+      margin: 15px 0;
+    }
+    .demo-account {
+      width: 430px;
+    }
+  }
+  .theme_text {
+    margin: 0 0 25px;
+    text-shadow: #e4e4e4 0 1px 0;
+    color: #222121;
+    font-size: 24px;
+  }
+  .reg-demo-theme__text ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0 0 18px;
+      padding: 0 0 0 30px;
+      background: image-url("application/pages/demo-account/marker.png") 4px 3px no-repeat;
+      text-shadow: #e4e4e4 0 1px 0;
+      font: normal 14px/18px 'PT Sans', sans-serif;
+    }
+  }
+  .reg-demo-theme .feedback {
+    position: relative;
+    width: 367px;
+    padding: 50px 0 0;
+  }
+  .reg-demo-theme .feedback .form__row {
+    position: relative;
+    overflow: hidden;
+    padding: 0 0 11px;
+  }
+    .reg-demo-theme .feedback .form__input--text {
+      display: block;
+      width: 325px;
+      height: 35px;
+      padding: 0 20px;
+      border-radius: 5px;
+      border: 1px solid #dad2ca;
+      font-size: 16px;
+      line-height: 35px;
+    }
+    
+    .reg-demo-theme .feedback .form__label_holded,
+    .reg-demo-theme .form__label_mobile {
+      position: absolute;
+      top: 8px;
+      left: 20px;
+      font-size: 16px;
+      color: #8e8e8e;
+    }
+  .reg-demo-theme .product__options {
+    position: relative;
+    width: 430px;
+    margin: 11px 0 22px;
+    padding: 15px 0;
+    text-align: center;
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
+  }
+  .reg-demo-theme .product__options .form__label {
+    display: inline-block;
+    margin: 0 15px;
+    vertical-align: middle;
+    text-shadow: #fff 0 1px 0;
+    font: normal 24px/32px 'PT Sans', sans-serif;
+    color: #222121;
+  }
+  .reg-demo-theme .radio_check {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin: 0 10px 0 0;
+    padding: 0;
+    cursor: pointer;
+    &:after {
+      display: block;
+      width: 9px;
+      height: 9px;
+      box-shadow: #666 0 0 1px 0;
+      border-radius: 7px;
+      border: 2px solid #fff;
+      background: #fff;
+      content: '';
+    }
+    &:checked:after {
+      background: #f78236;
+    }
+  }
+  .reg-demo-theme .product__options:before,
+  .reg-demo-theme .product__options:after {
+    position: absolute;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #b5b5bc;
+    border-bottom: 1px solid #ebeaed;
+    content: '';
+  }
+  .reg-demo-theme .comment {
+    text-align: center;
+    font-size: 12px;
+    font-style: normal !important;
+    width: 430px;
+    color: #222121;
+  }
+  .reg-demo-theme .comment + .comment {
+    margin-top: -1em;
+  }
+    .reg-demo-theme .comment a {
+      text-decoration: underline;
+      color: #333;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+/* Open account non-resident and resident
+   ========================================================================== */
+.page-account-non-resident,
+.page-account-resident {
+  .account-non-resident,
+  .account-resident {
+    padding: 50px 0;
+    .form-layout {
+      float: left;
+      width: 430px;
+      font-size: 13px;
+      .form-text {
+        font-size: 24px;
+        padding: 0 0 15px;
+      }
+      .form-row + .form-text {
+        padding: 15px 0 15px;
+      }
+      .form-text + p {
+        margin: -20px 0 10px;
+      }
+      span {
+        font-size: 11px;
+        margin: -15px 0;
+      }
+      p {
+        padding: 10px 0 0;
+        font-size: 14px;
+      }
+      /* Элементы формы */
+      .form-row { 
+        margin: 0 0 5px 0;
+        position:relative;
+        &.consent,
+        &.actions {
+          line-height: 36px;
+        }
+        .field_with_errors { display: inline; }
+      }
+      label {
+        color: white;
+      }
+      .input-text {
+        padding: 0 3%;
+        width: 94%;
+        height: 36px;
+        border: 0;
+      }
+      select {
+        width: 430px;
+      }
+      .input-checkbox {
+        margin-right: 6px;
+      }
+      .input-text::-webkit-input-placeholder { color: $dark-blue; }
+      .input-text:-moz-placeholder { color: $dark-blue; }
+    }
+    .description-layout {
+      float: right;
+      width: 450px;
+      color: white;
+
+      p:first-child { margin-top: 0; }
+    }
   }
 }
 /* Investing
@@ -1596,8 +1864,8 @@
       }
       input {
         height: 20px;
-        padding: 5px 0;
-        width: 400px;
+        padding: 5px;
+        width: 390px;
       }
     }
   }
@@ -1704,6 +1972,7 @@
     /* Элементы формы */
     .form-row { 
       margin: 0 0 5px 0;
+      position:relative;
       &.consent,
       &.actions {
         line-height: 36px;
@@ -1777,6 +2046,7 @@
           .form-row {
             margin: 0 2px;
             line-height: 24px;
+            position:relative;
           }
         }
         .publication,
@@ -1830,6 +2100,7 @@
       list-style: none;
       .form-row {
         margin: 0 10px;
+        position:relative;
       }
     }
     .accordion-second {

@@ -1,7 +1,9 @@
 doctype html
 /[if IE 8]
-    html class="no-js lt-ie9"
-<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+    html class="no-js lt-ie9 ie"
+/[if IE 9]
+    html class="no-js ie9 ie"
+<!--[if gt IE 9]><!--><html class="no-js"><!--<![endif]-->
   head
     title
         = (yield(:title) + " | " unless yield(:title).blank?).to_s + "ОТКРЫТИЕ Брокер" 

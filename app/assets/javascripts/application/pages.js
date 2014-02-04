@@ -25,6 +25,44 @@ $(function(){
   });
   // Карты филиалов
   $('.js.no-touch .branch-list > li').YaMap();
+  
+  // филиалы фильтр
+  var filter = $('input#filter');
+    $('ul.branch-list').listfilter({
+      'filter': filter,
+      'alternate': true,
+      'alternateclass': 'other'
+  });
+  //Переключатель Демо-счет
+  $('.radio_check').change( function(){    
+    switch ( $(this).val() ) {
+      case '1':
+        $('.reg-demo-default').fadeOut();
+        $('.reg-demo-quik').fadeIn();
+        $('.reg-demo-mt5').fadeOut();
+        document.getElementById("new_prospect").setAttribute("onsubmit", "return !!(Uch_Fields() && gaqReturn('_trackEvent', 'Demo accounts', 'Submit', 'demo_quik'));");
+      break;
+      case '0':
+        $('.reg-demo-default').fadeOut();
+        $('.reg-demo-mt5').fadeIn();
+        $('.reg-demo-quik').fadeOut();
+        document.getElementById("new_prospect").setAttribute("onsubmit", "return !!(Uch_Fields() && gaqReturn('_trackEvent', 'Demo accounts', 'Submit', 'demo_mt5'));");
+      break;
+    }
+  });
+  // Placeholder IE
+  $( '.ie .form-row' ).each( function() {
+    if ($(this).children( 'input, textarea' ).length > 0 ) {
+      $( this ).append('<label id="" class="placeholder">'+$(this).children( 'input, textarea' ).attr('placeholder')+'</label>');
+    }
+  });
+  $('input, textarea').on('input propertychange textInput focus blur', function () {
+    if ($(this).val().length > 0) {
+      $('.placeholder[for="' + $(this).attr('id') + '"]').fadeOut();
+    } else {
+      $('.placeholder[for="' + $(this).attr('id') + '"]').fadeIn();
+    }
+  });
 })
   // Гармошка документы
 $(document).ready(function() {
