@@ -46,6 +46,13 @@ h3 {
 .bg-gray { background-color: $dark-gray; }
 .centered { text-align: center; }
 
+.placeholder {
+  color: $dark-blue !important;
+  left: 12px;
+  top: 7px;
+  position: absolute;
+  width: 100%;
+}
 /* Кнопки */
 .btn {
   display: inline-block;

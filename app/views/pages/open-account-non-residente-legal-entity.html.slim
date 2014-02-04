@@ -1,0 +1,20 @@
+- content_for :title, "Открыть счёт"
+- content_for :meta_description, ""
+- content_for :meta_keywords, ""
+- content_for :page_content_class, "page-account-non-resident"
+= render partial: "shared/sub_menu", locals: {items: [["Физ. лицо", "open-account"],["Юр. лицо", "open-account-legal-entity"],["Юр. лицо не резидент", "open-account-non-residente-legal-entity"]]}
+section.slide.blue
+  .layout.group.account-non-resident
+    .form-layout
+      - if notice
+        p#notice = notice
+      - else
+        = render "shared/forms/open_account_non_residente_form"
+    .description-layout
+      p Для формирования договора помимо анкетных данных необходимо предоставить копии следующих страниц паспорта:
+      ul
+        li Cтраница с фотографией;
+        li Cтраница с регистрацией (все страницы, если их несколько);
+        li Cтраница со сведениями о ранее выданных паспортах.
+      p Их можно отсканировать или сфотографировать и отправить по email anketa@open.ru
+      p ОАО «Брокерский дом «ОТКРЫТИЕ» гарантирует конфиденциальность предоставленной информации. Переданные Вами в анкете данные будут использованы исключительно для открытия Вам брокерского счета в компании ОАО «Брокерский дом «ОТКРЫТИЕ» и последующего клиентского обслуживания.

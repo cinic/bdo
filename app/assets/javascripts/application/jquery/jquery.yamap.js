@@ -20,11 +20,13 @@ jQuery.fn.extend({
       
               }),
               myPlacemark = new ymaps.Placemark([$(elem).attr('data-latitude'), $(elem).attr('data-long')], {
-                  iconContent: 'O',
+                  iconContent: '',
                   balloonContent: [$(elem).attr('alt')],
-                  hintContent: [$(elem).attr('alt')]
+                  hintContent: [$(elem).attr('alt')],
               }, {
-                  preset: 'twirl#blueIcon'
+                  iconImageHref: '/assets/application/pages/icon-o.png',
+                  iconImageSize: [37, 67],
+                  iconImageOffset: [-22, -66]
               });
               myMap.geoObjects.add(myPlacemark);
             }
