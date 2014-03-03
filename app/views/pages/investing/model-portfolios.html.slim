@@ -29,14 +29,14 @@ section.slide.gray.however
       = image_tag("application/pages/investing/model-portfolios/portfolios.png")
   .img
   .layout.button
-    a.btn.white Подобрать тариф
+    = link_to "Подключить тариф", page_path("open-account"), class: "btn white"
 
 section.page-teasers
   .teasers
     a.item href="javascript:void()"
       i.icon.mutual-funds
       h5.title Паевые фонды
-    a.item href="javascript:void()"
+    a.item href="#{page_path('investing/open-advisor')}"
       i.icon.trading-signal
       h5.title Торговые сигналы
     a.item.icon href="javascript:void()"

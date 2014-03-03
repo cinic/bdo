@@ -10,7 +10,7 @@ section.slide.cover.personal-broker
         |Персональный подход к приумножению вашего капитала!
         br
         |Доступ к инвестициям в любые активы по всему миру.
-      a.btn.white Подробнее
+      a.btn.white href="#about" Подробнее
 section.slide.white
   #about.layout.about.product-teasers
     h2.title Вы получаете
@@ -58,7 +58,7 @@ section.slide.white
         p Низкая комиссия за использование инструментов маржинальной торговли и от 0,04 рубля за сделку – для тех, кто привык зарабатывать на рынках, как профессионал.
         .actions
           = link_to "Подробнее", page_path("pricing-plans/personal-broker"), class: "btn orange round-left"
-          = link_to "Подключить", "#", class: "btn orange round-right"
+          = link_to "Подключить", page_path("open-account"), class: "btn orange round-right"
       .item
         h2.title
           |&laquo;
@@ -67,7 +67,7 @@ section.slide.white
         p Привлекательные условия для начинающих инвесторов – комиссия 45 рублей за выполненное поручение,  0,045% от трейда и до 14% годовых при использовании брокерского «плеча».
         .actions 
           = link_to "Подробнее", page_path("pricing-plans/personal-broker-plus"), class: "btn orange round-left"
-          = link_to "Подключить", "#", class: "btn orange round-right"
+          = link_to "Подключить", page_path("open-account"), class: "btn orange round-right"
 section.page-teasers
   .teasers
     a.item href="javascript:void()"
@@ -76,9 +76,9 @@ section.page-teasers
     a.item href="javascript:void()"
       i.icon.webinar
       h5.title Вебинар: Структурные продукты
-    a.item href="javascript:void()"
+    a.item href="#{page_path('investing/model-portfolios')}"
       i.icon.model-portfolio
       h5.title Модельные портфели
-    a.item href="javascript:void()"
+    a.item href="#{page_path('investing/open-advisor')}"
       i.icon.trading-signal
       h5.title Торговые сигналы

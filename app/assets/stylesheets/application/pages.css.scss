@@ -1742,6 +1742,9 @@
 }
 /* ABOUT
    ========================================================================== */
+.about-menu {
+  padding: 50px 0 0;
+}
 .page-about {
   .about {
     .product-teasers {
@@ -1842,7 +1845,6 @@
    ========================================================================== */
 .page-branch {
   .branch {
-    padding: 30px 0 0;
     h1.title {
       text-transform: uppercase;
       &:after {
@@ -2145,6 +2147,121 @@
         border: 1px solid #cec7c7;
         padding: 5px 10px;
       }
+    }
+  }
+}
+/* Contact Us
+   ========================================================================== */
+.page-contactus {
+  .contactus {
+    padding-bottom: 30px;
+  }
+  .form-layout {
+    width: 430px;
+    margin: 0 auto;
+    padding: 36px 0 51px;
+    /* Элементы формы */
+    .form-row { 
+      margin: 0 0 5px 0;
+      position:relative;
+      &.consent,
+      &.actions {
+        line-height: 36px;
+      }
+      &.actions {
+        width: 100%;
+        padding: 10px 0 7px;
+        position: absolute;
+        text-align: center;
+        left: 0;
+        background: $light-blue;
+        .light-blue {
+          background: $light-blue;
+          &:hover {
+            background: $orange;
+          }
+        }
+      }
+      .field_with_errors { display: inline; }
+    }
+    label {
+      color: white;
+    }
+    .input-text {
+      padding: 0 3%;
+      width: 94%;
+      line-height: 36px;
+      border: 0;
+    }
+    .input-checkbox {
+      margin-right: 6px;
+    }
+    .input-text::-webkit-input-placeholder { color: $dark-blue; }
+    .input-text:-moz-placeholder { color: $dark-blue; }
+  }
+}
+/* Career
+   ========================================================================== */
+.page-career {
+  .job-events {
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+    .item {
+      padding: 18px 0;
+      h3.title {
+        font-size: 24px;
+      }
+      h4.title {
+        vertical-align: middle;
+        padding-left: 10px;
+        font-size: 14px;
+        max-width: 700px;
+        &:after {
+          display: none;
+        }
+      }
+      .fa {
+        font-size: 21px;
+        color: $dark-blue;
+      }
+      .actions {
+        a:first-child {
+          margin-right: 1px;
+        }
+        .item {
+          display: inline-block;
+          margin: 0 2px 2px 0;
+          padding: 4px;
+          font-size: 10px;
+          line-height: 14px;
+          background-color: #cecece;
+          border-radius: 2px;
+        }
+      }
+      &.dark-gray {
+        background-color: $dark-gray;
+      }
+    }
+  }
+  //Гармошки  style's
+  .accordion {
+    .accordion-first {
+      padding: 15px 0 0 50px;
+      display: none;
+    }
+    .accordion-second {
+      display:none;
+    }
+    h4, .title-link {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 0;
+      cursor: pointer;
+    }
+    h4 {
+      font-weight: 600;
     }
   }
 }
