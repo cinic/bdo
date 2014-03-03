@@ -16,7 +16,8 @@
   .form-row
     = f.email_field :email, class: "input-text", placeholder: "Email"
   .form-row.consent
-    = f.label :consent do 
+    /= f.label :consent do 
+    label
       = f.check_box :consent, class: "input-checkbox"
       | Согласен на обработку персональных данных
   .form-row.actions

@@ -18,7 +18,7 @@ $(function(){
   $( "header.header" ).hover(function() {
     $(this).removeClass("min");
   });
-  // Плавный скроллинг
+
   $('.no-touch  a[href^="#"]').on( 'click', function(e) {
       e.preventDefault();
       $('body').stop().scrollTo($(this).attr('href'), 800);
@@ -63,27 +63,6 @@ $(function(){
       $('.placeholder[for="' + $(this).attr('id') + '"]').fadeIn();
     }
   });
-
-  // Suggestions in forms
-  if (typeof $.fn.autocomplete == "function") {
-    //$( 'input[name*="first_name"], input[name*="last_name"], input[name*="patronymic"]').parent().hide();
-    var parentClassName = $( 'input[name*="first_name"], input[name*="last_name"], input[name*="patronymic"]').parent().attr( 'class' );
-    
-
-    $("#fullname").autocomplete({
-      serviceUrl: 'https://dadata.ru/api/v1/suggest',
-      dataType: 'jsonp',
-      autoSelectFirst: true,
-      params: {
-          service: "fio-suggestions"
-      },
-      // Вызывается, когда пользователь выбирает одну из подсказок
-      onSelect: function(suggestion) {
-          console.log(suggestion);
-      }
-    });
-  }
-  
 })
   // Гармошка документы
 $(document).ready(function() {

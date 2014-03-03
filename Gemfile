@@ -57,7 +57,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   #gem 'mongoid-rspec', '>= 1.6.0', github: 'evansagge/mongoid-rspec'
   gem 'email_spec'
-  gem 'fuubar'
 end
 group :test do
   gem 'faker'
