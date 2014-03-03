@@ -16,7 +16,6 @@ class PagesController < ApplicationController
         #format.json { render json: @prospect, status: :created, location: @prospect }
         #ProspectMailer.notification(@prospect, "Thanks for registration").deliver
         format.html { redirect_to request.referer, notice: 'Prospect was successfully created.'}
-        format.js   {}
         format.json { render json: @prospect, status: :created }
         cookies.delete(:url)
       else

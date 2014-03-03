@@ -366,25 +366,3 @@ header.header {
     }
   }
 }
-/* ==========================================================================
-   Suggestions in forms
-   ========================================================================== */
-.autocomplete-suggestions {
-    background: #fff;
-    border: 1px solid #b3b9cb;
-    cursor: default;
-    max-height: 500px;
-    overflow: auto;
-}
-.autocomplete-suggestions strong {
-    color: #3399FF;
-    font-weight: normal;
-}
-.autocomplete-suggestion {
-    overflow: hidden;
-    padding: 2px 5px;
-    white-space: nowrap;
-}
-.autocomplete-selected {
-    background: #f0f0f0;
-}

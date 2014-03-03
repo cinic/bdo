@@ -2,37 +2,42 @@
 - content_for :meta_description, ""
 - content_for :meta_keywords, ""
 - content_for :page_content_class, "page-demo-account"
-
-section.slide.cover.reg-demo
-	.layout.group
-		.content.pull-left
-			h1.title Демо–счёт
-			p Простой способ попробовать свои силы в трейдинге. Бесплатно.
-			a.btn.white href="#variants" Подробнее
-section.slide.white
-  #variants.layout.variants
-    h2.title Выбирайте платформу
-    .items.group
-      .item
-        h3.title MetaTrader 5
-        p.lead Многофункциональный инструмент для полноценной биржевой торговли фьючерсами. Платформа имеет интуитивно понятный интерфейс, минимальная задержка в получении биржевой информации и выставлении торговых поручений, доступ к актуальной аналитике, широкие возможности для проведения технического анализа и создания торговых роботов, как профессионалом, так и новичком.
-        p
-        	a.btn href="#platforms" Подключить
-      .item
-        h3.title WebQUIK
-        p.lead Международные финансовые рынки – это возможность получать высокий доход в иностранной валюте от инвестиций в акции крупнейших американских, европейских и азиатских компаний. Возможности инвесторов на зарубежных рынках впечатляют: значительное расширение перечня доступных финансовых инструментов, возможность инвестирования в отрасли, слабо представленные в России, доступ к самым ликвидным мировым рынкам!
-        p
-        	a.btn href="#platforms" Подключить
-      .item
-        h3.title QUIK
-        p.lead QUIK позволяет совершать сделки на любых рынках капитала (акции, облигации, валюты, фьючерсы и опционы, ETF и проч.), просматривать текущую аналитику и новости, работать с инструментами технического анализа. Приложение поддерживает возможность настройки рабочего пространства под индивидуальные задачи трейдера, а также создания торговых роботов на языке LUA.
-        p
-        	a.btn href="#platforms" Подключить
-section.slide.blue
-  #registration.layout.registration.group
-    h2.title Регистрация
-    .form-layout
-      - if notice
-        p#notice = notice
-      - else
-        = render "shared/forms/open_demo_account_form"
+- content_for :prospect_product, "Открытие демо счёта"
+section.slide.cover
+	.reg-demo-theme
+		.themes
+			.reg-demo-default
+			.reg-demo-quik
+				.reg-demo-theme__text
+					h2.theme_text Преимущества QUIK:
+					ul
+						li Широкий выбор акций российских компаний, торговля фьчерсами и облигациями;
+						li Удобный интерфейс;
+						li Встроенный язык программирования;
+						li Контроль портфеля в режиме online и общение с другими пользователями.
+			.reg-demo-mt5
+				.reg-demo-theme__text
+					h2.theme_text Преимущества MetaTrader5:
+					ul
+						li Удобен для торговли на срочном рынке;
+						li Возможность создания торговых роботов;
+						li Использвание различных стилей торговли;
+						li Широкий выбор инструментов для технического анализа.
+		.layout
+			section.feedback.group
+				h2.theme_text
+					| Откройте демо–счёт
+					br прямо сейчас
+				.form-layout
+				      - if notice
+				        p#notice = notice
+				      - else
+				        = render "shared/forms/open_demo_account_form"
+				p.comment
+				  |Отправляя форму, вы&nbsp;
+				  a href="#" target="_blank" соглашаетесь
+				  |&nbsp;на обработку
+				  br
+				  |ваших персональных данных.
+				  br
+				  |Все поля обязательны для заполнения.

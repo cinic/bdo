@@ -6,9 +6,7 @@
         - @prospect.errors.full_messages.each do |message|
           li = message
   .form-row
-    = f.select :product, [["QUIK", "Join Quik Demo"], ["WebQUIK", "Join Quik Demo", {"data-comment"=> "WebQUIK"}], ["MetaTrader 5", "Registration demo MT5"]], {}, {class: "input-select"}
-  .form-row
-    = f.text_field :first_name, class: "input-text", placeholder: "Имя"
+    = f.text_field :first_name, class: "input-text", placeholder: "Имя", autofocus: true
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Фамилия"
   .form-row
@@ -16,8 +14,14 @@
   .form-row
     = f.email_field :email, class: "input-text", placeholder: "Email"
   .form-row.consent
-    = f.label :consent do 
-      = f.check_box :consent, class: "input-checkbox"
-      | Согласен на обработку персональных данных
+    /= f.label :consent do 
+  h2.theme_text Выберите программу
+  .product__options
+    label.form__label
+      input.radio_check name="uch9_4" type="radio" value="1"
+      |Quick
+    label.form__label
+      input.radio_check name="uch9_4" type="radio" value="0"
+      |MetaTrader5
   .form-row.actions
     = submit_tag "Отправить заявку", class: "btn orange demo-account"
