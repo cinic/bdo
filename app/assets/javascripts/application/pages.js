@@ -18,7 +18,7 @@ $(function(){
   $( "header.header" ).hover(function() {
     $(this).removeClass("min");
   });
-
+  // Плавный скроллинг
   $('.no-touch  a[href^="#"]').on( 'click', function(e) {
       e.preventDefault();
       $('body').stop().scrollTo($(this).attr('href'), 800);
