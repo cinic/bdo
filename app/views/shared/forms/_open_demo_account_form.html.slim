@@ -1,4 +1,4 @@
-= form_for @prospect, url: {controller: "pages", action: "show"} do |f|
+= form_for @prospect, url: {controller: "pages", action: "show"}, remote: true, authenticity_token: true do |f|
   - if @prospect.errors.any?
     #error_explanation
       h5 = "#{pluralize(@prospect.errors.count, "error")} prohibited this prospect from being saved:"
