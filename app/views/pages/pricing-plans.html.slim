@@ -11,52 +11,79 @@ section.slide.white
           |&laquo;
           b Модельный портфель
           |&raquo;
-        p Для инвесторов, которые не имеют четкого плана относительно своих оборотов в день совершения сделок, а также не прогнозируют точный объем подаваемых торговых поручений (в рублях).
+        p Вне зависимости от оборота комиссия составляет 0,2%, но не менее 0,04 руб. за сделку. Подходит клиентам, которые не обладают свободным временем или опытом для самостоятельного управления своим инвестиционным портфелем. 
         .actions
           = link_to "Подробнее", page_path("pricing-plans/model-portfolio"), class: "btn orange round-left"
-          a.btn.orange.round-right Подключить
+          = link_to "Подключить", page_path("open-account"), class: "btn orange round-right"
       .item
         h2.title.bg-left
           |&laquo;
           b Инвестор
           |&raquo;
-        p Этот тариф больше всего подходить клиентам, совершающих операции с иностранной валютой (как спекулятивные, так и инвестиционные), но не выводящих иностранную валюту ее с брокерского счета.
+        p Привлекательные условия для начинающих инвесторов –45 рублей за выполненное поручение объемом до 100 тыс. рублей, и до 14% годовых при использовании эффекта «плеча».
         .actions 
           = link_to "Подробнее", page_path("pricing-plans/investor"), class: "btn orange round-left"
-          a.btn.orange.round-right Подключить
+          = link_to "Подключить", page_path("open-account"), class: "btn orange round-right"
       .item
         h2.title.bg-left
           |&laquo;
           b Инвестор +
           |&raquo;              
-        p Для клиентов, чей торговый оборот в день, составляет не менее 3 млн рублей, а  также для среднесрочных спекулянтов, удерживающих позиции с «плечом», так как стоимость использования «плеча» минимальна.
+        p Выгоден для тех, кто совершает торговые операции объемом от 500 000 рублей – 0,025%  от объема трейда. Комфортные условия по использованию кредитного плеча – от 13,1% годовых.
         .actions
           = link_to "Подробнее", page_path("pricing-plans/investor-plus"), class: "btn orange round-left"
-          a.btn.orange.round-right Подключить              
+          = link_to "Подключить", page_path("open-account"), class: "btn orange round-right"           
       .item
         h2.title.bg-left
           |&laquo;
           b Личный брокер
           |&raquo;
-        p Привлекательные условия для начинающих инвесторов – комиссия 45 рублей за выполненное поручение,  0,045% от трейда и до 14% годовых при использовании брокерского «плеча».
+        p Вне зависимости от оборота комиссия составляет 0,24%, но не менее 0,04 руб. за сделку. Подходит инвесторам, которые предпочитают следовать рекомендациям личного брокера, но в то же время принимать участие в управлении собственными средствами.
         .actions
           = link_to "Подробнее", page_path("pricing-plans/personal-broker"), class: "btn orange round-left"
-          a.btn.orange.round-right Подключить
+          = link_to "Подключить", page_path("open-account"), class: "btn orange round-right"
       .item
         h2.title.bg-left
           |&laquo;
-          b Личный брокер +
+          b Личный&nbsp;брокер&nbsp;+
           |&raquo;              
-        p Этот тариф подходит для клиентов, которые периодически совершают торговые операции, при этом объем каждого торгового поручения составляет не менее 500 000 рублей.
+        p Инвестор передает управление собственным капиталом профессионалу и платит комиссию за успех в размере 15% от финансового результата, полученного за календарное полугодие. При этом комиссия с оборота снижена до 0,13%, а минимальная комиссия отсутствует.
         .actions
           = link_to "Подробнее", page_path("pricing-plans/personal-broker-plus"), class: "btn orange round-left"
-          a.btn.orange.round-right Подключить
+          = link_to "Подключить", page_path("open-account"), class: "btn orange round-right"
       .item
         h2.title.bg-left
           |&laquo;
           b Профессионал
           |&raquo;
-        p Для клиентов, которые собираются покупать иностранную валюту и выводить на свой банковский счет.
+        p Плата за использование «плеча» от 12,2% годовых, и от 0,015% от торгового оборота за день  с учетом биржевых сборов – для тех, кто привык зарабатывать на рынках, как профессионал.
         .actions
           = link_to "Подробнее", page_path("pricing-plans/professional"), class: "btn orange round-left"
-          a.btn.orange.round-right Подключить
+          = link_to "Подключить", page_path("open-account"), class: "btn orange round-right"
+      .item
+        h2.title.bg-left
+          |&laquo;
+          b Универсальный
+          |&raquo;
+        p Вне зависимости от оборота комиссия составляет 0,057%, но не менее 0,04 руб. за сделку. Подходит тем, кто не имеет четкого плана относительно дневных оборотов и не прогнозирует точный объем торговых поручений.м
+        .actions
+          = link_to "Подробнее", page_path("pricing-plans/personal-broker"), class: "btn orange round-left"
+          = link_to "Подключить", page_path("open-account"), class: "btn orange round-right"
+      .item
+        h2.title.bg-left
+          |&laquo;
+          b Конверсионный
+          |&raquo;              
+        p Вне зависимости от оборота комиссия составляет 0,035%, но не менее 1 руб. за сделку. Наиболее предпочтителен для клиентов, которые собираются покупать иностранную валюту и выводить ее на свой банковский счет.
+        .actions
+          = link_to "Подробнее", page_path("pricing-plans/personal-broker-plus"), class: "btn orange round-left"
+          = link_to "Подключить", page_path("open-account"), class: "btn orange round-right"
+      .item
+        h2.title.bg-left
+          |&laquo;
+          b OpenAdvisor
+          |&raquo;
+        p Вне зависимости от оборота комиссия составляет 0,099%, но не менее 0,04 руб. за сделку. Разработан специально для клиентов, которые используют торговых роботов. 
+        .actions
+          = link_to "Подробнее", page_path("pricing-plans/professional"), class: "btn orange round-left"
+          = link_to "Подключить", page_path("open-account"), class: "btn orange round-right"
