@@ -17,12 +17,11 @@ class PagesController < ApplicationController
         #ProspectMailer.notification(@prospect, "Thanks for registration").deliver
         format.html { redirect_to request.referer, notice: 'Prospect was successfully created.'}
         format.js   {}
-        #format.json { render json: @prospect, status: :created }
+        format.json { render json: @prospect, status: :created }
         cookies.delete(:url)
       else
         format.html { render template: current_page }
-        format.js   {}
-        #format.json { render json: @prospect.errors, status: :unprocessable_entity }
+        format.json { render json: @prospect.errors, status: :unprocessable_entity }
       end
     end
   end
