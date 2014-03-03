@@ -1,0 +1,30 @@
+@import "vars";
+/* Элементы формы */
+.form-row { 
+  margin: 0 0 5px 0;
+  position:relative;
+  &.consent,
+  &.actions {
+    line-height: 36px;
+  }
+  .field_with_errors { display: inline; }
+}
+label {
+  color: white;
+}
+.input-text {
+  padding: 0 3%;
+  width: 94%;
+  height: 36px;
+  border: 0;
+}
+.input-checkbox { margin-right: 6px; }
+.input-text::-webkit-input-placeholder { color: $dark-blue; }
+.input-text:-moz-placeholder { color: $dark-blue; }
+
+.lt-ie9 {
+  .input-text {
+    height: 26px !important;
+    padding: 10px 0 0 5px !important;
+  }
+}
