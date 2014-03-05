@@ -54,8 +54,8 @@ section.slide.white
       = link_to "больше новостей", page_path("about/news"), class: "btn"
     .invest-ideas
       h3.title Инвест идеи
-      = render partial: "shared/invest-ideas/list", collection: @idea_list[0..1], as: :item
-      = link_to "больше идей", "#", class: "btn"
+      = render partial: "shared/invest-ideas/list", collection: @idea_list, as: :item
+      = link_to "больше идей", page_path("analytics/invest-ideas"), class: "btn"
 section.slide.gray
   ul.awards-list.layout.group
     li.item.awards--1st-place

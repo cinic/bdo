@@ -17,6 +17,9 @@ OpenBroker::Application.routes.draw do
   #Блок с новостями
   resources :news_items, path: '/about/news', format: false, only: [:index, :show]
   ###
+  #Блок с инвест идеями
+  resources :invest_idea_items, path: '/analytics/invest-ideas', format: false, only: [:index, :show]
+  ###
   #Главная страница и HightVoltage
   get '/index', to: redirect('/')
   get "/*id", to: 'pages#show', as: :page, :format => false, :constraints => HighVoltage::Constraints::RootRoute
