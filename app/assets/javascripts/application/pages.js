@@ -93,4 +93,5 @@ $(document).ready(function() {
   $('.accordion-title').click(function(){
     $(this).toggleClass('active').next().slideToggle();
   });
+  //Гармошка структурный продукт
 });
