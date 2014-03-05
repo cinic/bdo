@@ -158,7 +158,6 @@
             background-color: $dark-blue;
             background-repeat: no-repeat;
             background-position: 50% 50%;
-            border-radius: 20px;
             @include transition(background-color, 0.2s, ease-in-out);
           }
         }
