@@ -1,0 +1,16 @@
+- content_for :page_title, "Инвест идеи"
+- content_for :title, @idea_item.title
+- content_for :meta_description, ""
+- content_for :meta_keywords, ""
+- content_for :page_content_class, "page-invest-ideas"
+section.news
+  .layout.group 
+    = render partial: "shared/invest-ideas/list", collection: @idea_item, as: :item
+    article.item
+      - created_at = Date.strptime(@idea_item.created_at.to_s, "%Y-%m-%d %H:%M:%S %Z").strftime("%d.%m.%Y %H:%m")
+      h2.title
+        = @idea_item.title
+      = @idea_item.body.html_safe
+      time datetime="#{created_at}"
+        = created_at
+    = link_to "К списку идей", invest_idea_items_path, class: 'btn'

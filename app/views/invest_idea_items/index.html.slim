@@ -1,0 +1,7 @@
+- content_for :title, "Инвест идеи"
+- content_for :meta_description, ""
+- content_for :meta_keywords, ""
+- content_for :page_content_class, "page-invest-ideas"
+section.news
+  .layout.group 
+    = render partial: "shared/invest-ideas/list", collection: @idea_list, as: :item

@@ -158,7 +158,6 @@
             background-color: $dark-blue;
             background-repeat: no-repeat;
             background-position: 50% 50%;
-            border-radius: 20px;
             @include transition(background-color, 0.2s, ease-in-out);
           }
         }
@@ -542,6 +541,9 @@
             font-size: 30px;
             margin: 0;
           }
+          ul {
+            padding: 0 10px 0 20px;
+          }
           .icons {
             font-size: 36px;
             color: $dark-blue;
@@ -571,7 +573,7 @@
   .item {
     display: inline-block;
     width: 270px;
-    height:270px;
+    height:330px;
     vertical-align: top;
     margin: 2px;
     padding: 30px 25px;
