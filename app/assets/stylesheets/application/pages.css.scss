@@ -850,12 +850,7 @@
    ========================================================================== */
 .page-investing {
   .slide {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover !important;
     border-bottom: 4px solid #fff;
-    height: 450px;
     &.model-portfolios {
       background: image-url("application/pages/covers/model-portfolio.jpg") no-repeat left 50%;
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/model-portfolio.jpg"), sizingMethod='scale');
