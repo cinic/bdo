@@ -986,6 +986,13 @@
       &.coupon { background: image-url("application/pages/investing/structural-products/type-coupon.png") no-repeat 104px 60px; }
       &.securities { background: image-url("application/pages/investing/structural-products/type-securities.png") no-repeat 104px 60px; }
     }
+    .hidden {
+      display: none;
+      ul {
+        padding: 0 0 0 20px;
+        margin: 0 0 20px;
+      }
+    }
     .wrap {
       float: left;
       width: 365px;
