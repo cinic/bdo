@@ -7,5 +7,4 @@ nav.sub-nav
     span.title = nav_title
     ul.group
       - items.each do |item|
-        li
-          = li_with_link_to_unles_current item[0], page_path(item[1]), class: "item"
+        = li_with_link_to_unles_current item[0], page_path(item[1]), class: "item"
