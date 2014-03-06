@@ -35,42 +35,45 @@
     height: 450px;
     font-size: 18px;
     overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     /* Главная страница */
     &.index { 
-      background: image-url("application/layout/10.jpg") no-repeat center center;
+      background-image: image-url("application/layout/10.jpg");
       .content {
         margin: 3.33333333333333em 0;
       }
     }
     &.open-advisor { 
-      background: image-url("application/pages/covers/open-advisor.jpg") no-repeat center top;
+      background-image: image-url("application/pages/covers/open-advisor.jpg");
     }
     &.trading { 
-      background: image-url("application/pages/covers/trading.jpg") no-repeat center top;
+      background-image: image-url("application/pages/covers/trading.jpg");
     }
     &.training { 
-      background: image-url("application/pages/covers/training.jpg") no-repeat center top;
+      background-image: image-url("application/pages/covers/training.jpg");
     }
     &.investing { 
-      background: image-url("application/pages/covers/investing.jpg") no-repeat center top;
+      background-image: image-url("application/pages/covers/investing.jpg");
     }
     &.structural-products { 
-      background: image-url("application/pages/covers/structural-products.jpg") no-repeat center top;
+      background-image: image-url("application/pages/covers/structural-products.jpg");
       .title {
         font-size: 38px;
       }
     }
     &.personal-broker {
-      background: image-url("application/pages/covers/personal-broker.jpg") no-repeat center top;
+      background-image: image-url("application/pages/covers/personal-broker.jpg");
     }
     &.model-portfolio {
-      background: image-url("application/pages/covers/model-portfolio.jpg") no-repeat center top;
+      background-image: image-url("application/pages/covers/model-portfolio.jpg");
     }
     &.partners {
-      background: image-url("application/pages/covers/partners.png") no-repeat center top;
+      background-image: image-url("application/pages/covers/partners.png");
     }
     &.reg-demo { 
-      background: image-url("application/pages/covers/open-demo.jpg") no-repeat 50% 50%;
+      background-image: image-url("application/pages/covers/open-demo.jpg");
     }
 
     .title {
@@ -729,9 +732,6 @@
 /* Open account
    ========================================================================== */
 .page-open-account {
-  .slide {
-    background: image-url("application/layout/10.jpg") no-repeat 50% 50%;
-  }
   .form-layout,
   .description-layout { padding: 36px 0; }
   .form-layout {
