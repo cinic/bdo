@@ -28,13 +28,6 @@ namespace :deploy do
     end
   end
   
-  desc 'copy ckeditor nondigest assets'
-  task :copy_nondigest_assets do
-    on roles(:app) do
-      run "cd #{current_path} && RAILS_ENV=#{fetch(:stage)} ~/.rvm/bin/rvm default do bundle exec #{rake} ckeditor:create_nondigest_assets"
-    end
-  end
-  
   after 'deploy:assets:precompile', 'copy_nondigest_assets'
   after :finishing, "deploy:cleanup"
 end
