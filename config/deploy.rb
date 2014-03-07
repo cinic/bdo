@@ -28,6 +28,6 @@ namespace :deploy do
     end
   end
   
-  after 'deploy:assets:precompile', 'copy_nondigest_assets'
+  #after 'deploy:assets:precompile', 'copy_nondigest_assets'
   after :finishing, "deploy:cleanup"
 end
