@@ -1222,20 +1222,23 @@
         td:first-child {
           padding: 8px 5px 8px 15px;
         }
+
         .impact {
-          background: image-url("application/analitycs.pyramid.png") no-repeat; 
+          display: block;
           width: 10px;
           height: 10px;
-          display: block;
+          -moz-border-radius: 5px;
+          -webkit-border-radius: 5px;
+          border-radius: 5px;
         }
         .low {
-          background-position-x: 0;
+          background-color: #fc0;
         }
         .medium {
-          background-position-x: -10px;
+          background-color: #e89300;
         }
         .high {
-          background-position-x: -21px;
+          background-color: #e84c00;
         }
         .worse {
           color: red;
