@@ -31,7 +31,7 @@ namespace :deploy do
   desc 'copy ckeditor nondigest assets'
   task :copy_nondigest_assets do
     on roles(:app) do
-      run "cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} ckeditor:create_nondigest_assets"
+      run "cd #{current_path} && #{rake} RAILS_ENV=#{rails_env} ckeditor:create_nondigest_assets"
     end
   end
   
