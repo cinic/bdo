@@ -23,7 +23,7 @@
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Место гос. регистрации (страна, субъект/нас. пункт)"
   h2.form-text Юрисдикция организации:
-  .form-row
+  .form-row.select-arrow
     = select_tag "country", options_for_select(["Россия", "Италия", "Андорра"]), prompt: "Австралия"
   h2.form-text Контактное лицо:
   .form-row
@@ -99,7 +99,7 @@
     = f.text_field :last_name, class: "input-text", placeholder: "Доля учредителя (участника) в уставном капитале/фонде Клиента %"
   h2.form-text Адресная информация:
   p Адрес регистрации (в соответствии с учредительными документами):
-  .form-row
+  .form-row.select-arrow
     = select_tag "country", options_for_select(["Россия", "Италия", "Андорра"]), prompt: "Австралия"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Индекс"
@@ -114,7 +114,7 @@
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Офис"
   p Почтовый адрес (адрес, по которому Вы хотите получать почтовую корреспонденцию Брокерского дома Открытие)
-  .form-row
+  .form-row.select-arrow
     = select_tag "country", options_for_select(["Россия", "Италия", "Андорра"]), prompt: "Австралия"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Индекс"
@@ -129,7 +129,7 @@
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Офис"
   p Адрес фактического места нахождения совпадает с почтовым адресом
-  .form-row
+  .form-row.select-arrow
     = select_tag "country", options_for_select(["Россия", "Италия", "Андорра"]), prompt: "Австралия"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Индекс"
@@ -143,6 +143,8 @@
     = f.text_field :last_name, class: "input-text", placeholder: "Корпус/строение"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Офис"
+  .form-row
+    input#file.customfile-input name="file" type="file"
   .form-row.consent
     /= f.label :consent do 
     label

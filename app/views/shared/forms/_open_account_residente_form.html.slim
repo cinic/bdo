@@ -77,9 +77,9 @@
     = f.text_field :patronymic, class: "input-text", placeholder: "Отчество"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Дата рождения (дд.мм.гггг)"
-  .form-row
+  .form-row.select-arrow
     = select_tag "country", options_for_select(["Россия", "Италия", "Андорра"]), prompt: "Выберите страну"
-  .form-row
+  .form-row.select-arrow
     = select_tag "doc", options_for_select(["Паспорт"]), prompt: "Выберите документ"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Серия и № документа"
@@ -90,21 +90,21 @@
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Кем выдан"
   p Адрес регистрации
-  .form-row
+  .form-row.select-arrow
     = select_tag "region", options_for_select(["Дагестан респ.", "респ. Адыгея", "Московская область"]), prompt: "Выберите регион"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Адрес"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Индекс"
   p Адрес регистрации
-  .form-row
+  .form-row.select-arrow
     = select_tag "region", options_for_select(["Дагестан респ.", "респ. Адыгея", "Московская область"]), prompt: "Выберите регион"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Адрес"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Индекс"
   p Адрес регистрации
-  .form-row
+  .form-row.select-arrow
     = select_tag "region", options_for_select(["Дагестан респ.", "респ. Адыгея", "Московская область"]), prompt: "Выберите регион"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Адрес"
@@ -114,11 +114,11 @@
   br
   h2.form-text Адресная информация:
   p Адрес регистрации (в соответствии с учредительными документами):
-  .form-row
+  .form-row.select-arrow
     = select_tag "country", options_for_select(["Российская Федерация"]), prompt: "Выберите регион"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Индекс"
-  .form-row
+  .form-row.select-arrow
     = select_tag "region", options_for_select(["Дагестан респ.", "респ. Адыгея", "Московская область"]), prompt: "Выберите Субъект РФ"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Область/край"
@@ -133,11 +133,11 @@
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Офис"
   p Почтовый адрес (адрес, по которому Вы хотите получать почтовую корреспонденцию Брокерского дома Открытие)
-  .form-row
+  .form-row.select-arrow
     = select_tag "country", options_for_select(["Российская Федерация"]), prompt: "Выберите регион"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Индекс"
-  .form-row
+  .form-row.select-arrow
     = select_tag "region", options_for_select(["Дагестан респ.", "респ. Адыгея", "Московская область"]), prompt: "Выберите Субъект РФ"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Область/край"
