@@ -98,4 +98,6 @@ $(document).ready(function() {
     $(this).parent().prev().slideToggle();
     $(this).parent().parent().prev().children( '.hidden' ).slideToggle();
   });
+  //Выбрать файл
+  $('#file').customFileInput();
 });
