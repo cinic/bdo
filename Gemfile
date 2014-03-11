@@ -26,6 +26,7 @@ gem 'ipgeobase', github: 'cinic/ipgeobase'
 gem 'newrelic_rpm'
 # for WysiWyg
 gem "ckeditor"
+gem 'paperclip', github: 'crowdtap/paperclip'
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 # end for wysiwyg
 gem 'bson'
