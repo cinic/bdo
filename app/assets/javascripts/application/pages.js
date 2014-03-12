@@ -100,4 +100,13 @@ $(document).ready(function() {
   });
   //Выбрать файл
   $('#file').customFileInput();
+  //IE8 Checkbox
+  $( '.input-checkbox' ).on( 'click', function(e){
+    e.preventDefault();
+    if( $( '.span-checkbox' ).hasClass( 'checked') ) {
+      $( '.span-checkbox' ).removeClass( 'checked' );
+    } else {
+      $( '.span-checkbox' ).addClass( 'checked' );
+    }
+  });
 });
