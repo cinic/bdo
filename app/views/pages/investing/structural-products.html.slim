@@ -196,12 +196,4 @@ section.slide.white
         a.btn href="#id-2" Подробнее
 section.page-teasers
   .teasers.layout
-    a.item href="javascript:void()"
-      i.icon.mutual-funds
-      h5.title Паевые фонды
-    a.item href="javascript:void()"
-      i.icon.npf
-      h5.title НПФ / НПС
-    a.item.icon href="javascript:void()"
-      i.icon.trust-management
-      h5.title Доверительное управление
+    = render("shared/page-teasers/investing")
