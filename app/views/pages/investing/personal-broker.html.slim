@@ -68,15 +68,16 @@ section.slide.white
           = link_to "Подключить", page_path("open-account"), class: "btn orange round-right"
 section.page-teasers
   .teasers.layout
-    a.item href="javascript:void()"
+    = render("shared/page-teasers/investing")
+    /a.item href="javascript:void()"
       i.icon.ask-question
       h5.title Задать вопрос
-    a.item href="javascript:void()"
+    /a.item href="javascript:void()"
       i.icon.webinar
       h5.title Вебинар: Структурные продукты
-    a.item href="#{page_path('investing/model-portfolios')}"
+    /a.item href="#{page_path('investing/model-portfolios')}"
       i.icon.model-portfolio
       h5.title Модельные портфели
-    a.item href="#{page_path('investing/open-advisor')}"
+    /a.item href="#{page_path('investing/open-advisor')}"
       i.icon.trading-signal
       h5.title Торговые сигналы
