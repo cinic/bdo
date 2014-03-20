@@ -819,20 +819,6 @@
         }
         .field_with_errors { display: inline; }
       }
-      label {
-        color: white;
-      }
-      .input-text {
-        padding: 0 3%;
-        width: 94%;
-        height: 36px;
-        border: 0;
-      }
-      .input-checkbox {
-        margin-right: 6px;
-      }
-      .input-text::-webkit-input-placeholder { color: $dark-blue; }
-      .input-text:-moz-placeholder { color: $dark-blue; }
     }
     .customfile {
       color: $dark-blue;
@@ -1844,20 +1830,6 @@
       }
       .field_with_errors { display: inline; }
     }
-    label {
-      color: white;
-    }
-    .input-text {
-      padding: 0 3%;
-      width: 94%;
-      line-height: 36px;
-      border: 0;
-    }
-    .input-checkbox {
-      margin-right: 6px;
-    }
-    .input-text::-webkit-input-placeholder { color: $dark-blue; }
-    .input-text:-moz-placeholder { color: $dark-blue; }
   }
 }
 /* Disclosure
@@ -2033,20 +2005,6 @@
       }
       .field_with_errors { display: inline; }
     }
-    label {
-      color: white;
-    }
-    .input-text {
-      padding: 0 3%;
-      width: 94%;
-      line-height: 36px;
-      border: 0;
-    }
-    .input-checkbox {
-      margin-right: 6px;
-    }
-    .input-text::-webkit-input-placeholder { color: $dark-blue; }
-    .input-text:-moz-placeholder { color: $dark-blue; }
   }
 }
 /* Career

@@ -146,9 +146,10 @@
   .form-row
     input#file.customfile-input name="file" type="file"
   .form-row.consent
-    /= f.label :consent do 
+    /= f.label :consent do
     label
       = f.check_box :consent, class: "input-checkbox"
+      span.span-checkbox
       | Согласен на обработку персональных данных
   .form-row.actions
     = submit_tag "Отправить заявку", class: "btn orange"
