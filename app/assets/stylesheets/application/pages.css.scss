@@ -1776,16 +1776,21 @@
         display: inline-block;
         vertical-align: top;
         width: 280px;
+        height: 450px;
         padding: 30px 15px 30px 30px;
         margin: 0 5px;
         background: #ffffff;
+        position: relative;
         &:before {
           display: block;
           content: "";
           padding: 150px 0 0;
         }
         .btn {
-          margin: 20px 0 10px 50px;
+          position: absolute;
+          bottom: 25px;
+          left: 50%;
+          margin-left: -22%;
         }
       }
       .partner {
