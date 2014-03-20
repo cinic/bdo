@@ -53,7 +53,10 @@ $(function(){
   // Placeholder IE
   $( '.ie .form-row' ).each( function() {
     if ($(this).children( 'input, textarea' ).length > 0 ) {
-      $( this ).append('<label id="" class="placeholder">'+$(this).children( 'input, textarea' ).attr('placeholder')+'</label>');
+      $( this ).append('<label for="'+$(this).children( 'input, textarea' ).attr('id')+'" class="placeholder">'+$(this).children( 'input, textarea' ).attr('placeholder')+'</label>');
+      $('.actions .placeholder').fadeOut();
+    } else if ($( '.ie .form-row' ).children( 'input, textarea' ).val() != undefined && $( '.ie .form-row' ).children( 'input, textarea' ).val().length > 0) {
+      $('label.placeholder').hide();
     }
   });
   $('input, textarea').on('input propertychange textInput focus blur', function () {
@@ -83,6 +86,11 @@ $(function(){
       }
     });
   }
+  //Input Mask
+  if( typeof $.fn.mask == 'function' ) {
+    $( "#prospect_mobile" ).mask("+7 (999) 999 99 99");
+  }
+  //Проверка форм
   
 })
   // Гармошка документы
@@ -100,4 +108,13 @@ $(document).ready(function() {
   });
   //Выбрать файл
   $('#file').customFileInput();
+  //IE8 Checkbox
+  $( '.input-checkbox' ).on( 'click', function(e){
+    e.preventDefault();
+    if( $( '.span-checkbox' ).hasClass( 'checked') ) {
+      $( '.span-checkbox' ).removeClass( 'checked' );
+    } else {
+      $( '.span-checkbox' ).addClass( 'checked' );
+    }
+  });
 });

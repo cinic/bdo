@@ -155,6 +155,7 @@
     /= f.label :consent do 
     label
       = f.check_box :consent, class: "input-checkbox"
+      span.span-checkbox
       | Согласен на обработку персональных данных
   .form-row.actions
     = submit_tag "Отправить заявку", class: "btn orange"
