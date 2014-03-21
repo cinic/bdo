@@ -30,4 +30,5 @@ namespace :deploy do
   
   #after 'deploy:assets:precompile', 'copy_nondigest_assets'
   after :finishing, "deploy:cleanup"
+  after :finishing, "deploy:restart"
 end
