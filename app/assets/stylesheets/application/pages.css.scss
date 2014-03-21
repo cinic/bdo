@@ -1977,6 +1977,11 @@
   .content {
     text-align:left;
   }
+  ol {
+    li {
+      margin: 10px 0;
+    }
+  }
   ul {
     li {
       list-style-type: disk;
