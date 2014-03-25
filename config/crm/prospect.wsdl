@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions
+ xmlns="http://schemas.xmlsoap.org/wsdl/"
+ xmlns:xsdLocal0="http://www.siebel.com/xml/OPNeSalesProspectiveContactWebsiteImport"
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+ targetNamespace="http://siebel.com/CustomUI"
+ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:tns="http://siebel.com/CustomUI"
+>
+  <types>
+    <xsd:schema elementFormDefault="qualified" xmlns:xsdLocal0="http://www.siebel.com/xml/OPNeSalesProspectiveContactWebsiteImport"
+      attributeFormDefault="unqualified" targetNamespace="http://www.siebel.com/xml/OPNeSalesProspectiveContactWebsiteImport"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="listOfeSalesProspectiveContact" type="xsdLocal0:listOfeSalesProspectiveContact"></xsd:element>
+      <xsd:complexType name="listOfeSalesProspectiveContactTopElmt">
+        <xsd:sequence>
+          <xsd:element name="listOfeSalesProspectiveContact" maxOccurs="1" minOccurs="1" type="xsdLocal0:listOfeSalesProspectiveContact"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="listOfeSalesProspectiveContact">
+        <xsd:sequence>
+          <xsd:element name="listMgmtProspectiveContact" maxOccurs="unbounded" minOccurs="0" type="xsdLocal0:listMgmtProspectiveContact"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="listMgmtProspectiveContact">
+        <xsd:sequence>
+          <xsd:element name="id" default="NEW" maxOccurs="1" minOccurs="1" type="xsd:string"></xsd:element>
+          <xsd:element name="prospectSourceType" default="Web" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+          <xsd:element
+ name="web-RequestType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="lastName"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="firstName"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="middleName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="alternatePhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="emailAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="comment"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="bestCallTime"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="callbackDatetime"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element 
+ name="city" 
+ maxOccurs="1" 
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element>
+<xsd:element
+ name="comments"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="organization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="web-RequestSourceURL"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="web-RequestHTTPReferer"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="formSourceURL"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="web-RequestProductName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:schema
+></types
+>
+<message name="ProspectiveContactWebsiteImport_Input">
+  <part name="Pospective_spcContact" type="xsdLocal0:listOfeSalesProspectiveContactTopElmt"></part>
+</message>
+<message name="ProspectiveContactWebsiteImport_Output">
+  <part name="Prospective_spcContact_spcInsert_spcId" type="xsd:string"></part>
+</message>
+<portType name="OPN_spceSales_spcProspective_spcContact_spcWebsite_spcImport">
+  <operation name="ProspectiveContactWebsiteImport">
+    <input message="tns:ProspectiveContactWebsiteImport_Input"></input>
+    <output message="tns:ProspectiveContactWebsiteImport_Output"></output>
+  </operation>
+</portType>
+<binding
+ name="OPN_spceSales_spcProspective_spcContact_spcWebsite_spcImport"
+ type="tns:OPN_spceSales_spcProspective_spcContact_spcWebsite_spcImport"
+><soap:binding
+ transport="http://schemas.xmlsoap.org/soap/http"
+ style="rpc"
+></soap:binding
+><operation
+ name="ProspectiveContactWebsiteImport"
+><soap:operation
+ soapAction="rpc/http://siebel.com/CustomUI:ProspectiveContactWebsiteImport"
+></soap:operation
+><input
+><soap:body
+ namespace="http://siebel.com/CustomUI"
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ namespace="http://siebel.com/CustomUI"
+ use="literal"
+></soap:body
+></output
+></operation
+></binding
+><service
+ name="OPN_spceSales_spcProspective_spcContact_spcWebsite_spcImport"
+><port
+ binding="tns:OPN_spceSales_spcProspective_spcContact_spcWebsite_spcImport"
+ name="OPN_spceSales_spcProspective_spcContact_spcWebsite_spcImport"
+><soap:address
+ location="http://bd-vm-sbltest.open.ru/eai_rus/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;UserName=PORTAL&amp;Password=E8Gyd"
+></soap:address
+></port
+></service
+></definitions
+>
