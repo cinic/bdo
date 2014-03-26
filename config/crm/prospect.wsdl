@@ -174,7 +174,7 @@
  binding="tns:OPN_spceSales_spcProspective_spcContact_spcWebsite_spcImport"
  name="OPN_spceSales_spcProspective_spcContact_spcWebsite_spcImport"
 ><soap:address
- location="http://bd-vm-sbltest.open.ru/eai_rus/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;UserName=PORTAL&amp;Password=E8Gyd"
+ location="http://bd-vm-sblweb.open.ru/eai_rus/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;UserName=PORTAL&amp;Password=EVu5DU39"
 ></soap:address
 ></port
 ></service
