@@ -431,7 +431,50 @@
     }
   }
 }
-
+/* Existing products
+   ========================================================================== */
+.existing-products {
+  .item {
+    padding: 40px 104px 40px 240px;
+    border-bottom: 1px solid #cbcbcb;
+    &:last-child { border: 0; }
+    &.defensive { background: image-url("application/pages/investing/structural-products/type-defensive.png") no-repeat 104px 60px; }
+    &.coupon { background: image-url("application/pages/investing/structural-products/type-coupon.png") no-repeat 104px 60px; }
+    &.securities { background: image-url("application/pages/investing/structural-products/type-securities.png") no-repeat 104px 60px; }
+  }
+  .hidden {
+    display: none;
+    ul {
+      padding: 0 0 0 20px;
+      margin: 0 0 20px;
+    }
+  }
+  .wrap {
+    float: left;
+    width: 365px;
+  }
+  .graph {
+    float: right;
+    padding: 18px 0 0;
+    width: 222px;
+    .product-params {
+      margin: 18px -104px 0 0;
+      font-size: 10px;
+      table {
+        width: 100%;
+        td {
+          padding: 9px 18px;
+          color: #2f323b;
+        }
+        tr:first-child td {
+          font-size: 12px;
+          background-color: $dark-blue;
+          color: white;
+        }
+      }
+    }
+  }
+}
 /* ==========================================================================
    Стили для страниц
    ========================================================================== */
@@ -840,7 +883,7 @@
     }
     .customfile {
       color: $dark-blue;
-      height: 50px;
+      height: 60px;
       .customfile-input {
         height: 36px;
         width: 110px;
@@ -862,7 +905,7 @@
         border-radius: 0;
         padding: 10px 0;
         top: 21px;
-        left: 318px;
+        left: 320px;
         position: relative;
         font-size: 12px;
         width: 110px;
@@ -1011,48 +1054,6 @@
   .product-teasers .item {
     margin: 0 1%;
     width: 31%;
-  }
-  .existing-products {
-    .item {
-      padding: 40px 104px 40px 240px;
-      border-bottom: 1px solid #cbcbcb;
-      &:last-child { border: 0; }
-      &.defensive { background: image-url("application/pages/investing/structural-products/type-defensive.png") no-repeat 104px 60px; }
-      &.coupon { background: image-url("application/pages/investing/structural-products/type-coupon.png") no-repeat 104px 60px; }
-      &.securities { background: image-url("application/pages/investing/structural-products/type-securities.png") no-repeat 104px 60px; }
-    }
-    .hidden {
-      display: none;
-      ul {
-        padding: 0 0 0 20px;
-        margin: 0 0 20px;
-      }
-    }
-    .wrap {
-      float: left;
-      width: 365px;
-    }
-    .graph {
-      float: right;
-      padding: 18px 0 0;
-      width: 222px;
-      .product-params {
-        margin: 18px -104px 0 0;
-        font-size: 10px;
-        table {
-          width: 100%;
-          td {
-            padding: 9px 18px;
-            color: #2f323b;
-          }
-          tr:first-child td {
-            font-size: 12px;
-            background-color: $dark-blue;
-            color: white;
-          }
-        }
-      }
-    }
   }
 }
 /* PERSONAL BROKER
@@ -1920,6 +1921,10 @@
     }
     .affiliates {
       margin: 30px 0 0;
+      th {
+        border: 1px solid #ffffff;
+        background: $dark-gray;
+      }
       .even {
         td {
           border: 1px solid #ffffff;
@@ -1932,8 +1937,11 @@
       }
       tr {
         height: 30px;
-        td {
+        td, th {
           padding: 10px;
+        }
+        td {
+          border-top: 1px solid $dark-gray; 
         }
       }
     }
@@ -1942,6 +1950,7 @@
   .accordion {
     .accordion-first {
       padding: 30px 0 0;
+      margin-left: 28px;
       display: none;
       list-style: none;
       .form-row {
@@ -1966,6 +1975,13 @@
   //Цвет четных и нечетных строк
   .even {
     background-color: $dark-gray;
+    th {
+      border: 1px solid $dark-gray !important;
+      background: #ffffff !important;
+    }
+    td {
+      border-top: 1px solid #ffffff !important; 
+    }
   }
   .odd {
     background-color: $white;

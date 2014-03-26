@@ -102,7 +102,7 @@ $(document).ready(function() {
     $(this).toggleClass('active').next().slideToggle();
   });
   //Гармошка структурный продукт
-  $( '.page-structural-products .actions a:first-child' ).click(function(){
+  $( '.existing-products .actions a:first-child' ).click(function(){
     $(this).parent().prev().slideToggle();
     $(this).parent().parent().prev().children( '.hidden' ).slideToggle();
   });
