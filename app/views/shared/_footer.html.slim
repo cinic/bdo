@@ -11,11 +11,11 @@ footer.footer
     nav.advanced-menu
       ul.list
         li.item
-          a.link href="#" О компании
+          = link_to_with_current_class "О компании", "active", page_path("about"), class: "link"
         li.item
           a.link href="#" Институционалам
         li.item
-          a.link href="#" Партнерам
+          = link_to_with_current_class "Партнерам", "active", page_path("partners"), class: "link"
         li.item
           = link_to_with_current_class "Филиалы", "active", page_path("about/branch"), class: "link"
     .group 
@@ -23,6 +23,7 @@ footer.footer
         span © ОАО «Брокерский дом «ОТКРЫТИЕ»
         a href="#" Конфиденциальность
         = link_to_with_current_class "Раскрытие информации", "active", page_path("about/disclosure"), class: "link"
+        = link_to_with_current_class "Регламент", "active", page_path("docs/brokerage"), class: "link"
         = link_to_with_current_class "Напишите нам", "active", page_path("about/contactus"), class: "link"
       .social
         a.item.fa.fa-vk href="http://vk.com/openbroker"
