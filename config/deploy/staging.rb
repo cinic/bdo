@@ -1,6 +1,8 @@
 set :stage, :staging
 set :rvm_type, :user
 set :deploy_to, '/home/deployer/bdo/staging'
+set :app_name, "bdo_staging"
+set :user, "deployer"
 
 # Simple Role Syntax
 # ==================
