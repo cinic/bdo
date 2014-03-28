@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:tns="http://siebel.com/CustomUI" 
+	targetNamespace="http://siebel.com/CustomUI">
+  <types/>
+  <message name="ExecOperation_Input">
+    <part name="CommitedAmount" type="xsd:string"/>
+    <part name="DiscountCode" type="xsd:string"/>
+    <part name="CUST_ID" type="xsd:string"/>
+    <part name="ObjectId" type="xsd:string"/>
+    <part name="TRANS_ID" type="xsd:string"/>
+    <part name="Key" type="xsd:string"/>
+    <part name="Operation" type="xsd:string"/>
+  </message>
+  <message name="ExecOperation_Output">
+    <part name="ClassId" type="xsd:string"/>
+    <part name="ContactFirstName" type="xsd:string"/>
+    <part name="ContactId" type="xsd:string"/>
+    <part name="ContactLastName" type="xsd:string"/>
+    <part name="ContactMiddleName" type="xsd:string"/>
+    <part name="CourseFormat" type="xsd:string"/>
+    <part name="CourseFormatLIC" type="xsd:string"/>
+    <part name="CourseId" type="xsd:string"/>
+    <part name="CourseName" type="xsd:string"/>
+    <part name="CurrencyCode" type="xsd:string"/>
+    <part name="DiscountCode" type="xsd:string"/>
+    <part name="DiscountName" type="xsd:string"/>
+    <part name="DiscountValue" type="xsd:string"/>
+    <part name="ErrCode" type="xsd:string"/>
+    <part name="ErrText" type="xsd:string"/>
+    <part name="Key" type="xsd:string"/>
+    <part name="ListPrice" type="xsd:string"/>
+    <part name="LocalEndDate" type="xsd:string"/>
+    <part name="LocalStartDate" type="xsd:string"/>
+    <part name="LocationAddress" type="xsd:string"/>
+    <part name="LocationCity" type="xsd:string"/>
+    <part name="ObjectId" type="xsd:string"/>
+    <part name="Operation" type="xsd:string"/>
+    <part name="Organization" type="xsd:string"/>
+    <part name="ProfitsTaxAmount" type="xsd:string"/>
+    <part name="RegistrationDate" type="xsd:string"/>
+    <part name="RegistrationNumber" type="xsd:string"/>
+    <part name="Status" type="xsd:string"/>
+    <part name="TotalPrice" type="xsd:string"/>
+  </message>
+  <portType name="OPN_spceTraining_spcRegistration_spcInterface">
+    <operation name="ExecOperation">
+      <input message="tns:ExecOperation_Input"/>
+      <output message="tns:ExecOperation_Output"/>
+    </operation>
+  </portType>
+  <binding name="OPN_spceTraining_spcRegistration_spcInterface" type="tns:OPN_spceTraining_spcRegistration_spcInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+    <operation name="ExecOperation">
+      <soap:operation soapAction="rpc/http://siebel.com/CustomUI:ExecOperation"/>
+      <input>
+        <soap:body namespace="http://siebel.com/CustomUI" use="literal"/>
+      </input>
+      <output>
+        <soap:body namespace="http://siebel.com/CustomUI" use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="OPN_spceTraining_spcRegistration_spcInterface">
+    <port binding="tns:OPN_spceTraining_spcRegistration_spcInterface" name="OPN_spceTraining_spcRegistration_spcInterface">
+      <soap:address location="http://bd-vm-sblweb.open.ru/eai_rus/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;UserName=PORTAL&amp;Password=EVu5DU39"/>
+    </port>
+  </service>
+</definitions>
