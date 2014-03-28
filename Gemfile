@@ -31,6 +31,8 @@ gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 # end for wysiwyg
 gem 'bson'
 gem 'bson_ext'
+# Havymetal SOAP Client
+gem 'savon', github: 'savonrb/savon'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -42,7 +44,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'thin', :group => [:development, :test]
+gem 'puma', :group => [:development, :test, :staging]
+gem 'foreman'
 gem 'rack-rewrite'
 
 # Use ActiveModel has_secure_password

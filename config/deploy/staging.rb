@@ -1,13 +1,17 @@
 set :stage, :staging
+set :rvm_type, :user
+set :deploy_to, '/home/deployer/bdo/staging'
+set :app_name, "bdo_staging"
+set :user, "deployer"
 
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{ac.ifoxy.net}
-role :web, %w{ac.ifoxy.net}
-role :db,  %w{ac.ifoxy.net}
+role :app, %w{10.48.36.62}
+role :web, %w{10.48.36.62}
+role :db,  %w{10.48.36.62}
 
 # Extended Server Syntax
 # ======================
@@ -15,7 +19,7 @@ role :db,  %w{ac.ifoxy.net}
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server 'ac.ifoxy.net', user: 'cinic', roles: %w{web app db}, primary: :true
+server '10.48.36.62', user: 'deployer', roles: %w{web app db}, primary: :true
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
@@ -27,8 +31,9 @@ server 'ac.ifoxy.net', user: 'cinic', roles: %w{web app db}, primary: :true
 #    auth_methods: %w(password)
 #  }
 set :ssh_options, {
-   user: "cinic",
-   keys: %w(/home/cinic/.ssh/id_rsa),
+   user: "deployer",
+   keys: %w(~/.ssh/id_rsa),
+   port: 2605,
    forward_agent: false,
    auth_methods: %w(publickey)
 }
@@ -45,4 +50,4 @@ set :ssh_options, {
 #   }
 # setting per server overrides global ssh_options
 
-fetch(:default_env).merge!(rails_env: :production)
+fetch(:default_env).merge!(rails_env: :staging)

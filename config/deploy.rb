@@ -1,7 +1,8 @@
 set :application, 'bdo'
 set :repo_url, 'git@github.com:cinic/bdo.git'
 
-#ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+
+ask :branch, "add-soap-client-gem"
 set :scm, :git
 
 set :format, :pretty
@@ -9,26 +10,48 @@ set :log_level, :debug
 set :pty, true
 
 set :linked_files, %w{config/mongoid.yml}
-set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/upload public/assets}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/upload}
 
 set :default_env, { rvm_bin_path: '~/.rvm/bin' }
-set :keep_releases, 5
+set :keep_releases, 3
 set :use_sudo, false
 
-namespace :deploy do
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      if test "[ -f #{current_path}/tmp/pids/unicorn.pid ]"
-        execute :kill, "-s USR2 `cat #{current_path}/tmp/pids/unicorn.pid`"
-      else
-        #execute "#{fetch(:bundle_binstubs)}/unicorn", "-c #{release_path}/config/unicorn.rb -D -E #{fetch(:stage)}"
-        execute "cd #{current_path} && (RAILS_ENV=#{fetch(:stage)} ~/.rvm/bin/rvm default do bundle exec unicorn_rails -c #{current_path}/config/unicorn.rb -E #{fetch(:stage)})"
-      end
+namespace :foreman do
+  desc "Export the Procfile to Ubuntu's upstart scripts"
+  task :export do
+    on roles :app do
+      execute "cd #{current_path} && (RAILS_ENV=#{fetch(:stage)} ~/.rvm/bin/rvm default do rvmsudo bundle exec foreman export upstart /etc/init -a #{fetch(:app_name)} -u #{fetch(:user)} -l #{shared_path}/log/#{fetch(:app_name)})"
     end
   end
-  
-  #after 'deploy:assets:precompile', 'copy_nondigest_assets'
+
+  desc "Start the application services"
+  task :start do
+    on roles :app do
+      execute "sudo service #{fetch(:app_name)} start"
+    end
+  end
+
+  desc "Stop the application services"
+  task :stop do
+    on roles :app do
+      execute "sudo service #{fetch(:app_name)} stop"
+    end
+  end
+
+  desc "Restart the application services"
+  task :restart do 
+    on roles :app do
+      execute "sudo service #{fetch(:app_name)} start || sudo service #{fetch(:app_name)} restart"
+    end
+  end
+
+end
+
+namespace :deploy do
+      # on OS X the equivalent pid-finding command is `ps | grep '/puma' | head -n 1 | awk {'print $1'}`
+      #run "(kill -s SIGUSR1 $(ps -C ruby -F | grep '/puma' | awk {'print $2'})) || #{sudo} service #{fetch(:app_name)} restart"
+
   after :finishing, "deploy:cleanup"
-  after :finishing, "deploy:restart"
+  after :finishing, "foreman:export"
+  after :finishing, "foreman:restart"
 end

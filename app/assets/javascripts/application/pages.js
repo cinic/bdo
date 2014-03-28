@@ -87,8 +87,8 @@ $(function(){
     });
   }
   //Input Mask
-  if( typeof $.fn.mask == 'function' ) {
-    $( "#prospect_mobile" ).mask("+7 (999) 999 99 99");
+  if( typeof $.fn.inputmask == 'function' ) {
+    $( "#prospect_mobile" ).inputmask("+7 (999) 999 99 99",{ showMaskOnFocus: true, showMaskOnHover: false, clearMaskOnLostFocus: true});
   }
   //Проверка форм
   
@@ -110,7 +110,6 @@ $(document).ready(function() {
   $('#file').customFileInput();
   //IE8 Checkbox
   $( '.input-checkbox' ).on( 'click', function(e){
-    e.preventDefault();
     if( $( '.span-checkbox' ).hasClass( 'checked') ) {
       $( '.span-checkbox' ).removeClass( 'checked' );
     } else {

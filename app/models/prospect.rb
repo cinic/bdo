@@ -21,6 +21,6 @@ class Prospect
   validates :first_name, format: { with: /[[:alpha:]]/, message: 'должно состоять только из букв.'}
   validates :last_name, format: { with: /[[:alpha:]]/, message: 'должно состоять только из букв.' }
   validates :patronymic, format: { with: /[[:alpha:]]/, message: 'должно состоять только из букв.' }, allow_blank: true
-  validates :mobile, numericality: { only_integer: true, message: 'должен состоять только из цифр.' }
+  validates :mobile, presence: { message: ' необходимо заполнить.' }
 
 end
