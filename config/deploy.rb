@@ -1,7 +1,9 @@
 set :application, 'bdo'
 set :repo_url, 'git@github.com:cinic/bdo.git'
+set :app_name, "bdo_#{fetch(:stage)}"
+set :user, "deployer"
 
-#ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+ask :branch, "add-soap-client-gem"
 set :scm, :git
 
 set :format, :pretty
@@ -9,26 +11,42 @@ set :log_level, :debug
 set :pty, true
 
 set :linked_files, %w{config/mongoid.yml}
-set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/upload public/assets}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/upload}
 
 set :default_env, { rvm_bin_path: '~/.rvm/bin' }
-set :keep_releases, 5
-set :use_sudo, false
+set :keep_releases, 3
+#set :use_sudo, false
 
 namespace :deploy do
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      if test "[ -f #{current_path}/tmp/pids/unicorn.pid ]"
-        execute :kill, "-s USR2 `cat #{current_path}/tmp/pids/unicorn.pid`"
-      else
-        #execute "#{fetch(:bundle_binstubs)}/unicorn", "-c #{release_path}/config/unicorn.rb -D -E #{fetch(:stage)}"
-        execute "cd #{current_path} && (RAILS_ENV=#{fetch(:stage)} ~/.rvm/bin/rvm default do bundle exec unicorn_rails -c #{current_path}/config/unicorn.rb -E #{fetch(:stage)})"
-      end
+  desc "Export the Procfile to Ubuntu's upstart scripts"
+  task :export do
+    on roles(:app) do
+      run "cd #{current_path} && #{sudo} foreman export upstart /etc/init -a #{app_name} -u #{user} -l /var/log/nginx/#{app_name}"
     end
   end
-  
-  #after 'deploy:assets:precompile', 'copy_nondigest_assets'
+
+  desc "Start the application services"
+  task :start do
+    on roles(:app) do
+      run "#{sudo} service #{app_name} start"
+    end
+  end
+
+  desc "Stop the application services"
+  task :stop do
+    on roles(:app) do
+      run "#{sudo} service #{app_name} stop"
+    end
+  end
+
+  desc "Restart the application services"
+  task :restart do 
+    on roles(:app) do
+      run "#{sudo} service #{app_name} start || #{sudo} service #{app_name} restart"
+    end
+  end
+
   after :finishing, "deploy:cleanup"
+  after :finishing, "deploy:export"
   after :finishing, "deploy:restart"
 end

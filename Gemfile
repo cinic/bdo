@@ -44,7 +44,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'thin', :group => [:development, :test]
+gem 'puma', :group => [:development, :test, :staging]
+gem 'foreman'
 gem 'rack-rewrite'
 
 # Use ActiveModel has_secure_password
