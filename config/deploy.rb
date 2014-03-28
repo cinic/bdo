@@ -15,34 +15,34 @@ set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/upload}
 
 set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 set :keep_releases, 3
-set :use_sudo, true
+set :use_sudo, false
 
 namespace :deploy do
   desc "Export the Procfile to Ubuntu's upstart scripts"
   task :export do
     on roles(:app) do
-      run "cd #{current_path} && #{sudo} foreman export upstart /etc/init -a #{app_name} -u #{user} -l /var/log/nginx/#{app_name}"
+      run "cd #{current_path} && rvmsudo bundle exec foreman export upstart /etc/init -a #{fetch(:app_name)} -u #{fetch(:user)} -l #{shared_path}/log/#{fetch(:app_name)}"
     end
   end
 
   desc "Start the application services"
   task :start do
     on roles(:app) do
-      run "#{sudo} service #{app_name} start"
+      run "sudo service #{fetch(:app_name)} start"
     end
   end
 
   desc "Stop the application services"
   task :stop do
     on roles(:app) do
-      run "#{sudo} service #{app_name} stop"
+      run "sudo service #{fetch(:app_name)} stop"
     end
   end
 
   desc "Restart the application services"
   task :restart do 
     on roles(:app) do
-      run "#{sudo} service #{app_name} start || #{sudo} service #{app_name} restart"
+      run "sudo service #{fetch(:app_name)} start || sudo service #{fetch(:app_name)} restart"
     end
   end
 
