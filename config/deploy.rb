@@ -25,7 +25,7 @@ namespace :foreman do
                "-f Procfile",
                "-a #{fetch(:app_name)}",
                "-u #{fetch(:user)}",
-               "-l #{release_path.join('log')}"
+               "-l #{shared_path.join('log')}"
         end
       end
     end
