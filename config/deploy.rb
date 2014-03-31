@@ -13,7 +13,7 @@ set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/upload}
 set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 set :keep_releases, 3
 set :use_sudo, false
-set :precompile_cmd, "bundle exec rake RAILS_ENV=#{fetch(:stage)} RAILS_GROUPS=assets assets:precompile"
+
 
 namespace :foreman do
   desc "Export the Procfile to Ubuntu's upstart scripts"
