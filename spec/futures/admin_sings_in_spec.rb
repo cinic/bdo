@@ -1,6 +1,23 @@
 require 'spec_helper'
 
-describe 'site administration' do
+feature 'Admin signs in' do
+  scenario 'with valid email and password' do
+    sign_in_with 'cinic.rus@gmail.com', 'password'
+
+    within 'h1' do
+      page.should have_content 'Дашбоард'
+    end
+  end
+
+  def sign_in_with(email, password)
+    visit admin_login_path
+    fill_in 'Email', with: email
+    fill_in 'Password', with: password
+    click_button 'Войти'
+  end
+end
+
+/#describe 'site administration' do
   describe 'dashboard access' do
     it "accesses the dashboard" do
       FactoryGirl.create(:user,
@@ -31,7 +48,8 @@ describe 'site administration' do
       end
     end
   end
-  
+#/ 
+
   /#describe 'article management' do
     before :each do
       user = FactoryGirl.create(:user)
@@ -123,4 +141,4 @@ describe 'site administration' do
     end
   end#/
   
-end
+#end
