@@ -18,32 +18,38 @@ set :use_sudo, false
 namespace :foreman do
   desc "Export the Procfile to Ubuntu's upstart scripts"
   task :export do
-    on roles :app do
-      execute "cd #{current_path} && (RAILS_ENV=#{fetch(:stage)} ~/.rvm/bin/rvm default do rvmsudo bundle exec foreman export upstart /etc/init -a #{fetch(:app_name)} -u #{fetch(:user)} -l #{shared_path}/log/#{fetch(:app_name)})"
+    on roles(:app), in: :sequence, wait: 5 do
+      within release_path do
+        with rails_env: fetch(:rails_env) do
+          sudo '-E', SSHKit.config.command_map[:bundle], :exec, :foreman, :export, :upstart, "/etc/init",
+               "-f Procfile",
+               "-a #{fetch(:app_name)}",
+               "-u #{fetch(:user)}",
+               "-l #{release_path.join('log')}"
+        end
+      end
+    end
+  end
+
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute "sudo start #{fetch(:app_name)} || sudo restart #{fetch(:app_name)}"
     end
   end
 
   desc "Start the application services"
   task :start do
-    on roles :app do
-      execute "sudo service #{fetch(:app_name)} start"
+    on roles(:app), in: :sequence, wait: 5 do
+      sudo :start, fetch(:app_name)
     end
   end
 
   desc "Stop the application services"
   task :stop do
-    on roles :app do
-      execute "sudo service #{fetch(:app_name)} stop"
+    on roles(:app), in: :sequence, wait: 5 do
+      sudo :stop, fetch(:app_name)
     end
   end
-
-  desc "Restart the application services"
-  task :restart do 
-    on roles :app do
-      execute "sudo service #{fetch(:app_name)} start || sudo service #{fetch(:app_name)} restart"
-    end
-  end
-
 end
 
 namespace :deploy do
