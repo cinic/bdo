@@ -57,6 +57,8 @@ namespace :deploy do
       #run "(kill -s SIGUSR1 $(ps -C ruby -F | grep '/puma' | awk {'print $2'})) || #{sudo} service #{fetch(:app_name)} restart"
 
   after :finishing, "deploy:cleanup"
-  after :finishing, "foreman:export"
-  after :finishing, "foreman:restart"
+  after :updated, 'foreman:export'
+  after :publishing, 'foreman:restart'
+  #after :finishing, "foreman:export"
+  #after :finishing, "foreman:restart"
 end
