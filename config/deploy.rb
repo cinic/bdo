@@ -1,8 +1,6 @@
 set :application, 'bdo'
 set :repo_url, 'git@github.com:cinic/bdo.git'
 
-
-ask :branch, "add-soap-client-gem"
 set :scm, :git
 
 set :format, :pretty
