@@ -1578,19 +1578,27 @@
     .accordion-first {
       padding: 15px 0 0 50px;
       display: none;
+      ul {
+        li {
+          margin: 7px 0;
+        }
+      }
     }
     .accordion-second {
       display:none;
     }
     h4, .title-link {
       font-size: 13px;
-      font-weight: 400;
+      font-weight: 600;
       line-height: 24px;
       margin: 0;
       cursor: pointer;
     }
     h4 {
-      font-weight: 600;
+      color: $dark-blue;
+      span {
+        border-bottom: 1px dotted $dark-blue;
+      }
     }
   }
 }
@@ -2110,9 +2118,6 @@
       line-height: 24px;
       margin: 0;
       cursor: pointer;
-    }
-    h4 {
-      font-weight: 600;
     }
   }
 }
