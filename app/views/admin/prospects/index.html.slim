@@ -5,7 +5,9 @@
     thead
       tr
         th.span5
-          | Имя Фамилия
+          | CRM ID
+        th.span5
+          | Полное имя
         th.span5
           span.line
           | Email и Телефон 
@@ -21,6 +23,8 @@
     tbody
       - @prospects.each do |prospect|
         tr
+          td
+            = prospect.crm_id
           td
             /= link_to post.first_name, [:admin,:posts,prospect], class: "name"
             = prospect.first_name + " " + prospect.last_name

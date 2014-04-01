@@ -10,6 +10,11 @@ capybara-*.html
 /log/*
 /tmp/*
 /db/*.sqlite3
+/db/mongoid.yml
+/config/newrelic.yml
+/config/deploy.rb
+/config/puma.rb
+/config/deploy/*
 /public/system/*
 /public/assets/*
 /public/upload
@@ -20,4 +25,6 @@ rerun.txt
 pickle-email-*.html
 .project
 Gemfile.lock
-app/assets/javascripts/application/pages.js
+Procfile
+Procfile.production
+Capfile

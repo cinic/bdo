@@ -6,7 +6,7 @@ class Prospect
   field :last_name, type: String
   field :patronymic, type: String
   field :email, type: String
-  field :mobile, type: Integer
+  field :mobile, type: String
   field :city, type: String
   field :url, type: Array
   field :visit, type: Array
@@ -22,5 +22,31 @@ class Prospect
   validates :last_name, format: { with: /[[:alpha:]]/, message: 'должно состоять только из букв.' }
   validates :patronymic, format: { with: /[[:alpha:]]/, message: 'должно состоять только из букв.' }, allow_blank: true
   validates :mobile, presence: { message: ' необходимо заполнить.' }
+
+  private
+
+  def self.service_params
+    {
+      :id => "NEW",
+      :prospectSourceType => "Our own sales network", 
+      :"web-RequestType" => "Active Sale",
+      :lastName => "Test",
+      :firstName => "Test",
+      :middleName => "Test",
+      :alternatePhone => "+79119998877",
+      :emailAddress => "andreev-a@open.ru",
+      :comment => "Тестирование WSDL",
+      :bestCallTime => "",
+      :callbackDatetime => "",
+      :city => "Москва",
+      :comments => "Тестирование WSDL",
+      :organization => "",
+      :"web-RequestSourceURL" => "HTTP RequestSourceURL",
+      :"web-RequestHTTPReferer" => "HTTP RequestHTTPReferer",
+      :formSourceURL => "formSourceURL",
+      :"web-RequestProductName" => "Имя продукта"
+    }
+  end
+
 
 end

@@ -7,8 +7,20 @@ class PagesController < ApplicationController
   def create
     @prospect = Prospect.new(prospect_params) || {}
     @prospect.ip = request.remote_ip
-    @prospect.city = get_city || "Москва" #Выпилить Москву перед релизом на продакшен
+    @prospect.city = get_city || "Москва" #Если не определилось, то Москва
     @prospect.url = get_cookies_url
+    
+    if @prospect.valid?
+      crm_service_params = Prospect.service_params
+      crm_service_path = File.join(Rails.root, "config", "crm", "prospect.wsdl")
+      crm_service_client = Savon.new(crm_service_path)
+      crm_service_operation = crm_service_client.operation(:OPN_spceSales_spcProspective_spcContact_spcWebsite_spcImport, :OPN_spceSales_spcProspective_spcContact_spcWebsite_spcImport, :ProspectiveContactWebsiteImport)
+      crm_service_operation.body = {:Pospective_spcContact => {:listOfeSalesProspectiveContact => {:listMgmtProspectiveContact => [crm_service_params]}}}
+
+      crm_service_response = crm_service_operation.call 
+      @prospect.crm_id = crm_service_response.body[:prospective_contact_website_import_response][:prospective_spc_contact_spc_insert_spc_id]
+    end
+    
 
     respond_to do |format|
       if @prospect.save
@@ -38,6 +50,7 @@ class PagesController < ApplicationController
 
     def set_params
       @prospect = Prospect.new
+      puts Rails.root
     end
 
     def set_cookies
@@ -45,7 +58,6 @@ class PagesController < ApplicationController
         cookies[:url] = {value: cookies[:url]  + ',' + params[:id], expires: 7.day.from_now} if cookies[:url].split(',').last != params[:id]
       else
         cookies[:url] = {value: params[:id], expires: 7.day.from_now}
-        cookies[:from] = request.referrer
       end
     end
 
