@@ -17,11 +17,11 @@ class Prospect
   field :referrer, type: String
   field :consent, type: Mongoid::Boolean
 
-  validates :consent, inclusion: { in: [true], message: ' – необходимо отметить.' }
-  validates :first_name, format: { with: /[[:alpha:]]/, message: 'должно состоять только из букв.'}
-  validates :last_name, format: { with: /[[:alpha:]]/, message: 'должно состоять только из букв.' }
-  validates :patronymic, format: { with: /[[:alpha:]]/, message: 'должно состоять только из букв.' }, allow_blank: true
-  validates :mobile, presence: { message: ' необходимо заполнить.' }
+  validates :consent, inclusion: { in: [true], message: 'должно состоять только из букв.' }
+  validates :first_name, format: { with: /[[:alpha:]]/ }
+  validates :last_name, format: { with: /[[:alpha:]]/ }
+  validates :patronymic, format: { with: /[[:alpha:]]/ }, allow_blank: true
+  validates :mobile, presence: true
 
   private
 

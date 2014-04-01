@@ -1,0 +1,28 @@
+ru:
+  mongoid:
+    errors:
+      models:
+        prospect:
+          attributes:
+            first_name:
+              invalid: "должно состоять из букв"
+            last_name:
+              invalid: "должна состоять из букв"
+            patronymic:
+              invalid: "должно состоять из букв"
+            consent:
+              inclusion: "должно быть отмечено"
+          blank: "необходимо заполнить"
+          inclusion: "необходимо отметить"
+    attributes:
+      prospect:
+        first_name: Имя
+        last_name: Фамилия
+        patronymic: Отчество
+        mobile: Мобильный
+        consent: Согласен на обработку <a href="#personal">персональных данных</a>
+  errors:
+    template:
+      header: 'Возникли проблемы со следующими полями:'
+  forms:
+    send_request: "Отправить заявку"

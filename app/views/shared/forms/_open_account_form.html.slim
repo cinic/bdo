@@ -1,24 +1,24 @@
 = form_for @prospect, url: {controller: "pages", action: "show"} do |f|
   - if @prospect.errors.any?
     #error_explanation
-      h5 = "#{pluralize(@prospect.errors.count, "error")} prohibited this prospect from being saved:"
+      h5 = t('errors.template.header')
       ul
         - @prospect.errors.full_messages.each do |message|
-          li = message
+          li = raw(message)
   .form-row
-    = f.text_field :first_name, class: "input-text", placeholder: "Имя", autofocus: true
+    = f.text_field :first_name, class: "input-text", placeholder: Prospect.human_attribute_name(:first_name), autofocus: true
   .form-row
-    = f.text_field :last_name, class: "input-text", placeholder: "Фамилия"
+    = f.text_field :last_name, class: "input-text", placeholder: Prospect.human_attribute_name(:last_name)
   .form-row
-    = f.text_field :patronymic, class: "input-text", placeholder: "Отчество"
+    = f.text_field :patronymic, class: "input-text", placeholder: Prospect.human_attribute_name(:patronymic)
   .form-row
-    = f.text_field :mobile, class: "input-text", placeholder: "Мобильный"
+    = f.text_field :mobile, class: "input-text", placeholder: Prospect.human_attribute_name(:mobile)
   .form-row
-    = f.email_field :email, class: "input-text", placeholder: "Email"
+    = f.email_field :email, class: "input-text", placeholder: Prospect.human_attribute_name(:email)
   .form-row.consent
     = f.label :consent do 
       = f.check_box :consent, class: "input-checkbox"
       span.span-checkbox
-      | Согласен на обработку персональных данных
+      = raw(Prospect.human_attribute_name(:consent))
   .form-row.actions
-    = submit_tag "Отправить заявку", class: "btn orange"
+    = submit_tag "#{t('forms.send_request')}", class: "btn orange"

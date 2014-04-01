@@ -19,15 +19,15 @@ module OpenBroker
 
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-  # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Moscow'
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
     config.assets.precompile += Ckeditor.assets
     config.assets.precompile += ['admin/admin.js', 'admin/admin.css', 'application/modernizr-custom.js', 'fonts', 'application/application.css', 'application/application.js']
     #config.assets.precompile += %w(ckeditor/*)
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-  # config.i18n.default_locale = :de
-  I18n.enforce_available_locales = false
+    config.i18n.default_locale = :ru
+    I18n.enforce_available_locales = false
     config.generators do |g|
       g.test_framework :rspec,
         :fixtures => true,
