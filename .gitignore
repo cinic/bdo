@@ -13,7 +13,6 @@ capybara-*.html
 /db/mongoid.yml
 /config/newrelic.yml
 /config/deploy.rb
-/config/puma.rb
 /config/deploy/*
 /public/system/*
 /public/assets/*
