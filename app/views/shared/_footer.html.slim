@@ -21,7 +21,7 @@ footer.footer
     .group 
       .copyright
         span © ОАО «Брокерский дом «ОТКРЫТИЕ»
-        a href="#" Конфиденциальность
+        = link_to_with_current_class "Конфиденциальность", "active", "http://www.open-broker.ru/common/img/uploaded/PDF-files1/personal-info.pdf", class: "link"
         = link_to_with_current_class "Раскрытие информации", "active", page_path("about/disclosure"), class: "link"
         = link_to_with_current_class "Регламент", "active", page_path("docs/brokerage"), class: "link"
         = link_to_with_current_class "Напишите нам", "active", page_path("about/contactus"), class: "link"
