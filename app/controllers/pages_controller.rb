@@ -10,7 +10,7 @@ class PagesController < ApplicationController
     @prospect.city = get_city || "Москва" #Если не определилось, то Москва
     @prospect.url = get_cookies_url
     
-    if @prospect.valid?
+    if @prospect.valid? && (Rails.env.production? or Rails.env.staging?)
       crm_service_params = Prospect.service_params
       crm_service_path = File.join(Rails.root, "config", "crm", "prospect.wsdl")
       crm_service_client = Savon.new(crm_service_path)
@@ -26,7 +26,7 @@ class PagesController < ApplicationController
       if @prospect.save
         #format.html { redirect_to @prospect, notice: 'Prospect was successfully created.' }
         #format.json { render json: @prospect, status: :created, location: @prospect }
-        #ProspectMailer.notification(@prospect, "Thanks for registration").deliver
+        ProspectMailer.notification(@prospect, "Thanks for registration").deliver
         format.html { redirect_to request.referer, notice: 'Prospect was successfully created.'}
         format.js   {}
         format.json { render json: @prospect, status: :created }
@@ -50,7 +50,6 @@ class PagesController < ApplicationController
 
     def set_params
       @prospect = Prospect.new
-      puts Rails.root
     end
 
     def set_cookies

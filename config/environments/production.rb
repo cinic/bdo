@@ -79,7 +79,7 @@ OpenBroker::Application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.default_options = {from: "\"ОТКРЫТИЕ Брокер\" <no-replay@bdo.ifoxy.net>"}
+  config.action_mailer.default_options = {from: "\"ОТКРЫТИЕ Брокер\" <no-replay@open-broker.ru>"}
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
