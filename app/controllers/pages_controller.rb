@@ -61,7 +61,7 @@ class PagesController < ApplicationController
     end
 
     def prospect_params
-    	params.require(:prospect).permit(:first_name, :last_name, :patronymic, :email, :mobile, :consent)
+    	params.require(:prospect).permit(:first_name, :last_name, :patronymic, :email, :mobile, :consent, :request_type, :product_name, :product)
     end
 
     def init_pages_data

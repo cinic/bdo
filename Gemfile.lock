@@ -42,6 +42,15 @@ GIT
       tzinfo (>= 0.3.37)
 
 GIT
+  remote: git://github.com/nextgearcapital/activerecord-sqlserver-adapter.git
+  revision: 95a4e1fcd44f453a494af20d311a5280ec454a51
+  branch: rails-4
+  specs:
+    activerecord-sqlserver-adapter (4.0.0)
+      activerecord (~> 4.0.0)
+      arel (~> 4.0.1)
+
+GIT
   remote: git://github.com/savonrb/savon.git
   revision: 61e13c61b68e5d3fa80826c31d54d696ab77290d
   specs:
@@ -318,6 +327,7 @@ GEM
     tilt (1.4.1)
     timers (1.1.0)
     tins (1.0.0)
+    tiny_tds (0.6.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
@@ -338,6 +348,7 @@ PLATFORMS
 DEPENDENCIES
   actionpack-action_caching
   actionpack-page_caching
+  activerecord-sqlserver-adapter!
   bcrypt-ruby
   bson
   bson_ext
@@ -378,5 +389,6 @@ DEPENDENCIES
   savon!
   sdoc
   slim-rails
+  tiny_tds
   uglifier (>= 1.3.0)
   unicorn

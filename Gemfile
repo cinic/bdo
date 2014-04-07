@@ -31,8 +31,13 @@ gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 # end for wysiwyg
 gem 'bson'
 gem 'bson_ext'
+## Gems for back-end services connect
 # Havymetal SOAP Client
 gem 'savon', github: 'savonrb/savon'
+# Mssql connection
+gem 'tiny_tds'
+gem 'activerecord-sqlserver-adapter', github: 'nextgearcapital/activerecord-sqlserver-adapter', branch: 'rails-4'
+## End gems for back-end services connect
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
