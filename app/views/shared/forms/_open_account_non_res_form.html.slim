@@ -1,0 +1,321 @@
+= form_for @prospect, url: {controller: "pages", action: "show"} do |f|
+  - if @prospect.errors.any?
+    #error_explanation
+      h5 = "#{pluralize(@prospect.errors.count, "error")} prohibited this prospect from being saved:"
+      ul
+        - @prospect.errors.full_messages.each do |message|
+          li = message
+  h2.form-text Сведения о клиенте:
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "Полное наименование на русском языке", autofocus: true
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "Сокращенное наименование на русском языке"
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "Полное наименование на иностранном языке"
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "Сокращенное наименование на иностранном языке"
+  .form-row
+    = f.text_field :first_name, class: "input-text", placeholder: "КИО (код иностранной организации)"
+  .form-row
+    = f.text_field :first_name, class: "input-text", placeholder: "ИНН (Идентификационный номер налогоплательщика)"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "КПП (Код причины постановки на учет)"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Место гос. регистрации (страна, субъект/нас. пункт)"
+  h2.form-text Юрисдикция организации:
+  .form-row.select-arrow
+    = select_tag "country", options_for_select(["Россия", "Италия", "Андорра"]), prompt: "Австралия"
+  h2.form-text Контактное лицо:
+  .form-row
+    = f.text_field :first_name, class: "input-text", placeholder: "Имя"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Фамилия"
+  .form-row
+    = f.text_field :mobile, class: "input-text", placeholder: "Мобильный"
+  .form-row
+    = f.email_field :email, class: "input-text", placeholder: "Email"
+  h2.form-text Уполномоченные представители:
+  p Руководитель:
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Должность"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "ФИО"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Основание"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "№ (доверенность/иное-указать что)"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Дата начала полномочий (дд.мм.гггг)"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Дата окончания полномочий (дд.мм.гггг)"
+  p Представитель (доверенное лицо)
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Должность"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "ФИО"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Основание"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "№ (доверенность/иное-указать что)"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Дата начала полномочий (дд.мм.гггг)"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Дата окончания полномочий (дд.мм.гггг)"
+  h2.form-text Сведения о составе участников, доля которых в капитале компании составляет более 5%:
+  p Учередитель 1:
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Ф.И.О./наименование"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "ИНН или КИО"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Доля учредителя (участника) в уставном капитале/фонде Клиента %"
+  p Учередитель 2:
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Ф.И.О./наименование"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "ИНН или КИО"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Доля учредителя (участника) в уставном капитале/фонде Клиента %"
+  p Учередитель 3:
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Ф.И.О./наименование"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "ИНН или КИО"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Доля учредителя (участника) в уставном капитале/фонде Клиента %"
+  p Учередитель 4:
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Ф.И.О./наименование"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "ИНН или КИО"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Доля учредителя (участника) в уставном капитале/фонде Клиента %"
+  p Учередитель 5:
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Ф.И.О./наименование"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "ИНН или КИО"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Доля учредителя (участника) в уставном капитале/фонде Клиента %"
+  h2.form-text Адресная информация:
+  p Адрес регистрации (в соответствии с учредительными документами):
+  .form-row.select-arrow
+    = select_tag "country", options_for_select(["Россия", "Италия", "Андорра"]), prompt: "Австралия"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Индекс"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Город, населенный пункт"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Улица"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Дом"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Корпус/строение"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Офис"
+  p Почтовый адрес (адрес, по которому Вы хотите получать почтовую корреспонденцию Брокерского дома Открытие)
+  .form-row.select-arrow
+    = select_tag "country", options_for_select(["Россия", "Италия", "Андорра"]), prompt: "Австралия"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Индекс"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Город, населенный пункт"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Улица"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Дом"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Корпус/строение"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Офис"
+  p Адрес фактического места нахождения совпадает с почтовым адресом
+  .form-row.select-arrow
+    = select_tag "country", options_for_select(["Россия", "Италия", "Андорра"]), prompt: "Австралия"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Индекс"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Город, населенный пункт"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Улица"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Дом"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Корпус/строение"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Офис"
+  .form-row
+    input#file.customfile-input name="file" type="file"
+  br
+  br
+  h2.form-text Реквизиты банковского счета в рублях в российском банке
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "Получатель"
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "ИНН получателя"
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "Расчетный счет"
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "Наименование банка"
+  .form-row
+    = f.text_field :first_name, class: "input-text", placeholder: "Местонахождения банка"
+  .form-row
+    = f.text_field :first_name, class: "input-text", placeholder: "Корреспондентский счет №"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "ИНН банка"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "БИК"
+  br
+  br
+  h2.form-text Реквизиты банковского счета в рублях в зарубежном банке
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "Получатель"
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "ИНН получателя"
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "Расчетный счет/счет получателя №"
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "IBAN"
+  .form-row
+    = f.text_field :first_name, class: "input-text", placeholder: "Наименование банка получателя"
+  .form-row
+    = f.text_field :first_name, class: "input-text", placeholder: "Местонахождение банка получателя"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "ИНН банка получателя"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Наименование банка-корреспондента"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Местонахождение банка-корреспондента"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "SWIFT-код банка-корреспондента"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "SWIFT-код/БИК банка получателя"
+  br
+  br
+  h2.form-text Сведения о государственной регистрации нерезидента РФ
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "Hаименование регистрационного документа"
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "Регистрационный номер"
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "Наименование регистрирующего органа"
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "Дата регистрации"
+  br
+  br
+  h2.form-text Сведения об органах управления
+  p Данные берутся из Устава
+  p №1
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Наименование органа управления, входящего в структуру органов управления"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Персональный состав органа управления"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Полномочия органа управления. Необходимо указать соответствующий пункт/раздел/статью Устава"
+  p №2
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Наименование органа управления, входящего в структуру органов управления"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Персональный состав органа управления"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Полномочия органа управления. Необходимо указать соответствующий пункт/раздел/статью Устава"
+  p №3
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Наименование органа управления, входящего в структуру органов управления"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Персональный состав органа управления"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Полномочия органа управления. Необходимо указать соответствующий пункт/раздел/статью Устава"
+  p №4
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Наименование органа управления, входящего в структуру органов управления"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Персональный состав органа управления"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Полномочия органа управления. Необходимо указать соответствующий пункт/раздел/статью Устава"
+  p №5
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Наименование органа управления, входящего в структуру органов управления"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Персональный состав органа управления"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Полномочия органа управления. Необходимо указать соответствующий пункт/раздел/статью Устава"
+  br
+  h2.form-text Сведения о размере зарегистрированного уставного (складочного) капитала или размере уставного фонда, стоимости имущества
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Зарегистрированный уставной капитал"
+  br
+  h2.form-text Сведения о размере оплаченного уставного (складочного) капитала или размере уставного фонда, стоимости имущества
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Оплаченный уставной капитал"
+  br
+  h2.form-text Сведения о наличии или отсутствии выгодоприобретателей
+  .form-row
+    label
+      = radio_button_tag "radio-1", "Да", class: "input-text"
+      span.span-radio
+        | Да
+  .form-row
+    label
+      = radio_button_tag "radio-1", "Нет", class: "input-text"
+      span.span-radio
+        | Нет
+  br
+  h2.form-text Сведения об аффилированных лицах
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Лицо №1"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Лицо №2"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Лицо №3"
+  br
+  h2.form-text Контактная информация
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Телефон 1 (с кодом страны и города)"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Телефон 2 (с кодом страны и города)"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Адрес электронной почты 1"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Адрес электронной почты 2"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Факс 1"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Факс 2"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "ICQ"
+  br
+  h2.form-text Сведения о наличии или отсутствии у клиента счетов в банках, зарегистрированных в государстве (на территории), которое (которая) не участвует в международном сотрудничестве в сфере противодействия легализации (отмыванию) доходов, полученных преступным путем, и финансированию терроризма
+  .form-row
+    label
+      = radio_button_tag "radio-2", "Да", class: "input-text"
+      span.span-radio
+        | Да
+  .form-row
+    label
+      = radio_button_tag "radio-2", "Нет", class: "input-text"
+      span.span-radio
+        | Нет
+  br
+  h2.form-text Сведения о присутствии или отсутствии по местонахождению клиента его постоянно действующего органа управления, иного органа или лица, которые имеют право действовать от имени клиента без доверенности
+  .form-row
+    label
+      = radio_button_tag "radio-3", "Да", class: "input-text"
+      span.span-radio
+        | Да
+  .form-row
+    label
+      = radio_button_tag "radio-3", "Нет", class: "input-text"
+      span.span-radio
+        | Нет
+  br
+  h2.form-text Кодовое слово
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Слово-пароль для идентификации Вашей личности, от 5 до 10 символов"
+  .form-row.consent
+    /= f.label :consent do
+    label
+      = f.check_box :consent, class: "input-checkbox"
+      span.span-checkbox
+      | Согласен на обработку персональных данных
+  .form-row.actions
+    = submit_tag "Отправить заявку", class: "btn orange"

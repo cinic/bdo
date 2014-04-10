@@ -1,0 +1,22 @@
+= form_for @prospect, url: {controller: "pages", action: "show"} do |f|
+  - if @prospect.errors.any?
+    #error_explanation
+      h5 = "#{pluralize(@prospect.errors.count, "error")} prohibited this prospect from being saved:"
+      ul
+        - @prospect.errors.full_messages.each do |message|
+          li = message
+  .form-row
+    = f.text_field :first_name, class: "input-text", placeholder: "Имя"
+  .form-row
+    = f.text_field :last_name, class: "input-text", placeholder: "Фамилия"
+  .form-row
+    = f.email_field :email, class: "input-text", placeholder: "Email"
+  .form-row
+    = f.text_area :first_name, class: "input-text", placeholder: "Сообщение"
+  .form-row.consent
+    = f.label :consent do 
+      = f.check_box :consent, class: "input-checkbox"
+      span.span-checkbox
+      = raw(Prospect.human_attribute_name(:consent))
+  .form-row.actions
+    = submit_tag "Отправить заявку", class: "btn light-blue"

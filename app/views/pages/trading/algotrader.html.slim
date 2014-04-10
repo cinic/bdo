@@ -1,0 +1,46 @@
+- content_for :title, "Алготрейдерам"
+- content_for :meta_description, ""
+- content_for :meta_keywords, ""
+- content_for :page_content_class, "page-algotrader"
+section.slide.cover.algotrader
+  .layout.group
+    .content.pull-right
+      h1.title Алготрейдерам
+      p Уникальные тарифы и современные сервисы для автоматической торговли
+      a.btn.white href="#description" Подробнее
+section.slide.white
+  #description.layout.description
+    h2.title Заголовок
+    p Трейдерам, предпочитающих автоматическую торговлю, мы предлагаем выгодные тарифы: от 24 копеек за сделку на срочном рынке и 0,002% от дневного оборота на ММВБ. Мы используем высококлассное оборудование и предоставляем любую конфигурацию при размещении в дата-центрах биржи или "ОТКРЫТИЕ-Брокер".
+    ul
+      li Выделенные серверы для высокочастотной торговли;
+      li Размещение серверов в дата-центрах бирж или брокера;
+      li Весь ассортимент продуктов QUIK.
+section.slide.gray.bordered
+  .layout.offer
+    h2.title Мы предлагаем
+    h3 ММВБ
+    ul
+      li Шлюз ММВБ (TEAP) Фондовая секция. Торговый и просмотровый доступ;
+      li Шлюз ММВБ (TEAP) Срочная секция. Торговый и просмотровый доступ;
+      li Шлюз ММВБ (TEAP) Валютная секция. Просмотровый доступ;
+      li Торговый доступ по технологии FIX;
+      li Рыночные данные по технологии FAST/Multicast;
+      li Подключение к шлюзам с помощью VPN;
+      li Серверы в Дата-центре ММВБ.
+    h3 РТС
+    ul
+      li Торговый доступ по технологии Plaza II;
+      li Торговый доступ по технологии FIX;
+      li Рыночные данные по технологии FAST/Multicast;
+      li Выделенный биржевой канал Брокера;
+      li Серверы в Дата-центре Брокера;
+      li Серверы в Дата-центре РТС.
+section.slide.blue
+  .layout.registration.group
+    h2.title Регистрация
+    .form-layout
+      - if notice
+        p#notice = notice
+      - else
+        = render "shared/forms/algotrader_form"

@@ -55,6 +55,11 @@
       filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/trading.jpg', sizingMethod='scale')";
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/trading.jpg', sizingMethod='scale')";
     }
+    &.algotrader { 
+      background-image: image-url("application/pages/covers/trading.jpg");
+      filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/trading.jpg', sizingMethod='scale')";
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/trading.jpg', sizingMethod='scale')";
+    }
     &.training { 
       background-image: image-url("application/pages/covers/training.jpg");
       filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/training.jpg', sizingMethod='scale')";
@@ -1382,6 +1387,11 @@
       .schedule {
         clear:both;
         margin: 15px 0 0;
+        #schedule {
+          width: 958px;
+          margin: 0 auto;
+          tspan[x='948'] { display:none; }
+        }
       }
       table {
         border: none;
@@ -2118,6 +2128,45 @@
       line-height: 24px;
       margin: 0;
       cursor: pointer;
+    }
+  }
+}
+/* Algotrader
+   ========================================================================== */
+.page-algotrader {
+  .algotrader {
+    padding-bottom: 30px;
+  }
+  .description,
+  .offer { padding: 30px 0; }
+  .form-layout {
+    width: 430px;
+    margin: 0 auto;
+    padding: 0 0 51px;
+    /* Элементы формы */
+    .form-row { 
+      margin: 0 0 5px 0;
+      position:relative;
+      a { color: #ffffff; }
+      &.consent,
+      &.actions {
+        line-height: 36px;
+      }
+      &.actions {
+        width: 100%;
+        padding: 10px 0 7px;
+        position: absolute;
+        text-align: center;
+        left: 0;
+        background: $light-blue;
+        .light-blue {
+          background: $light-blue;
+          &:hover {
+            background: $orange;
+          }
+        }
+      }
+      .field_with_errors { display: inline; }
     }
   }
 }
