@@ -313,13 +313,15 @@
   br
   h2.form-text Сведения о наличии или отсутствии выгодоприобретателей
   .form-row
-    = radio_button_tag "radio-1", "Да", class: "input-text"
-    span.span-radio
-      | Да
+    label
+      = radio_button_tag "radio-1", "Да", class: "input-text"
+      span.span-radio
+        | Да
   .form-row
-    = radio_button_tag "radio-1", "Нет", class: "input-text"
-    span.span-radio
-      | Нет
+    label
+      = radio_button_tag "radio-1", "Нет", class: "input-text"
+      span.span-radio
+        | Нет
   br
   h2.form-text Сведения об аффилированных лицах
   .form-row
