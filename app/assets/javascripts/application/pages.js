@@ -110,10 +110,10 @@ $(document).ready(function() {
   $('#file').customFileInput();
   //IE8 Checkbox
   $( '.input-checkbox' ).on( 'click', function(){
-    if( $( this ).siblings().hasClass( 'checked') ) {
-      $( this ).siblings().removeClass( 'checked' );
+    if( $( this ).next().hasClass( 'checked') ) {
+      $( this ).next().removeClass( 'checked' );
     } else {
-      $( this ).siblings().addClass( 'checked' );
+      $( this ).next().addClass( 'checked' );
     }
   });
 });
