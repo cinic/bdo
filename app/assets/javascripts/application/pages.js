@@ -109,11 +109,11 @@ $(document).ready(function() {
   //Выбрать файл
   $('#file').customFileInput();
   //IE8 Checkbox
-  $( '.input-checkbox' ).on( 'click', function(e){
-    if( $( '.span-checkbox' ).hasClass( 'checked') ) {
-      $( '.span-checkbox' ).removeClass( 'checked' );
+  $( '.input-checkbox' ).on( 'click', function(){
+    if( $( this ).siblings().hasClass( 'checked') ) {
+      $( this ).siblings().removeClass( 'checked' );
     } else {
-      $( '.span-checkbox' ).addClass( 'checked' );
+      $( this ).siblings().addClass( 'checked' );
     }
   });
 });
