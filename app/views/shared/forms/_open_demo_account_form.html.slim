@@ -6,7 +6,7 @@
         - @prospect.errors.full_messages.each do |message|
           li = message
   .form-row.select-arrow
-    = f.select :product, [["QUIK", "Join Quik Demo"], ["WebQUIK", "Join Quik Demo", {"data-comment"=> "WebQUIK"}], ["MetaTrader 5", "Registration demo MT5"]], {}, {class: "input-select"}
+    = f.select :request_type, [["QUIK", "Join Quik Demo"], ["WebQUIK", "Join Quik Demo", {"data-comment"=> "WebQUIK"}], ["MetaTrader 5", "Registration demo MT5"]], {}, {class: "input-select"}
   .form-row
     = f.text_field :first_name, class: "input-text", placeholder: "Имя"
   .form-row

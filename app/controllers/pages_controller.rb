@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     @prospect.ip = request.remote_ip
     @prospect.city = get_city || "Москва" #Если не определилось, то Москва
     @prospect.url = get_cookies_url
+
     
     if @prospect.valid? && (Rails.env.production? or Rails.env.staging?)
       crm_service_params = Prospect.service_params
@@ -61,7 +62,7 @@ class PagesController < ApplicationController
     end
 
     def prospect_params
-    	params.require(:prospect).permit(:first_name, :last_name, :patronymic, :email, :mobile, :consent)
+    	params.require(:prospect).permit(:first_name, :last_name, :patronymic, :email, :mobile, :consent, :request_type, :product_name, :product)
     end
 
     def init_pages_data
