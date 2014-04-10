@@ -11,8 +11,10 @@ nav.main-menu
     li.item
       = link_to_with_current_class "Обучение", "active", page_path("learning"), class: "link"
     li.item
-      = link_to_with_current_class "Открыть счёт", "active", page_path("open-account"), class: "link account account_left"
+      = link_to_with_current_class "О компании", "active", page_path("about"), class: "link"
     li.item
-      = link_to_with_current_class "Демо счёт", "active", page_path("open-demo-account"), class: "link account account_right"
+      = link_to_with_current_class "Открыть счёт", "active", page_path("open-account"), class: "link account"
+    /li.item
+      /= link_to_with_current_class "Демо счёт", "active", page_path("open-demo-account"), class: "link account account_right"
     li.item
-      = link_to raw('<i class="fa fa-user"></i> Вход в ЛК'), "https://clients.open.ru", class: "link"
+      = link_to raw('Войти'), "https://clients.open.ru", class: "link"
