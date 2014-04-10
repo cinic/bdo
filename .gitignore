@@ -11,9 +11,6 @@ capybara-*.html
 /tmp/*
 /db/*.sqlite3
 /db/mongoid.yml
-/config/newrelic.yml
-/config/deploy.rb
-/config/deploy/*
 /public/system/*
 /public/assets/*
 /public/upload
@@ -23,4 +20,3 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 .project
-Capfile
