@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions
+xmlns="http://schemas.xmlsoap.org/wsdl/"
+xmlns:xsdLocal0="http://www.siebel.com/xml/OPN%20Contact%20Buffer%20Import"
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+targetNamespace="http://siebel.com/CustomUI"
+xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:tns="http://siebel.com/CustomUI">
+<types>
+  <xsd:schema
+  elementFormDefault="qualified"
+  xmlns:xsdLocal0="http://www.siebel.com/xml/OPN%20Contact%20Buffer%20Import"
+  attributeFormDefault="unqualified"
+  targetNamespace="http://www.siebel.com/xml/OPN%20Contact%20Buffer%20Import"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:annotation>
+	  <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="ListOfOpnContactBufferImport" type="xsdLocal0:ListOfOpnContactBufferImport"></xsd:element>
+	<xsd:complexType name="ListOfOpnContactBufferImportTopElmt">
+	  <xsd:sequence>
+	    <xsd:element name="ListOfOpnContactBufferImport" maxOccurs="1" minOccurs="1" type="xsdLocal0:ListOfOpnContactBufferImport"></xsd:element>
+	  </xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ListOfOpnContactBufferImport">
+	  <xsd:sequence>
+	    <xsd:element name="OpnContactBuffer" maxOccurs="unbounded" minOccurs="0" type="xsdLocal0:OpnContactBuffer"></xsd:element>
+	  </xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OpnContactBuffer">
+	  <xsd:sequence>
+	    <xsd:element name="ClassId" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="ASAPFlag" maxOccurs="1" minOccurs="1" type="xsd:string"></xsd:element>
+		<xsd:element name="CourseId" maxOccurs="1" minOccurs="1" type="xsd:string"></xsd:element>
+		<xsd:element name="Branch" maxOccurs="1" minOccurs="1" type="xsd:string"></xsd:element>
+		<xsd:element name="Channel" default="Internet" maxOccurs="1" minOccurs="1" type="xsd:string"></xsd:element>
+		<xsd:element name="Id" default="NEW" maxOccurs="1" minOccurs="1" type="xsd:string"></xsd:element>
+		<xsd:element name="TransferDisabledFlag" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="CredentialSeries" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="CredentialNumber" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="CredentialIssuingOrganizationName" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="CredentialIssuingOrganizationCode" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="CredentialIssuingCountry" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="CredentialIssueDate" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="CredentialCategory" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="MiddleName" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="LastName" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="FirstName" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="DateofBirth" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="Email" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="Phone" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="AddressType" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="Addr" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="Province" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="PostalCode" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="County" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="Country" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+		<xsd:element name="City" maxOccurs="1" minOccurs="0" type="xsd:string"></xsd:element>
+	  </xsd:sequence>
+	</xsd:complexType>
+  </xsd:schema>
+</types>
+<message name="Contact_Buffer_Import_Input">
+  <part name="Contact_spcBuffer" type="xsdLocal0:ListOfOpnContactBufferImportTopElmt"></part>
+</message>
+<message name="Contact_Buffer_Import_Output">
+  <part name="Contact_spcBuffer_spcId" type="xsd:string"></part>
+</message>
+<portType name="OPN_spceTraining_spcContact_spcBuffer_spcImport">
+  <operation name="Contact_Buffer_Import">
+    <input message="tns:Contact_Buffer_Import_Input"></input>
+    <output message="tns:Contact_Buffer_Import_Output"></output>
+  </operation>
+</portType>
+<binding name="OPN_spceTraining_spcContact_spcBuffer_spcImport" type="tns:OPN_spceTraining_spcContact_spcBuffer_spcImport">
+  <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"></soap:binding>
+  <operation name="Contact_Buffer_Import">
+    <soap:operation soapAction="rpc/http://siebel.com/CustomUI:Contact_Buffer_Import"></soap:operation>
+	<input>
+	  <soap:body namespace="http://siebel.com/CustomUI" use="literal"></soap:body>
+	</input>
+	<output>
+	  <soap:body namespace="http://siebel.com/CustomUI" use="literal"></soap:body>
+	</output>
+  </operation>
+</binding>
+<service name="OPN_spceTraining_spcContact_spcBuffer_spcImport">
+  <port binding="tns:OPN_spceTraining_spcContact_spcBuffer_spcImport" name="OPN_spceTraining_spcContact_spcBuffer_spcImport">
+    <soap:address location="http://10.48.34.246:80/eai_rus/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;UserName=PORTAL&amp;Password=PORTAL"></soap:address>
+  </port>
+</service>
+</definitions>

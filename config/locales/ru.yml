@@ -21,8 +21,80 @@ ru:
         patronymic: Отчество
         mobile: Мобильный
         consent: Согласен на обработку <a href="#personal">персональных данных</a>
+      legal_entity:
+        org_name_full: Полное наименование на русском языке
+        org_name_full_en: Полное наименование на иностранном языке
+        org_name_short: Сокращенное наименование на русском языке
+        org_name_short_en: Сокращенное наименование на иностранном языке
+        bic: БИК (обязательно для кредитных организаций)
+        taxpayer_id: ИНН
+        taxpayer_crr: КПП
+        reg_place: Место регистрации (город / нас. пункт)
+        contact_person:
+          name: Имя и Фамилия
+          post: Должность
+          phone: Телефон
+          email: Email
+        representatives:
+          post: Должность
+          full_name: ФИО
+          basis: Основание
+          document: № доверенности или иного документа
+          date_start: Дата начала полномочий
+          date_end: Дата окончания полномочий
+        founders:
+          full_name: ФИО или наименование компании
+          passport: Паспорт / ОГРН / Регистрационный номер / КИО
+          share: Доля учредителя в уставном капитале в %
+        beneficiaries:
+          first_name: Имя
+          last_name: Фамилия
+          patronymic: Отчество
+          birth_date: Дата рождения
+          country: Страна
+          passport: Паспорт
+          serial_num: Серия и номер паспорта
+          subdivision_code: Код подразделения
+          issue_date: Дата выдачи
+          issue_by: Кем выдан
+          address: Адрес
+        addresses:
+          region: Область
+          edge: Край
+          city: Город, населённый пункт
+          address: Адрес
+          house: Дом
+          housing: Корпус / строение
+          office: офис
+        code_form_fso:
+          okpo: ОКПО
+          okved: ОКВЭД
+          okato: ОКАТО
+          okfs: ОКФС
+          okopf: ОКОПФ
+          okogu: ОКОГУ
+          oktmo: ОКТМО
+        reg_doc:
+          name: Наименование регистрационного документа
+          num: Регистрационный номер
+          org_name: Наименование регистрирующего органа
+          date: Дата регистрации
+        licenses:
+          num: Номер
+          date: Дата выдачи
+          valid: Срок действия
+          issue_by: Кем выдана
+        controls:
+          name: Наименование органа
+          composition: Состав органа
+          credentials: Полномочия органа, необходимо указать соответствующий пункт/раздел/статью Устава
+        affiliates:
+          face: Лицо
+        codeword: Кодовое слово
   errors:
     template:
-      header: 'Возникли проблемы со следующими полями:'
+      header: Возникли проблемы со следующими полями:
   forms:
-    send_request: "Отправить заявку"
+    send_request: Отправить заявку
+    select_region: Выберите регион
+    consent: Согласен на обработку <a href="#personal">персональных данных</a>

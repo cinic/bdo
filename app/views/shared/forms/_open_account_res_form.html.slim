@@ -1,30 +1,30 @@
-= form_for @prospect, url: {controller: "pages", action: "show"} do |f|
-  - if @prospect.errors.any?
+= form_for @legal_entity do |f|
+  - if @legal_entity.errors.any?
     #error_explanation
-      h5 = "#{pluralize(@prospect.errors.count, "error")} prohibited this prospect from being saved:"
+      h2 = "#{pluralize(@legal_entity.errors.count, "error")} prohibited this legal_entity from being saved:"
       ul
-        - @prospect.errors.full_messages.each do |message|
+        - @legal_entity.errors.full_messages.each do |message|
           li = message
   h2.form-text Сведения о клиенте:
   .form-row
-    = f.text_area :first_name, class: "input-text", placeholder: "Полное наименование на русском языке", autofocus: true
+    = f.text_field :org_name_full, class: "input-text", placeholder: "Полное наименование на русском языке"
   .form-row
-    = f.text_area :first_name, class: "input-text", placeholder: "Сокращенное наименование на русском языке"
+    = f.text_field :org_name_short, class: "input-text", placeholder: "Сокращенное наименование на русском языке"
   .form-row
-    = f.text_area :first_name, class: "input-text", placeholder: "Полное наименование на иностранном языке"
+    = f.text_field :org_name_full_en, class: "input-text", placeholder: "Полное наименование на иностранном языке"
   .form-row
-    = f.text_area :first_name, class: "input-text", placeholder: "Сокращенное наименование на иностранном языке"
+    = f.text_field :org_name_short_en, class: "input-text", placeholder: "Сокращенное наименование на иностранном языке"
   .form-row
-    = f.text_field :first_name, class: "input-text", placeholder: "БИК (обязательно для кредитных организаций)"
+    = f.number_field :bic, class: "input-text", placeholder: "БИК (обязательно для кредитных организаций)"
   .form-row
-    = f.text_field :first_name, class: "input-text", placeholder: "ИНН (Идентификационный номер налогоплательщика)"
+    = f.number_field :taxpayer_id, class: "input-text", placeholder: "ИНН (Идентификационный номер налогоплательщика)"
   .form-row
-    = f.text_field :last_name, class: "input-text", placeholder: "КПП / КПП Крупнейшего налогоплательщика"
+    = f.number_field :taxpayer_crr, class: "input-text", placeholder: "КПП / КПП Крупнейшего налогоплательщика"
   .form-row
-    = f.text_field :last_name, class: "input-text", placeholder: "Место гос. регистрации (страна, субъект/нас. пункт)"
+    = f.text_field :reg_place, class: "input-text", placeholder: "Место гос. регистрации (страна, субъект/нас. пункт)"
   h2.form-text Контактное лицо:
   .form-row
-    = f.text_field :first_name, class: "input-text", placeholder: "ФИО"
+    = f.text_field :contact_person[:first_name], class: "input-text", placeholder: "ФИО"
   .form-row
     = f.text_field :last_name, class: "input-text", placeholder: "Должность"
   .form-row
