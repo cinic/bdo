@@ -13,7 +13,7 @@ footer.footer
         li.item
           = link_to_with_current_class "О компании", "active", page_path("about"), class: "link"
         li.item
-          a.link href="#" Институционалам
+          = link_to_with_current_class "Институционалам", "active", page_path("institutional"), class: "link"
         li.item
           = link_to_with_current_class "Партнерам", "active", page_path("partners"), class: "link"
         li.item
