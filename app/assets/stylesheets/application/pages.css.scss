@@ -56,9 +56,39 @@
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/trading.jpg', sizingMethod='scale')";
     }
     &.algotrader { 
-      background-image: image-url("application/pages/covers/trading.jpg");
-      filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/trading.jpg', sizingMethod='scale')";
-      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/trading.jpg', sizingMethod='scale')";
+      background-image: image-url("application/layout/algotrader.png");
+      filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/algotrader.png', sizingMethod='scale')";
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/algotrader.png', sizingMethod='scale')";
+    }
+    &.institutional { 
+      background-image: image-url("application/layout/institutional.png");
+      filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/institutional.png', sizingMethod='scale')";
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/institutional.png', sizingMethod='scale')";
+    }
+    &.training { 
+      background-image: image-url("application/pages/covers/training.jpg");
+      filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/investing.jpg', sizingMethod='scale')";
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/investing.jpg', sizingMethod='scale')";
+    }
+    &.mutual-funds { 
+      background-image: image-url("/assets/application/layout/mutual-fonds.png");
+      filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/mutual-fonds.png', sizingMethod='scale')";
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/mutual-fonds.png', sizingMethod='scale')";
+    }
+    &.tutoring { 
+      background-image: image-url("/assets/application/layout/tutoring.png");
+      filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/tutoring.png', sizingMethod='scale')";
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/tutoring.png', sizingMethod='scale')";
+    }
+    &.about { 
+      background-image: image-url("/assets/application/layout/about.png");
+      filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/about.png', sizingMethod='scale')";
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/about.png', sizingMethod='scale')";
+    }
+    &.coach { 
+      background-image: image-url("/assets/application/layout/coach.png");
+      filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/coach.png', sizingMethod='scale')";
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/coach.png', sizingMethod='scale')";
     }
     &.training { 
       background-image: image-url("application/pages/covers/training.jpg");
@@ -89,14 +119,19 @@
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/model-portfolio.jpg', sizingMethod='scale')";
     }
     &.partners {
-      background-image: image-url("application/pages/covers/partners.png");
-      filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/partners.jpg', sizingMethod='scale')";
-      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/partners.jpg', sizingMethod='scale')";
+      background-image: image-url("application/layout/partners.png");
+      filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/partners.png', sizingMethod='scale')";
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/partners.png', sizingMethod='scale')";
     }
     &.reg-demo { 
       background-image: image-url("application/pages/covers/open-demo.jpg");
       filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/open-demo.jpg', sizingMethod='scale')";
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/pages/covers/open-demo.jpg', sizingMethod='scale')";
+    }
+    &.trust-management {
+      background-image: image-url("application/layout/trust-managment.png");
+      filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/trust-managment.png', sizingMethod='scale')";
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/application/layout/trust-managment.png', sizingMethod='scale')";
     }
 
     .title {
@@ -300,6 +335,36 @@
         .toolbar {
           &:before {
             background-image: image-url("application/pages/product-teasers/toolbar.png");
+          }
+        }
+        .yield {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/yield.png");
+          }
+        }
+        .flexibility {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/flexibility.png");
+          }
+        }
+        .opacity {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/opacity.png");
+          }
+        }
+        .raw-materials {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/raw-materials.png");
+          }
+        }
+        .real-estate {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/real-estate.png");
+          }
+        }
+        .stock-indexes {
+          &:before {
+            background-image: image-url("application/pages/product-teasers/stock-indexes.png");
           }
         }
       }
@@ -1112,6 +1177,56 @@
       width: 100%;
       z-index: 10;
     }
+    .idea {
+      margin: 30px 0;
+      width: 450px;
+      text-align: left;
+      h3.caption { font-size: 25px; }
+      .item {
+        position: relative;
+        margin-top: 30px;
+        .icon {
+          display: block;
+          width: 71px;
+          height: 58px;
+          &.portfolio-one {
+            background: image-url("application/pages/investing/personal-broker/idea.one.png") no-repeat;
+          }
+          &.portfolio-two {
+            background: image-url("application/pages/investing/personal-broker/idea.two.png") no-repeat;
+          }
+        }
+        h4 {
+          font-size: 18px;
+          font-weight: 600;
+          margin: 15px 0 5px;
+        }
+        p {
+          font-size: 13px;
+          margin: 0;
+        }
+        span {
+          font-size: 15px;
+          b {
+            display: inline-block;
+            padding: 10px;
+            margin: -5px 0 0;
+            vertical-align: middle;
+            font-size: 30px;
+            font-weight: 700;
+            color: $light-blue;
+          }
+        }
+        a {
+          position: absolute;
+          top: 135px;
+          right: 0;
+        }
+      }
+    }
+    .idea + .idea {
+      margin: 30px 0 0 70px;
+    }
   }
   /* Subsection RATES
    ========================================================================== */
@@ -1528,9 +1643,10 @@
     }
   }
 }
-/* Docs
+/* Docs & Requisites
    ========================================================================== */
-.page-docs {
+.page-docs,
+.page-requisites {
   .content {
     text-align:center;
   }
@@ -1543,7 +1659,8 @@
     color: #53b2df;
     text-decoration: underline; 
   }
-  .docs-events {
+  .docs-events,
+  .requisites-events {
     margin: 20px 0 0;
     padding: 0;
     list-style: none;
@@ -2167,6 +2284,322 @@
         }
       }
       .field_with_errors { display: inline; }
+    }
+  }
+}
+/* License
+   ========================================================================== */
+.page-license {
+  .license {
+    .items {
+      margin: 50px 0 0;
+      .item {
+        width: 480px;
+        margin: 0 10px 40px 0;
+        a { margin-right: 10px; }
+        .description {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+/* Requisites
+   ========================================================================== */
+.page-requisites {
+  .requisites-events {
+    .fa-li,
+    h4.accordion-title {
+      line-height: 30px;
+    }
+    table {
+      width: 780px;
+      tr {
+        &.even { background: #f7f7f7; }
+        &.odd { background: $white; }
+        td,
+        th {
+          padding: 15px 10px;
+        }
+      }
+    }
+    .accordion-second {
+      margin-left: 0;
+    }
+  }
+  .information {
+    color: $white;
+    font-size: 13px;
+    padding: 30px 0;
+    p.info {
+      border: 1px dotted #ffffff;
+      padding: 10px;
+    }
+  }
+}
+/* Institutional
+   ========================================================================== */
+.page-institutional {
+  .slide {
+    border-bottom: 4px solid #fff;
+    &.algotrader {
+      background: image-url("application/layout/algotrader.png") no-repeat left 50%;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/layout/algotrader.png"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/layout/algotrader.png"), sizingMethod='scale');
+    }
+    &.structural-products {
+      background: image-url("application/pages/covers/structural-products.jpg") no-repeat right 50%;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/structural-products.jpg"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/structural-products.jpg"), sizingMethod='scale');
+    }
+    &.converse-operation {
+      background: image-url("application/layout/converse-operation.png") no-repeat left 50%;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/layout/converse-operation.png"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/layout/converse-operation.png"), sizingMethod='scale');
+    }
+    &.trading {
+      background: image-url("application/pages/covers/trading.jpg") no-repeat left 50%;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/trading.jpg"), sizingMethod='scale');
+      -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=image-path("application/pages/covers/trading.jpg"), sizingMethod='scale');
+    }
+    .product {
+      padding: 50px 2em 60px 3em;
+      width: 430px;
+      font-size: 15px;
+      .params,
+      .description {
+        margin-bottom: 2em;
+        padding: 0;
+        font-family: Georgia, serif;
+        font-style: italic;
+      }
+      .params {
+        list-style: none;
+        text-align: center;
+      }
+
+    }
+    .item { height: 450px; }
+    &.pull-left {
+      float: none;
+      margin-right: 50%;
+      width: 50%;
+      >.item {
+        position: relative;
+        margin-right: -100%;
+        width: 100%;
+        z-index: 1;
+        >.product { 
+          float: left;
+        }
+        &:before {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 100%;
+          margin-right: -100px;
+          width: 150px;
+          content: "";
+          -moz-transform: skewX(-10deg);
+          -ms-transform: skewX(-10deg);
+          -o-transform: skewX(-10deg);
+          -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+          z-index: -1;
+        }
+      }
+    }
+    &.pull-right {
+      float: none;
+      margin-left: 50%;
+      width: 50%;
+      >.item {
+        position: relative;
+        margin-left: -100%;
+        width: 100%;
+        z-index: 1;
+        >.product { float: right; }
+        &:before {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 100%;
+          margin-left: -100px;
+          width: 150px;
+          content: "";
+          -moz-transform: skewX(-10deg);
+          -ms-transform: skewX(-10deg);
+          -o-transform: skewX(-10deg);
+          -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+          z-index: -1;
+        }
+      }
+    }
+    /* Бэкграунды для скосов */
+    .item.bg-gray:before { background-color: $dark-gray; }
+    .item.bg-white:before { background-color: white; }
+  }  
+}
+.lt-ie9 {
+  .page-institutional {
+    .slide.pull-left,
+    .slide.pull-right {
+      > .item:before {
+        display:none;
+      }
+    }
+  }
+}
+/* Tutoring
+   ========================================================================== */
+.page-tutoring {
+  .tutoring {
+    padding-bottom: 30px;
+  }
+  .description,
+  .offer { padding: 30px 0; }
+  .form-layout {
+    width: 430px;
+    margin: 0 auto;
+    padding: 36px 0 51px;
+    /* Элементы формы */
+    .form-row { 
+      margin: 0 0 5px 0;
+      position:relative;
+      &.consent,
+      &.actions {
+        line-height: 36px;
+      }
+      &.actions {
+        width: 100%;
+        padding: 10px 0 7px;
+        position: absolute;
+        text-align: center;
+        left: 0;
+        background: $light-blue;
+        .light-blue {
+          background: $light-blue;
+          &:hover {
+            background: $orange;
+          }
+        }
+      }
+      .field_with_errors { display: inline; }
+    }
+  }
+}
+/* Trust Management
+   ========================================================================== */
+.page-trust-management {
+  .slide.trust-management {
+    padding-bottom: 30px;
+  }
+  .product-teasers {
+    text-align: left;
+    .item {
+      width: 300px;
+    }
+  }
+  .available-strategies {
+    .schedule {
+
+    }
+    .strategy {
+      padding: 50px 0;
+      width: 600px;
+      text-align: left;
+      .item {
+        margin: 0 0 20px;
+        h4.caption {
+          font-size: 28px;
+          line-height: 35px;
+          margin: 0;
+        }
+        .description {
+          display: none;
+          margin: 10px 0;
+          table {
+            .light-gray {
+              background-color: #f7f7f7;
+            }
+            .gray {
+              background-color: #e1e1e1;
+            }
+            th {
+              font-weight: normal;
+              font-size: 13px;
+            }
+            td {
+              font-size: 12px;
+            }
+            th,
+            td {
+              width: 220px;
+              padding: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Mutual Funds
+   ========================================================================== */
+.page-mutual-funds {
+  .slide.mutual-funds {
+    padding-bottom: 30px;
+  }
+  .product-teasers {
+    text-align: left;
+  }
+  .data {
+    .schedule {
+
+    }
+    .description {
+      padding: 30px 0;
+      text-align: left;
+      table {
+        font-size: 11px;
+        .light-gray {
+          background-color: #f7f7f7;
+        }
+        .gray {
+          background-color: #e1e1e1;
+        }
+        th {
+          font-weight: normal;
+          color: #ffffff;
+          background-color: $dark-blue;
+          &:first-child {
+            width: 280px;
+            padding: 10px 20px;
+          }
+        }
+        th,
+        td {
+          padding: 10px;
+        }
+        td {
+          h5.caption {
+            font-weight: 700;
+            font-size: 13px;
+            margin: 5px 0 10px;
+          }
+        }
+        .info {
+          display: none;
+          p:first-child {
+            margin: 0;
+          }
+        }
+        .actions {
+          a:first-child {
+            margin-right: 1px;
+          }
+        }
+      }
     }
   }
 }

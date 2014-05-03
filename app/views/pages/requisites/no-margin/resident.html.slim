@@ -1,0 +1,408 @@
+- content_for :title, "Реквизиты"
+- content_for :meta_description, ""
+- content_for :meta_keywords, ""
+- content_for :page_content_class, "page-requisites"
+= render "pages/requisites/no-margin/menu"
+section.requisites
+  .layout.group 
+    .content
+      h1.title
+        |Реквизиты для клиентов,
+        br не предоставивших Брокеру право использования денежных средств
+      br
+      a.link href="/requisites/resident" Реквизиты для клиентов, предоставивших Брокеру право использования денежных средств
+ul.requisites-events
+  li.item.group.dark-gray.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Для перечисления денежных средств в рублях
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть
+      ul.accordion-first.fa-ul
+        li
+          i.fa-li.fa.fa-file-text
+          h4.accordion-title
+            span
+              | Реквизиты в ОАО Банк «ОТКРЫТИЕ»
+          ul.accordion-second.fa-ul
+            li
+              table
+                tbody
+                  tr.even
+                    th Получатель
+                    td ОАО «Брокерский дом «ОТКРЫТИЕ»
+                  tr.odd
+                    th Банк
+                    td ОАО Банк «ОТКРЫТИЕ», Москва
+                  tr.even
+                    th БИК
+                    td 044585297
+                  tr.odd
+                    th Р/С
+                    td 40701810800000000496
+                  tr.even
+                    th К/С
+                    td 30101810500000000297
+                  tr.odd
+                    th ИНН
+                    td 7710170659
+                  tr.even
+                    th Назначение платежа
+                    td
+                      |Перевод средств в портфель 
+                      b
+                        |[полное наименование портфеля]* 
+                      | для участия в торгах по договору № 
+                      b
+                        |[номер брокерского договора] 
+                      | от «___» ______ 20__ г. НДС не облагается. Клиент 
+                      b
+                        |[номер счёта или субсчёта] 
+                      | ФИО/Наименование.   
+        li
+          p
+            |*Список портфелей:
+          ul
+            li Фондовый Рынок Московской биржи;
+            li Валютный Рынок Московской Биржи;
+            li Срочный рынок FORTS;
+            li Внебиржевой Фондовый Рынок;
+            li Структурные Продукты;
+            li Международный Фондовый Рынок
+        li
+          i.fa-li.fa.fa-file-text
+          h4.accordion-title
+            span
+              | Реквизиты в НКО ЗАО НРД
+          ul.accordion-second.fa-ul
+            li
+              table
+                tbody
+                  tr.even
+                    th Получатель
+                    td ОАО «Брокерский дом «ОТКРЫТИЕ»
+                  tr.odd
+                    th Банк
+                    td НКО ЗАО НРД, г. Москва
+                  tr.even
+                    th БИК
+                    td 044583505
+                  tr.odd
+                    th Р/С
+                    td 30411810000005000375
+                  tr.even
+                    th К/С
+                    td 30105810100000000505
+                  tr.odd
+                    th Назначение платежа
+                    td
+                      |Перевод средств в портфель 
+                      b
+                        |[полное наименование портфеля]* 
+                      | для участия в торгах по договору № 
+                      b
+                        |[номер брокерского договора] 
+                      | от «___» ______ 20__ г. НДС не облагается. Клиент 
+                      b
+                        |[номер счёта или субсчёта] 
+                      | ФИО/Наименование.  
+        li
+          p
+            |*Список портфелей:
+          ul
+            li Фондовый Рынок Московской биржи;
+            li Валютный Рынок Московской Биржи;
+            li Срочный рынок FORTS;
+            li Внебиржевой Фондовый Рынок;
+            li Структурные Продукты;
+  li.item.group.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Для перечисления денежных средств в долларах США
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть
+      ul.accordion-first.fa-ul
+        li
+          i.fa-li.fa.fa-file-text
+          h4.accordion-title
+            span
+              | Реквизиты в ОАО Банк «ОТКРЫТИЕ»
+          ul.accordion-second.fa-ul
+            li
+              table
+                tbody
+                  tr.even
+                    th Beneficiary`s Bank
+                    td OTKRITIE BANK (JSC), MOSCOW
+                  tr
+                    th SWIFT
+                    td RUDLRUMM
+                  tr.even
+                    th BIC
+                    td 044585297
+                  tr
+                    th Account
+                    td 30101810500000000297
+                  tr.even
+                    th Beneficiary
+                    td JSC BROKERAGE HOUSE OTKRITIE
+                  tr
+                    th INN
+                    td 7710170659
+                  tr.even
+                    td colspan="2"  115114, MOSCOW, UL.LETNIKOVSKAYA, D.2, STR.4
+                  tr
+                    th Транзитный для спец. брокер. в USD
+                    td 40701840100000200500
+                  tr.even
+                    th Назначение платежа
+                    td
+                      |Perevod sredstv v portfel’ 
+                      b
+                        |[полное наименование портфеля]* 
+                      | dlya uchastiya v torgakh po dogovoru № 
+                      b
+                        |[номер брокерского договора] 
+                      | ot «___» ______ 20__ g. NDS ne oblagaetsya. Klient
+                      b
+                        |[номер счёта или субсчёта] 
+        li
+          p
+            |*Список портфелей:
+          ul
+            li Valyutnyi Rynok Moscovskoy birzhi;
+            li Mezhdunarodnyi fondovyi rynok
+          p
+            small
+              |*Для корректного зачисления платежа поле «Назначение платежа» необходимо заполнять латинскими буквами.
+  li.item.group.dark-gray.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Для перечисления денежных средств в евро
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть
+      ul.accordion-first.fa-ul
+        li
+          i.fa-li.fa.fa-file-text
+          h4.accordion-title
+            span
+              | Реквизиты в ОАО Банк «ОТКРЫТИЕ»
+          ul.accordion-second.fa-ul
+            li
+              table
+                tbody
+                  tr.even
+                    th Beneficiary`s Bank
+                    td OTKRITIE BANK (JSC), MOSCOW
+                  tr.odd
+                    th SWIFT
+                    td RUDLRUMM
+                  tr.even
+                    th BIC
+                    td 044585297
+                  tr.odd
+                    th Account
+                    td 30101810500000000297
+                  tr.even
+                    th Beneficiary
+                    td JSC BROKERAGE HOUSE OTKRITIE
+                  tr.odd
+                    th INN
+                    td 7710170659
+                  tr.even
+                    td colspan="2"  115114, MOSCOW, UL.LETNIKOVSKAYA, D.2, STR.4
+                  tr.odd
+                    th Транзитный для спец. брокер. в EUR
+                    td 40701978700000200500
+                  tr.even
+                    th Назначение платежа
+                    td
+                      |Perevod sredstv v portfel’ 
+                      b
+                        |[полное наименование портфеля]* 
+                      | dlya uchastiya v torgakh po dogovoru № 
+                      b
+                        |[номер брокерского договора] 
+                      | ot «___» ______ 20__ g. NDS ne oblagaetsya. Klient
+                      b
+                        |[номер счёта или субсчёта] 
+        li
+          p
+            |*Список портфелей:
+          ul
+            li Valyutnyi Rynok Moscovskoy birzhi;
+            li Mezhdunarodnyi fondovyi rynok
+  li.item.group.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Для перечисления денежных средств в британских фунтах
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть
+      ul.accordion-first.fa-ul
+        li
+          i.fa-li.fa.fa-file-text
+          h4.accordion-title
+            span
+              | Реквизиты в ОАО Банк «ОТКРЫТИЕ»
+          ul.accordion-second.fa-ul
+            li
+              table
+                tbody
+                  tr.even
+                    th Beneficiary`s Bank
+                    td OTKRITIE BANK (JSC), MOSCOW
+                  tr
+                    th SWIFT
+                    td RUDLRUMM
+                  tr.even
+                    th BIC
+                    td 044585297
+                  tr
+                    th Account
+                    td 30101810500000000297
+                  tr.even
+                    th Beneficiary
+                    td JSC BROKERAGE HOUSE OTKRITIE
+                  tr
+                    th INN
+                    td 7710170659
+                  tr.even
+                    td colspan="2"  115114, MOSCOW, UL.LETNIKOVSKAYA, D.2, STR.4
+                  tr
+                    th Транзитный для спец. брокер. в GBP
+                    td 40701826700000200500
+                  tr.even
+                    th Назначение платежа
+                    td
+                      |Perevod sredstv v portfel’ Valyutnyi Rynok Moscovskoy birzhi dlya uchastiya v torgakh po dogovoru № 
+                      b
+                        |[номер брокерского договора] 
+                      | ot «___» ______ 20__ g. NDS ne oblagaetsya. Klient
+                      b
+                        |[номер счёта или субсчёта]               
+  li.item.group.dark-gray.accordion
+    .layout
+      .section.group
+        i.fa.fa-file-text-o.pull-left
+        h3.title.pull-left Для перечисления денежных средств в гонконгских долларах
+        .actions.pull-right
+          a.btn.orange.accordion-link Развернуть
+      ul.accordion-first.fa-ul
+        li
+          i.fa-li.fa.fa-file-text
+          h4.accordion-title
+            span
+              | Реквизиты в ОАО Банк «ОТКРЫТИЕ»
+          ul.accordion-second.fa-ul
+            li
+              table
+                tbody
+                  tr.even
+                    th Beneficiary`s Bank
+                    td OTKRITIE BANK (JSC), MOSCOW
+                  tr.odd
+                    th SWIFT
+                    td RUDLRUMM
+                  tr.even
+                    th BIC
+                    td 044585297
+                  tr.odd
+                    th Account
+                    td 30101810500000000297
+                  tr.even
+                    th Beneficiary
+                    td JSC BROKERAGE HOUSE OTKRITIE
+                  tr.odd
+                    th INN
+                    td 7710170659
+                  tr.even
+                    td colspan="2"  115114, MOSCOW, UL.LETNIKOVSKAYA, D.2, STR.4
+                  tr.odd
+                    th Транзитный для спец. брокер. в HKD
+                    td 40701344500000200499
+                  tr.even
+                    th Назначение платежа
+                    td
+                      |Perevod sredstv v portfel’ Valyutnyi Rynok Moscovskoy birzhi dlya uchastiya v torgakh po dogovoru № 
+                      b
+                        |[номер брокерского договора] 
+                      | ot «___» ______ 20__ g. NDS ne oblagaetsya. Klient
+                      b
+                        |[номер счёта или субсчёта] 
+  li.item.group.accordion
+      .layout
+        .section.group
+          i.fa.fa-file-text-o.pull-left
+          h3.title.pull-left Зачисление денежных средств
+          .actions.pull-right
+            a.btn.orange.accordion-link Развернуть
+        ul.accordion-first.fa-ul
+          li
+            p Зачислить денежные средства на счет можно несколькими способами:
+            ul
+              li Внесение наличных средств;
+              li Перевод с банковского счета;
+              li Перевод средств от другого брокера;
+              li С помощью клиентской банковской карты АС Сберкарт.
+          li
+            i.fa-li.fa.fa-file-text
+            h4.accordion-title
+              span
+                | Внесение наличных денежных средств
+            ul.accordion-second.fa-ul
+              li
+                p
+                  |У клиентов Брокерского дома "ОТКРЫТИЕ" есть возможность внести 
+                  b
+                    |без комиссии 
+                  |наличные денежные средства на брокерский счет в любом офисе нашего банка 
+                  a href="http://www.openbank.ru/" ОАО Банк "ОТКРЫТИЕ"
+                  |.
+                p ВНИМАНИЕ! Для внесения денежных средств вам достаточно предъявить паспорт и назвать номер вашего брокерского договора.
+                p В качестве документов, подтверждающих внесение клиентом наличных денежных средств на торговый счет, Банком выдаются заверенные экземпляры приходно-кассового ордера и платежного поручения.
+          li
+            i.fa-li.fa.fa-file-text
+            h4.accordion-title
+              span
+                | Перевод с банковского счета
+            ul.accordion-second.fa-ul
+              li
+                p Внести денежные средства можно с банковского счета, открытого на имя клиента в любом другом банке.
+                p
+                  a href="/ru/why/requisites/" Реквизиты для безналичного перечисления денежных средств 
+                  |на счет клиента.
+                p Платежные документы должны содержать указание на номер договора на брокерское обслуживание, номер инвестиционного счета клиента (если он отличен от номера договора на брокерское обслуживание) и назначение платежа с указанием наименования торговой системы или неорганизованного рынка ценных бумаг, действующего на территории РФ.
+                p
+                  |Со счета другого лица перевести денежные средства можно только в случаях, указанных в 
+                  a href="/ru/investing/rates-docs/docs/brokerage-docs/" разделе 5.2.3. Регламента
+                  |.
+          li
+            i.fa-li.fa.fa-file-text
+            h4.accordion-title
+              span
+                | Перевод средств от другого профессионального участника рынка ценных бумаг
+            ul.accordion-second.fa-ul
+              li
+                p
+                  |Перевод средств от других профессиональных участников рынка ценных бумаг возможен только при соблюдении условий 
+                  a href="/ru/investing/rates-docs/docs/brokerage-docs/" разделе 5.2.3. Регламента
+                  |.
+section.slide.blue.information
+  .layout
+    p Клиентам, для которых открыты отдельные специальные брокерские счета, а также клиентам — управляющим пенсионными накоплениями и/или накоплениями для жилищного обеспечения военнослужащих, необходимо руководствоваться реквизитами, указанными в извещении об открытии счетов.
+    p Юридическим лицам (резидентам) при перечислении денежных средств в иностранной валюте с расчетного счета, открытого в ОАО Банк «ОТКРЫТИЕ», необходимо обратиться к клиентскому менеджеру.
+    p.info
+      |Для перевода денежных средств в 
+      b
+        |иностранной валюте 
+      |Ваш банк может потребовать предоставления копии Вашего брокерского договора на обслуживание на российских торговых площадках (при перечислении в портфель 
+      b
+        |Валютный рынок Московской биржи
+      |) или копии брокерского договора на обслуживание на иностранных торговых площадках (при перечислении в портфель 
+      b
+        |Международный фондовый рынок
+      |).

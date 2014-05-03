@@ -1,0 +1,30 @@
+- content_for :title, "Индивидуальное обеспечение"
+- content_for :meta_description, ""
+- content_for :meta_keywords, ""
+- content_for :page_content_class, "page-tutoring"
+section.slide.cover.tutoring
+  .layout.group
+    .content.pull-right
+      h1.title Индивидуальное обучение
+      p Занимайтесь с профессионалами по индивидуальной программе
+      a.btn.white href="#description" Подробнее
+section.slide.white
+  #description.layout.description
+    h2.title Как это работает?
+    p Специалист учебного центра связывается с вами и выясняет информацию, необходимую для разработки индивидуальной программы обучения. В дальнейшем вы занимаетесь по данной программе с профессиональным трейдером, получаете важную дополнительную информацию, список литературы и рекомендации преподавателя. При желании вы получаете «домашнее задание», которое выполняется на специальном торговом тренажере.
+section.slide.gray.bordered
+  .layout.offer
+    h2.title Преимущества услуги:
+    ul
+      li Назначайте удобное вам расписание занятий
+      li Составляйте программу курса совместно с преподавателем
+      li Получайте именно те знания, которых вам не хватает
+      li Занимайтесь индивидуально или в группе до 3-х человек
+//section.slide.blue
+  .layout.registration.group
+    h2.title Регистрация
+    .form-layout
+      - if notice
+        p#notice = notice
+      - else
+        = render "shared/forms/algotrader_form"
