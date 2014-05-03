@@ -1,0 +1,65 @@
+- content_for :title, "Инвестиции"
+- content_for :meta_description, ""
+- content_for :meta_keywords, ""
+- content_for :page_content_class, "page-institutional"
+section.slide.cover.institutional
+  .layout.group
+    .content.pull-right
+      h1.title Институционалам
+      p Расширьте возможности своего бизнеса
+      a.btn.white href="#trading" Подробнее
+section#trading.slide.white.group.pull-left.trading
+  .pull-right.bg-white.item
+    .trading.product
+      h2.title Доступ к торгам
+      p Торгуйте биржевыми инструментами или оказывайте своим клиентам услуги, пользуясь преимуществами субброкерской схемы сотрудничества.
+      ul.description
+        li Использование всей инфраструктуры брокера
+        li Торги на фондовом, срочном и валютном рынках
+        li Доступ к популярным и ликвидным инструментам на международных площадках
+        li Снижение затрат на доступ к торгам для профессиональных участников рынка
+      p.centered
+        = link_to "Подробнее", page_path("trading"), class: "btn"
+section.slide.gray.pull-right.structural-products.group
+  .pull-left.bg-gray.item
+    .structural-products.product
+      h2.title Структурные продукты
+      p Услуги, доступные профессиональным участникам рынка:
+      ul.description
+        li Продажа продуктов под вашим брендом 
+        li Регулярное обновление линейки продуктов 
+        li Проектирование индивидуальных продуктов по запросу клиента
+        li Обучение персонала и консультации по внутреннему учету структурных продуктов
+        li Актуальная аналитика и рыночная экспертиза
+      p.centered
+        = link_to "Подробнее", page_path("investing/structural-products"), class: "btn"
+section.slide.white.pull-left.group.converse-operation
+  .pull-right.bg-white.item
+    .converse-operation.product
+      h2.title Конверсионные&nbsp;операции
+      p Если ваш бизнес связан с использованием иностранных валют, пользуйтесь возможностью совершать обменные операции по самым выгодным курсам.
+      ul.description
+        li Сокращение издержек на конвертацию
+        li Обмен валюты по биржевым курсам в режиме онлайн
+        li Перевод валюты на ваш банковский счет, а затем – на счета контрагентов
+        li Возможность использовать «эффект плеча» и зафиксировать курс валюты
+      p.centered
+        = link_to "Подробнее", page_path("investing/open-advisor"), class: "btn"
+section.slide.gray.pull-right.algotrader.group
+  .pull-left.bg-gray.item
+    .algotrader.product
+      h2.title Услуги&nbsp;для&nbsp;алготрейдеров
+      p Специальные условия и современные сервисы для автоматической торговли
+      ul.description
+        li Высококлассное оборудование в дата-центрах бирж или брокера
+        li Выделенные серверы для высокочастотной торговли
+        li Минимальные тарифы на брокерское обслуживание
+        li Персональный менеджер, помогающий решить любые вопросы
+      p.centered
+        = link_to "Подробнее", page_path("trading/algotrader"), class: "btn"
+section.page-teasers
+  .teasers.layout
+    = render("shared/page-teasers/investing")
+    /a.item href="#"
+      i.icon.npf
+      h5.title НПФ / НПС

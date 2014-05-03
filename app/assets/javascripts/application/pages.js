@@ -116,4 +116,133 @@ $(document).ready(function() {
       $( this ).next().addClass( 'checked' );
     }
   });
+ // Гармошка Д/У
+ $( '.strategy .item .btn' ).click(function(){
+  $this = $(this)
+  $this.prev( 'div' ).slideToggle("slow", function() {
+    if ($(this).css('display') == 'none'){
+      $this.text('Подробнее');
+    }else{
+      $this.text('Скрыть');
+    }
+  });
+ });
+  // Гармошка  ПИФЫ
+ $( '.description .actions .round-left' ).click(function(){
+  $this = $(this)
+  $this.parent().prev( 'div.info' ).slideToggle("slow", function() {
+    if ($(this).css('display') == 'none'){
+      $this.text('Подробнее');
+    }else{
+      $this.text('Скрыть');
+    }
+  });
+ });
+  //Лицензии  Fancybox
+  $(".fancybox-effects1").fancybox({
+     wrapCSS    : 'fancybox-custom',
+  closeClick : true,
+  padding: 0,
+  maxWidth : 600, 
+  fitToView : false,
+        autoCenter: true,
+        fixed: false,
+        title: 'Лицензия ФСФР РФ на осуществление брокерской деятельности',
+    helpers : {
+    title : {
+    type : 'inside'
+  },
+  overlay : {
+    css : {
+       'background-color' : '#eee'
+    },
+  }
+    }
+ });
+ $(".fancybox-effects2").fancybox({
+     wrapCSS    : 'fancybox-custom',
+  closeClick : true,
+  padding: 0,
+  maxWidth : 600, 
+  fitToView : false,
+        fixed: false,
+        title: 'Лицензия ФСФР РФ на осуществление дилерской деятельности',
+    helpers : {
+    title : {
+    type : 'inside'
+  },
+  overlay : {
+    css : {
+       'background-color' : '#eee'
+    },
+  }
+    }
+ });
+ $(".fancybox-effects3").fancybox({
+     wrapCSS    : 'fancybox-custom',
+  closeClick : true,
+  padding: 0,
+  maxWidth : 600, 
+  fitToView : false,
+        fixed: false,
+        title: 'Лицензия ФСФР РФ на осуществление деятельности по управлению ценными бумагами',
+    helpers : {
+    title : {
+    type : 'inside'
+  },
+  overlay : {
+    css : {
+       'background-color' : '#eee'
+    },
+  }
+    }
+ });
+ $(".fancybox-effects4").fancybox({
+     wrapCSS    : 'fancybox-custom',
+  closeClick : true,
+  padding: 0,
+  maxWidth : 600, 
+  fitToView : false,
+        fixed: false,
+        title: 'Лицензия ФСФР РФ на осуществление депозитарной деятельности',
+    helpers : {
+    title : {
+    type : 'inside'
+  },
+  overlay : {
+    css : {
+       'background-color' : '#eee'
+    },
+  }
+    }
+ });
+var x_click = 0;
+var y_click = 0;
+var r = 0;
+function defPosition(el, event) {
+  var event = event || window.event;
+// Получаем координаты клика по странице, то есть абсолютные координаты клика.
+  if (document.attachEvent != null) { // Internet Explorer & Opera
+  x_click = window.event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+  y_click = window.event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+    } else if (!document.attachEvent && document.addEventListener) { // Gecko
+  x_click = event.clientX+ window.scrollX;
+  y_click = event.clientY+ window.scrollY;
+} 
+  r = { x: $('#right_content').offset().left,y: $(el).offset().top};
+ /* if (el.offsetParent) {
+  var tmp = getAbsolutePosition(el.offsetParent);
+  r.x += tmp.x;
+  r.y += tmp.y;
+  }*/
+}  
+function getAbsolutePosition(el) {
+  var r = { x: el.offsetLeft, y: el.offsetTop };
+  if (el.offsetParent) {
+   var tmp = getAbsolutePosition(el.offsetParent);
+   r.x += tmp.x;
+   r.y += tmp.y; 
+}
+return r;
+}
 });
