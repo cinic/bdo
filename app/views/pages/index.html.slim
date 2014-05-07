@@ -71,3 +71,11 @@ section.slide.white
     li.item.awards--aaa.item_last
       span ААА
       div Максимальный рейтинг надежности
+section.slide.gray
+  = request.remote_ip
+  br
+  = request.env["HTTP_X_FORWARDED_FOR"]
+  br
+  = request.remote_addr
+  br
+  = request.env['REMOTE_ADDR']
