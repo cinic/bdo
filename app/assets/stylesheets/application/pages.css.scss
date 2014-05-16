@@ -1731,76 +1731,174 @@
 }
 /* ABOUT
    ========================================================================== */
-.about-menu {
-  padding: 50px 0 0;
-}
 .page-about {
   .about {
-    .product-teasers {
-      .items {
-        .item {
-          text-align: left;
-          .title {
-            &:after {
-              display: none;
-            }
+    padding: 50px 0 0;
+    .items {
+      list-style: none;
+      padding: 30px 0 30px 120px;
+      .item {
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+        height: 92px;
+        padding-left: 120px;
+        &.stopwatch {
+          background: image-url("application/pages/about/about.stopwatch.png") no-repeat;
+          p { padding-top: 30px; }
+        }
+        &.operation {
+          background: image-url("application/pages/about/about.85.operation.png") no-repeat;
+        }
+        &.clients {
+          background: image-url("application/pages/about/about.clients.png") no-repeat;
+        }
+        &.saif {
+          background: image-url("application/pages/about/about.saif.png") no-repeat;
+        }
+        &.deffence {
+          background: image-url("application/pages/about/about.deffence.png") no-repeat;
+        }
+        p {
+          font-size: 19px;
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+  .leaders {
+    padding: 100px 0 60px;
+    text-align: center;
+    .leader {
+      display: inline-block;
+      width: 220px;
+      vertical-align: top;
+      margin: 0 122px;
+      position: relative;
+      .title {
+        padding: 0;
+        font-size: 25px;
+        line-height: 24px;
+        padding-top: 170px;
+        margin: 0 0 30px;
+        &:after { display: none; }
+        span {
+          display: block;
+          padding: 15px 0 0;
+          line-height: 24px;
+          &:before {
+            display: block;
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 100%;
+            height: 173px;
+            content: "";
+            background-position: 50% 50%;
+          }
+        }
+        small {
+          font-size: 10px;
+          font-style: italic;
+        }
+        .mincev {
+          &:before {
+            background-image: image-url("application/pages/about/about.m.u.n.png");
+          }
+        }
+        .avksenteva {
+          &:before {
+            background-image: image-url("application/pages/about/about.a.v.v.png");
+          }
+        } 
+      }     
+    }
+  }
+  .honors {
+    height: 650px;
+    background: image-url("application/pages/about/about.bg.jpg") no-repeat center bottom;
+    filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/pages/about/about.bg.jpg', sizingMethod='scale')";
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/pages/about/about.bg.jpg', sizingMethod='scale')"; 
+    .honor {
+      padding: 70px 0;
+      .title {
+        font-size: 36px;
+        padding-bottom: 18px;
+        &:after {
+          left: 50%;
+          margin-left: -16px;
+          width: 32px;
+          height: 1px;
+          background: #53b2df;
+          content: ""; 
+        }
+      }
+      .pride {
+        text-align: center;
+        margin: 60px 0 100px;
+        li {
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 35px;
+          .icon {
+            display: inline-block;
+            width: 60px;
+            height: 59px;
+            &.first { background-image: image-url("application/pages/about/about.41000.png"); }
+            &.second { background-image: image-url("application/pages/about/about.250.rub.png"); }
+            &.third { background-image: image-url("application/pages/about/about.15.market.png"); }
+            &.fourth { background-image: image-url("application/pages/about/about.client.company.png"); }
+          }
+          p {
+            font: 600 14px "Open Sans";
+            color: #535353;
+            margin: 10px 0 0;
           }
         }
       }
-    }
-    .content {
-      padding: 30px 0;
-      text-align: center;
-      p {
-        font-family: Georgia, serif;
-        font-style: italic;
-        font-size: 15px;
-      }
-    }
-  }
-  .securities {
-    padding: 40px 0 20px;
-    .title {
-      font-family: Georgia, serif;
-      font-style: italic;
-      font-size: 36px;
-      color: #ffffff;
-    }
-  }
-  .transcript, .terms {
-    margin: 30px 0;
-    text-align: left;
-    width: 600px;
-    .caption {
-      font-size: 32px;
-      padding: 0 0 10px;
-    }
-    ol, ul {
-      margin: 0 0 0 20px;
-      padding: 0;
-      li {
-        margin: 3px 0 0;
-      }
-    }
-  }
-  .executives {
-    overflow:hidden;
-    padding: 25px 0 15px;
-    text-align:left;
-    .item {
-      width: 450px;
-      margin: 0 10px 0 0;
-      figure {
-        margin:0 10px 0 0;
-      }
-      .description {
-        overflow:hidden;
-        .title {
-          font-size: 24px;
-          line-height: 30px;
+      .awards {
+        text-align: center;
+        color: #535353;
+        li {
+          display: inline-block;
+          vertical-align: bottom;
+          margin: 0 90px 0 0;
+          .icon {
+            display: inline-block;
+            &.first {
+              background-image: image-url("application/pages/about/about.mosbir.png");
+              width: 193px;
+              height: 48px;
+            }
+            &.second {
+              background-image: image-url("application/pages/about/about.aaa.png");
+              width: 143px;
+              height: 56px;
+            }
+            &.third {
+              background-image: image-url("application/pages/about/about.fo.png");
+              width: 63px;
+              height: 55px;
+            }
+            &.fourth {
+              background: image-url("application/pages/about/about.finanz.png") no-repeat;
+              background-position: 50% 50%;
+              width: 115px;
+              height: 50px;
+            }
+          }
+          h4 {
+            font: 600 25px "Open Sans";
+            margin: 10px 0 0;
+          }
+          p {
+            font: 16px "Open Sans";
+            font-style: normal;
+            margin: 10px 0 0;
+          }
         }
       }
-    }
+    }   
   }
 }
 /* NEWS
